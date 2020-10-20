@@ -40,37 +40,48 @@ To interact with the model you have the following ROS topics and services. They 
 
 Topics availables:
 
-* /\<modelName\>/robot/moveWheels
-* /\<modelName\>/robot/resetWheels
-* /\<modelName\>/robot/movePanTilt
-* /\<modelName\>/robot/unlock/move
-* /\<modelName\>/robot/accel
-* /\<modelName\>/robot/camera/camera_info
-* /\<modelName\>/robot/camera/image/compressed
-* /\<modelName\>/robot/irs
-* /\<modelName\>/robot/orientation
-* /\<modelName\>/robot/pan
-* /\<modelName\>/robot/tilt
-* /\<modelName\>/robot/wheels
+* /robot/[\<modelName\>/]moveWheels
+* /robot/[\<modelName\>/]resetWheels
+* /robot/[\<modelName\>/]movePanTilt
+* /robot/[\<modelName\>/]unlock/move
+* /robot/[\<modelName\>/]accel
+* /robot/[\<modelName\>/]camera/camera_info
+* /robot/[\<modelName\>/]camera/image/compressed
+* /robot/[\<modelName\>/]irs
+* /robot/[\<modelName\>/]orientation
+* /robot/[\<modelName\>/]pan
+* /robot/[\<modelName\>/]tilt
+* /robot/[\<modelName\>/]wheels
 
 Services availables:
 
-* /\<modelName>\/moveWheels
-* /\<modelName>\/resetWheels
-* /\<modelName>\/movePanTilt
+* /robot/[\<modelName\>/]moveWheels
+* /robot/[\<modelName\>/]resetWheels
+* /robot/[\<modelName\>/]movePanTilt
 
-\<modelName\> is robot by default but it can be changed for other name in the launch file.
+[\<modelName\>] is the Robobos name in the launch file (for example, see [here](launch/robobo_multi.launch)). If only launching one Robobo the modelName wont be present (for example, see [here](launch/robobo_single.launch)). This is the same behaviour than the real Robobo.
 
 ## Multi robot enviroment
 
-This Gazebo package supports multi robot enviroments. To spawn a Robobo you should add a group tag like the following to the launch file (see [here](launch/robobo.launch)):
+This Gazebo package supports multi robot enviroments. To spawn a Robobo you should add a group tag like the following to the launch file (see [here](launch/robobo_multi.launch)):
 
 ```xml
-<group ns="NAME">
-     <param name="tf_prefix" value="NAME_tf" />
-     <arg name="robobo_name" default="NAME"/>
-     <node name="robobo_model" pkg="gazebo_ros" type="spawn_model" args="-file $(find robobo_gazebo)/models/robobo/model.sdf -sdf -x 1.0 -y -0.0 -z 0.0 -Y 3.14159 -model $(arg robobo_name)" />
-     <node name="robobo_irs" pkg="robobo_gazebo" type="robobo_irs" args="-n $(arg robobo_name)"/>
+<group ns="NAME*">
+<param name="tf_prefix" value="NAME*_tf" />
+<arg name="robobo_name" default="NAME*"/>
+<param name="robot_description" command="$(find xacro)/xacro --inorder '$(find robobo_gazebo)/urdf/robobo.urdf.xacro' 
+     pusher:=true
+     camera_front:=true
+     emotion:=SAD
+     visualize_irSensor:=false 
+     visualize_camera:=false" />
+<node name="robobo_model" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -x 0 -y 0 -z 0 -R 0 -P 0 -Y 0  -model $(arg robobo_name) summit -param robot_description"/>
+<node name="robobo_irs" pkg="robobo_gazebo" type="robobo_irs" args="-n $(arg robobo_name)"/>
+<node name= "image_view" pkg="image_view" type= "image_view" respawn= "false" output ="screen">
+     <remap from="image" to="/robot/$(arg robobo_name)/light_sensor/image_raw"/>
+     <param name="autosize" value="true"/>
+     <param name="image_transport" value="compressed"/>
+</node>
 </group>
 ```
 
@@ -78,7 +89,11 @@ Where *NAME* should be changed to a unique name that will help to identify that 
 
 ### Example
 
-> rosrun robobo_gazebo moveTest.py __ns:=robobo1 _lspeed:=60 _time:=1000
+> rosrun robobo_gazebo moveTest.py __ns:=robot _lspeed:=60 _time:=1000
+
+or
+
+> rosrun robobo_gazebo moveTest.py __ns:=robot/robobo1 _lspeed:=60 _time:=1000
 
 The previous command will run the moveTest.py script and will set the private variables *lspeed*, *time* and *_ns*; effectively commanding the robobo1 to move left wheel at 60 speed for 1000 milliseconds.
 

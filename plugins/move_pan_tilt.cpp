@@ -59,21 +59,25 @@ void MovePanTilt::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
     ros::init(argc, argv, model->GetName(), ros::init_options::NoSigintHandler);
   }
 
+  std::string robot_namespace = "";
+  if (_sdf->HasElement("robotNamespace")) {
+    robot_namespace = _sdf->GetElement("robotNamespace")->Get<std::string>();
+  }
   // Create node handler
-  rosNode.reset(new ros::NodeHandle(model->GetName()));
+  rosNode.reset(new ros::NodeHandle(robot_namespace));
 
   // Create MovePanTilt service
   ros::AdvertiseServiceOptions advSerOpt = ros::AdvertiseServiceOptions::create<robobo_msgs::MovePanTilt>(
-      "robot/movePanTilt", boost::bind(&MovePanTilt::ServiceCallback, this, _1, _2), ros::VoidPtr(), &this->rosQueue);
+      "movePanTilt", boost::bind(&MovePanTilt::ServiceCallback, this, _1, _2), ros::VoidPtr(), &this->rosQueue);
   movePanTiltService = rosNode->advertiseService(advSerOpt);
 
   ros::SubscribeOptions subOpt = ros::SubscribeOptions::create<robobo_msgs::MovePanTiltCommand>(
-      "robot/movePanTilt", 10, boost::bind(&MovePanTilt::TopicCallback, this, _1), ros::VoidPtr(), &this->rosQueue);
+      "movePanTilt", 10, boost::bind(&MovePanTilt::TopicCallback, this, _1), ros::VoidPtr(), &this->rosQueue);
   movePanTiltSubscriber = rosNode->subscribe(subOpt);
 
 
   // BlockId Publisher
-  blockPub = rosNode->advertise<std_msgs::Int16>("robot/unlock/move", 10);
+  blockPub = rosNode->advertise<std_msgs::Int16>("unlock/move", 10);
 
   // Queue thread
   this->rosQueueThread = std::thread(std::bind(&MovePanTilt::QueueThread, this));}

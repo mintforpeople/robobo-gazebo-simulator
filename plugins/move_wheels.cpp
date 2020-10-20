@@ -59,22 +59,25 @@ void MoveWheels::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
     char **argv = NULL;
     ros::init(argc, argv, model->GetName(), ros::init_options::NoSigintHandler);
   }
-
+  std::string robot_namespace = "";
+  if (_sdf->HasElement("robotNamespace")) {
+    robot_namespace = _sdf->GetElement("robotNamespace")->Get<std::string>();
+  }
   // Create node handler
-  rosNode.reset(new ros::NodeHandle(model->GetName()));
+  rosNode.reset(new ros::NodeHandle(robot_namespace));
 
   // Create MoveWheels service
   ros::AdvertiseServiceOptions advSerOpt = ros::AdvertiseServiceOptions::create<robobo_msgs::MoveWheels>(
-      "robot/moveWheels", boost::bind(&MoveWheels::ServiceCallback, this, _1, _2), ros::VoidPtr(), &this->rosQueue);
+      "moveWheels", boost::bind(&MoveWheels::ServiceCallback, this, _1, _2), ros::VoidPtr(), &this->rosQueue);
   moveWheelsService = rosNode->advertiseService(advSerOpt);
 
   // MoveWheels Subscriber
   ros::SubscribeOptions subOpt = ros::SubscribeOptions::create<robobo_msgs::MoveWheelsCommand>(
-      "robot/moveWheels", 10, boost::bind(&MoveWheels::TopicCallback, this, _1), ros::VoidPtr(), &this->rosQueue);
+      "moveWheels", 10, boost::bind(&MoveWheels::TopicCallback, this, _1), ros::VoidPtr(), &this->rosQueue);
   moveWheelsSubscriber = rosNode->subscribe(subOpt);
 
   // BlockId Publisher
-  blockPub = rosNode->advertise<std_msgs::Int16>("robot/unlock/move", 10);
+  blockPub = rosNode->advertise<std_msgs::Int16>("unlock/move", 10);
 
   // Queue thread
   this->rosQueueThread = std::thread(std::bind(&MoveWheels::QueueThread, this));

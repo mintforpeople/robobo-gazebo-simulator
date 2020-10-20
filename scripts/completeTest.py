@@ -59,27 +59,27 @@ if __name__ == '__main__':
     global moveWheelsServ, movePanTiltServ, imageSub, accelSub, orientationSub, moveWheelsPub, movePanTiltPub, funThread
     cv2.namedWindow('image')
     rospy.init_node('test_consumer', anonymous=True)
-    rospy.wait_for_service('robot/moveWheels')
-    rospy.wait_for_service('robot/movePanTilt')
+    rospy.wait_for_service('moveWheels')
+    rospy.wait_for_service('movePanTilt')
 
     # Services
-    moveWheelsServ = rospy.ServiceProxy('robot/moveWheels', MoveWheels)
-    movePanTiltServ = rospy.ServiceProxy('robot/movePanTilt', MovePanTilt)
+    moveWheelsServ = rospy.ServiceProxy('moveWheels', MoveWheels)
+    movePanTiltServ = rospy.ServiceProxy('movePanTilt', MovePanTilt)
 
     # Subscribers
     imageSub = rospy.Subscriber(
-        'robot/camera/image/compressed', CompressedImage, imageCallback)
+        'camera/image/compressed', CompressedImage, imageCallback)
 
     accelSub = rospy.Subscriber(
-        'robot/accel', Accel, accelCallback)
+        'accel', Accel, accelCallback)
     orientationSub = rospy.Subscriber(
-        'robot/orientation', Quaternion, orientationCallback)
+        'orientation', Quaternion, orientationCallback)
 
     # Publishers
     moveWheelsPub = rospy.Publisher(
-        'robot/moveWheels', MoveWheelsCommand, queue_size=1)
+        'moveWheels', MoveWheelsCommand, queue_size=1)
 
-    movePanTiltPub = rospy.Publisher('robot/movePanTilt',
+    movePanTiltPub = rospy.Publisher('movePanTilt',
                                      MovePanTiltCommand, queue_size=1)
 
     funThread = threading.Thread(target=commandTheShip)

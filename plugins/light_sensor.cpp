@@ -43,10 +43,10 @@ namespace gazebo
 
     //this->_nh.reset(new ros::NodeHandle(model->GetName()));
 
-    //_sensorPublisher = _nh.advertise<sensor_msgs::Illuminance>("robot/ambientlight", 1);
+    //_sensorPublisher = _nh.advertise<sensor_msgs::Illuminance>("ambientlight", 1);
 
     std::string sensorName = _parent->Name();
-    this->topic_name_ = "robot/" + sensorName;
+    this->topic_name_ = sensorName;
     this->robot_namespace_ = GetRobotNamespace(_parent, _sdf, "Illuminance");
 
     this->_nh = new ros::NodeHandle(this->robot_namespace_);

@@ -27,7 +27,7 @@
 
 		<!--launch image node for light sensor-->
 		<node name= "image_view" pkg="image_view" type= "image_view" respawn= "false" output ="screen">
-			<remap from="image" to="/$(arg robobo_name)/robot/light_sensor/image_raw"/>
+			<remap from="image" to="/robot/$(arg robobo_name)/light_sensor/image_raw"/>
 			<param name="autosize" value="true"/>
 			<param name="image_transport" value="compressed"/>
 		</node>

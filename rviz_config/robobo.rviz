@@ -140,7 +140,7 @@ Visualization Manager:
       Enabled: true
       Name: Range
       Queue Size: 100
-      Topic: /robobo/robot/back_c_rviz
+      Topic: /robot/robobo/back_c_rviz
       Unreliable: false
       Value: true
     - Alpha: 0.5
@@ -150,7 +150,7 @@ Visualization Manager:
       Enabled: true
       Name: Range
       Queue Size: 100
-      Topic: /robobo/robot/back_l_rviz
+      Topic: /robot/robobo/back_l_rviz
       Unreliable: false
       Value: true
     - Alpha: 0.5
@@ -160,7 +160,7 @@ Visualization Manager:
       Enabled: true
       Name: Range
       Queue Size: 100
-      Topic: /robobo/robot/back_r_rviz
+      Topic: /robot/robobo/back_r_rviz
       Unreliable: false
       Value: true
     - Alpha: 0.5
@@ -170,7 +170,7 @@ Visualization Manager:
       Enabled: true
       Name: Range
       Queue Size: 100
-      Topic: /robobo/robot/front_c_rviz
+      Topic: /robot/robobo/front_c_rviz
       Unreliable: false
       Value: true
     - Alpha: 0.5
@@ -180,7 +180,7 @@ Visualization Manager:
       Enabled: true
       Name: Range
       Queue Size: 100
-      Topic: /robobo/robot/front_l_rviz
+      Topic: /robot/robobo/front_l_rviz
       Unreliable: false
       Value: true
     - Alpha: 0.5
@@ -190,7 +190,7 @@ Visualization Manager:
       Enabled: true
       Name: Range
       Queue Size: 100
-      Topic: /robobo/robot/front_ll_rviz
+      Topic: /robot/robobo/front_ll_rviz
       Unreliable: false
       Value: true
     - Alpha: 0.5
@@ -200,7 +200,7 @@ Visualization Manager:
       Enabled: true
       Name: Range
       Queue Size: 100
-      Topic: /robobo/robot/front_r_rviz
+      Topic: /robot/robobo/front_r_rviz
       Unreliable: false
       Value: true
     - Alpha: 0.5
@@ -210,13 +210,13 @@ Visualization Manager:
       Enabled: true
       Name: Range
       Queue Size: 100
-      Topic: /robobo/robot/front_rr_rviz
+      Topic: /robot/robobo/front_rr_rviz
       Unreliable: false
       Value: true
     - Class: rviz/Camera
       Enabled: true
       Image Rendering: background and overlay
-      Image Topic: /robobo/robot/camera/image
+      Image Topic: /robot/robobo/camera/image
       Name: Camera
       Overlay Alpha: 0.5
       Queue Size: 2

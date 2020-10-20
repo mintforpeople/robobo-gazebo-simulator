@@ -87,8 +87,8 @@ void RoboboImuSensor::Load(sensors::SensorPtr sensor_, sdf::ElementPtr sdf_)
 
   node = new ros::NodeHandle(this->robot_namespace);
 
-  accelPub = node->advertise<geometry_msgs::Accel>(robot_namespace + "robot/accel", 1);
-  orientationPub = node->advertise<geometry_msgs::Quaternion>(robot_namespace + "robot/orientation", 1);
+  accelPub = node->advertise<geometry_msgs::Accel>(robot_namespace + "accel", 1);
+  orientationPub = node->advertise<geometry_msgs::Quaternion>(robot_namespace + "orientation", 1);
 
   connection = event::Events::ConnectWorldUpdateBegin(boost::bind(&RoboboImuSensor::UpdateChild, this, _1));
 

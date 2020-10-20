@@ -10,10 +10,10 @@ TEST = "TOPIC"
 
 
 def call_service(panPos, panSpeed, panUnlockId, tiltPos, tiltSpeed, tiltUnlockId):
-    rospy.wait_for_service('robot/movePanTilt')
+    rospy.wait_for_service('movePanTilt')
     # rate = rospy.Rate(10) # 10hz
     try:
-        movePanTilt = rospy.ServiceProxy('robot/movePanTilt', MovePanTilt)
+        movePanTilt = rospy.ServiceProxy('movePanTilt', MovePanTilt)
         resp1 = movePanTilt(Int16(panPos), Int8(panSpeed), Int16(
             panUnlockId), Int16(tiltPos), Int8(tiltSpeed), Int16(tiltUnlockId))
         return resp1.error.data
@@ -22,7 +22,7 @@ def call_service(panPos, panSpeed, panUnlockId, tiltPos, tiltSpeed, tiltUnlockId
 
 
 def call_topic(panPos, panSpeed, panUnlockId, tiltPos, tiltSpeed, tiltUnlockId):
-    pub = rospy.Publisher('robot/movePanTilt',
+    pub = rospy.Publisher('movePanTilt',
                           MovePanTiltCommand, queue_size=10)
     rospy.sleep(1)
     pub.publish(MovePanTiltCommand(Int16(panPos), Int8(panSpeed), Int16(

@@ -10,17 +10,17 @@ TEST = "TOPIC"
 
 
 def call_service(lspeed, rspeed, time, blockid=0):
-    rospy.wait_for_service('robot/moveWheels')
+    rospy.wait_for_service('moveWheels')
     #rate = rospy.Rate(10) # 10hz
     try:
-        moveWheels = rospy.ServiceProxy('robot/moveWheels', MoveWheels)
+        moveWheels = rospy.ServiceProxy('moveWheels', MoveWheels)
         resp1 = moveWheels(Int8(lspeed), Int8(rspeed), Int32(time), Int16(blockid))
         return resp1.error.data
     except rospy.ServiceException, e:
         print "Service call failed: %s"%e
 
 def call_topic(lspeed, rspeed, time, blockid=0):
-    pub = rospy.Publisher('robot/moveWheels', MoveWheelsCommand, queue_size=10)
+    pub = rospy.Publisher('moveWheels', MoveWheelsCommand, queue_size=10)
     rospy.sleep(1)
     pub.publish(MoveWheelsCommand(Int8(lspeed), Int8(rspeed), Int32(time), Int16(blockid)))
 

@@ -43,17 +43,17 @@ class ROBOBO_IRS(object):
         rospy.init_node('RoboboIRS', anonymous=True)
         # ROS publishers
         # IRs
-        self.irs_pub = rospy.Publisher('robot/irs', IRs, queue_size=1)
+        self.irs_pub = rospy.Publisher('irs', IRs, queue_size=1)
 
         # ROS Subscribers
-        rospy.Subscriber('robot/front_c', Range, self.irs_cb, 'front_c')
-        rospy.Subscriber('robot/front_l', Range, self.irs_cb, 'front_l')
-        rospy.Subscriber('robot/front_ll', Range, self.irs_cb, 'front_ll')
-        rospy.Subscriber('robot/front_r', Range, self.irs_cb, 'front_r')
-        rospy.Subscriber('robot/front_rr', Range, self.irs_cb, 'front_rr')
-        rospy.Subscriber('robot/back_c', Range, self.irs_cb, 'back_c')
-        rospy.Subscriber('robot/back_l', Range, self.irs_cb, 'back_l')
-        rospy.Subscriber('robot/back_r', Range, self.irs_cb, 'back_r')
+        rospy.Subscriber('front_c', Range, self.irs_cb, 'front_c')
+        rospy.Subscriber('front_l', Range, self.irs_cb, 'front_l')
+        rospy.Subscriber('front_ll', Range, self.irs_cb, 'front_ll')
+        rospy.Subscriber('front_r', Range, self.irs_cb, 'front_r')
+        rospy.Subscriber('front_rr', Range, self.irs_cb, 'front_rr')
+        rospy.Subscriber('back_c', Range, self.irs_cb, 'back_c')
+        rospy.Subscriber('back_l', Range, self.irs_cb, 'back_l')
+        rospy.Subscriber('back_r', Range, self.irs_cb, 'back_r')
 
     def irs_cb(self, value, id):
         self.irs_dict[id] = value

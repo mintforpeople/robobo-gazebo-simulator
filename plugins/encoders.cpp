@@ -54,23 +54,27 @@ void Encoders::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
     ros::init(argc, argv, model->GetName(), ros::init_options::NoSigintHandler);
   }
 
+  std::string robot_namespace = "";
+  if (_sdf->HasElement("robotNamespace")) {
+    robot_namespace = _sdf->GetElement("robotNamespace")->Get<std::string>();
+  }
   // Create node handler
-  rosNode.reset(new ros::NodeHandle(model->GetName()));
+  rosNode.reset(new ros::NodeHandle(robot_namespace));
 
   // Subscribe to Gazebo link states topic/
   connection = event::Events::ConnectWorldUpdateBegin(boost::bind(&Encoders::Callback, this, _1));
 
   // Create topics to publish
-  pubWheels = rosNode->advertise<robobo_msgs::Wheels>("robot/wheels", 1);
-  pubPan = rosNode->advertise<std_msgs::Int16>("robot/pan", 1);
-  pubTilt = rosNode->advertise<std_msgs::Int16>("robot/tilt", 1);
+  pubWheels = rosNode->advertise<robobo_msgs::Wheels>("wheels", 1);
+  pubPan = rosNode->advertise<std_msgs::Int16>("pan", 1);
+  pubTilt = rosNode->advertise<std_msgs::Int16>("tilt", 1);
 
   // Declare the node as a subscriber
   rosQueueThread = std::thread(std::bind(&Encoders::QueueThread, this));
 
   // Create ResetWheels service
-  resetService = rosNode->advertiseService<robobo_msgs::ResetWheels::Request, robobo_msgs::ResetWheels::Response>("robot/resetWheels", boost::bind(&Encoders::CallbackResetWheels, this, _1, _2));
-  resetWheelsSub = rosNode->subscribe("robot/resetWheelsCommand", 2, &Encoders::ResetWheelsTopicCallback, this);
+  resetService = rosNode->advertiseService<robobo_msgs::ResetWheels::Request, robobo_msgs::ResetWheels::Response>("resetWheels", boost::bind(&Encoders::CallbackResetWheels, this, _1, _2));
+  resetWheelsSub = rosNode->subscribe("resetWheelsCommand", 2, &Encoders::ResetWheelsTopicCallback, this);
 }
 
 void Encoders::Callback(const common::UpdateInfo &)
@@ -97,8 +101,8 @@ void Encoders::Callback(const common::UpdateInfo &)
       // Save data in Wheels msg
       msgWheels.wheelPosR.data = rightWheelPos;
       msgWheels.wheelSpeedR.data = rightWheelVel;
-      msgWheels.wheelPosL.data = rightWheelPos;
-      msgWheels.wheelSpeedL.data = rightWheelVel;
+      msgWheels.wheelPosL.data = leftWheelPos;
+      msgWheels.wheelSpeedL.data = leftWheelVel;
       // Publish msg in topic
       pubWheels.publish(msgWheels);
     }

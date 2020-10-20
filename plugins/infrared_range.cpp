@@ -75,7 +75,7 @@ void InfraredRange::Load(sensors::SensorPtr _parent, sdf::ElementPtr _sdf)
   // Create the range topic name with the model name and sensor name
   std::string sensorName = _parent->Name();
 
-  this->topic_name_ = "robot/" + sensorName;
+  this->topic_name_ = sensorName;
 
   // save pointers
   this->sdf = _sdf;

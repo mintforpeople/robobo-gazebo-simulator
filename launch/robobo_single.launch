@@ -8,11 +8,10 @@
 
 	<!--create a new robobo-->
 	<group ns="robot">
-	<group ns="robobo">
 		
 		<!--define parameters-->
 		<param name="tf_prefix" value="robobo_tf" />
-		<arg name="robobo_name" default="robobo"/>
+		<arg name="robobo_name" default="robot"/>
 		<param name="robot_description" command="$(find xacro)/xacro --inorder '$(find robobo_gazebo)/urdf/robobo.urdf.xacro' 
 			pusher:=true
 			camera_front:=true
@@ -32,6 +31,5 @@
 			<param name="autosize" value="true"/>
 			<param name="image_transport" value="compressed"/>
 		</node>
-	</group>
 	</group>
 </launch>

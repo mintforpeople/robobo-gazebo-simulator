@@ -22,7 +22,7 @@ if __name__ == '__main__':
     cv2.namedWindow('image')
     rospy.init_node('test_consumer', anonymous=True)
     imageSub = rospy.Subscriber(
-        'robot/camera/image/compressed', CompressedImage, imageCallback)
+        'camera/image/compressed', CompressedImage, imageCallback)
     while not rospy.is_shutdown():
         if image is not None:
             cv2.imshow('image', image)

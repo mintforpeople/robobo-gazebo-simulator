@@ -50,8 +50,13 @@ void BatteryPlugin::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
 
     this->sim_time_now = this->world->GetSimTime().Double();
 
-    // Create ros node and publish stuff there!
-    this->rosNode.reset(new ros::NodeHandle(model->GetName()));
+    std::string robot_namespace = "";
+    if (_sdf->HasElement("robotNamespace")) {
+        robot_namespace = _sdf->GetElement("robotNamespace")->Get<std::string>();
+    }
+    // Create node handler and publish stuff there!
+    this->rosNode.reset(new ros::NodeHandle(robot_namespace));
+
     if (this->rosNode->ok())
     {
         //ROS_GREEN_STREAM("ROS node is up");
@@ -60,7 +65,7 @@ void BatteryPlugin::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
     std::string batteryName = _sdf->Get<std::string>("battery_name");
 
     // Publish a topic for charge level
-    this->charge_state = this->rosNode->advertise<std_msgs::Int32>("robot/battery/"+batteryName, 1);
+    this->charge_state = this->rosNode->advertise<std_msgs::Int32>("battery/"+batteryName, 1);
 
     std::string linkName = _sdf->Get<std::string>("link_name");
     this->link = this->model->GetLink(linkName);

@@ -234,7 +234,7 @@
 				<gaussianNoise>0.005</gaussianNoise>
 				<updateRate>100</updateRate>
 				<alwaysOn>true</alwaysOn>
-				<topicName>robot/${name}</topicName>
+				<topicName>${name}</topicName>
 				<frameName>${name}_link</frameName>
 				<visualize>0</visualize>
 				<fov>0</fov>
@@ -266,7 +266,7 @@
 				<gaussianNoise>0.005</gaussianNoise>
 				<updateRate>100</updateRate>
 				<alwaysOn>true</alwaysOn>
-				<topicName>robot/${name}_rviz</topicName>
+				<topicName>${name}_rviz</topicName>
 				<frameName>${name}_link</frameName>
 				<visualize>1</visualize>
 				<radiation>infrared</radiation>
@@ -297,7 +297,7 @@
 				<frameName>tilt_smartphone</frameName>
 				<alwaysOn>true</alwaysOn>
 				<updateRate>5.0</updateRate>
-				<cameraName>robot/camera</cameraName>
+				<cameraName>camera</cameraName>
 				<imageTopicName>image</imageTopicName>
 				<cameraInfoTopicName>camera_info</cameraInfoTopicName>
 			</plugin>
@@ -323,7 +323,7 @@
 				</clip>
 			</camera>
 			<plugin name="gazebo_light_sensor" filename="liblight_sensor.so">
-				<cameraName>robot/light_sensor</cameraName>
+				<cameraName>light_sensor</cameraName>
 				<alwaysOn>true</alwaysOn>
 				<updateRate>10</updateRate>
 				<imageTopicName>image_raw</imageTopicName>
