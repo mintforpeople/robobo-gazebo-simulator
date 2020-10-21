@@ -59,7 +59,7 @@ Services availables:
 * /robot/[\<modelName\>/]resetWheels
 * /robot/[\<modelName\>/]movePanTilt
 
-[\<modelName\>] is the Robobos name in the launch file (for example, see [here](launch/robobo_multi.launch)). If only launching one Robobo the modelName wont be present (for example, see [here](launch/robobo_single.launch)). This is the same behaviour than the real Robobo.
+[\<modelName\>] is the Robobos name in the launch file (for example, see [here](launch/robobo_multi.launch)). If only launching one Robobo the modelName wont be present (for example, see [here](launch/robobo.launch)). This is the same behaviour than the real Robobo.
 
 ## Multi robot enviroment
 
