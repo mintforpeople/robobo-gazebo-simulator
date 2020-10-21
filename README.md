@@ -10,7 +10,7 @@ Repository for Robobo robot simulation in the Gazebo environment.
 
 ## Installation
 
-This model uses the original Robobo ROS messages, so it is necessary to use the robobo_msgs package, avaliable on https://github.com/mintforpeople/robobo-ros-msgs/tree/master/robobo_msgs.
+This model uses the original Robobo ROS messages, so it is necessary to use the robobo_msgs package, avaliable on https://github.com/mintforpeople/robobo-ros-msgs.
 Clone the respository in your own workspace and compile:
 
 
