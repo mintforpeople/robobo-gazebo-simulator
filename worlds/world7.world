@@ -168,10 +168,10 @@
       <pose frame=''>0.028115 0.014021 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>190 17000000</sim_time>
-      <real_time>237 426514948</real_time>
-      <wall_time>1604313353 117258075</wall_time>
-      <iterations>190017</iterations>
+      <sim_time>317 175000000</sim_time>
+      <real_time>435 284572519</real_time>
+      <wall_time>1604315767 876368932</wall_time>
+      <iterations>317175</iterations>
       <model name='bigcity'>
         <pose frame=''>0 0 0.002788 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -182,21 +182,21 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='ceda_qr'>
-        <pose frame=''>2.08023 1.47221 0.012778 1e-06 -1e-06 0</pose>
+      <model name='ceda_aruco'>
+        <pose frame=''>2.08264 1.47002 0.012778 6e-06 1e-06 0</pose>
         <scale>1 1 1</scale>
-        <link name='link_0'>
-          <pose frame=''>2.08023 1.47221 0.012778 1e-06 -1e-06 0</pose>
+        <link name='link_9'>
+          <pose frame=''>2.08264 1.47002 0.012778 6e-06 1e-06 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -9.8 0 -0 0</acceleration>
           <wrench>0 0 -0.196 0 -0 0</wrench>
         </link>
       </model>
-      <model name='derecha_qr_0'>
-        <pose frame=''>2.95159 2.35084 0.012778 1e-06 -2e-06 3.13535</pose>
+      <model name='derecha_aruco'>
+        <pose frame=''>2.93763 2.32825 0.013424 -0.005135 0.005604 3.13058</pose>
         <scale>1 1 1</scale>
-        <link name='link_1'>
-          <pose frame=''>2.95159 2.35084 0.012778 1e-06 -2e-06 3.13535</pose>
+        <link name='link_10'>
+          <pose frame=''>2.93763 2.32825 0.013424 -0.005135 0.005604 3.13058</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -9.8 0 -0 0</acceleration>
           <wrench>0 0 -0.196 0 -0 0</wrench>
@@ -212,72 +212,72 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='parar_qr'>
-        <pose frame=''>2.06988 3.41979 0.012778 8e-06 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link_4'>
-          <pose frame=''>2.06988 3.41979 0.012778 8e-06 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 -9.8 0 -0 0</acceleration>
-          <wrench>0 0 -0.196 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='peatones_qr'>
-        <pose frame=''>2.06366 0.780848 0.012778 5e-06 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link_6'>
-          <pose frame=''>2.06366 0.780848 0.012778 5e-06 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 -9.8 0 -0 0</acceleration>
-          <wrench>0 0 -0.196 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='rotonda_qr'>
-        <pose frame=''>1.7499 2.00047 0.012778 3e-06 -3e-06 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link_9'>
-          <pose frame=''>1.7499 2.00047 0.012778 3e-06 -3e-06 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 -9.8 0 -0 0</acceleration>
-          <wrench>0 0 -0.196 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='velocidad10_qr_0'>
-        <pose frame=''>2.07339 2.57252 0.012788 3e-06 -1e-06 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link_11'>
-          <pose frame=''>2.07339 2.57252 0.012788 3e-06 -1e-06 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 -9.8 0 -0 0</acceleration>
-          <wrench>0 0 -0.196 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='velocidad20_qr'>
-        <pose frame=''>3.47868 1.45634 0.012788 2e-06 -3e-06 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link_12'>
-          <pose frame=''>3.47868 1.45634 0.012788 2e-06 -3e-06 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 -9.8 0 -0 0</acceleration>
-          <wrench>0 0 -0.196 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='velocidad40_qr'>
-        <pose frame=''>3.47918 0.689176 0.012778 3e-06 -2e-06 0</pose>
+      <model name='parar_aruco'>
+        <pose frame=''>2.08973 3.38533 0.012778 2e-06 -1e-06 -0</pose>
         <scale>1 1 1</scale>
         <link name='link_13'>
-          <pose frame=''>3.47918 0.689176 0.012778 3e-06 -2e-06 0</pose>
+          <pose frame=''>2.08973 3.38533 0.012778 2e-06 -1e-06 -0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -9.8 0 -0 0</acceleration>
           <wrench>0 0 -0.196 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='peatones_aruco'>
+        <pose frame=''>2.07855 0.844264 0.012788 1e-06 -1e-06 1.3e-05</pose>
+        <scale>1 1 1</scale>
+        <link name='link_15'>
+          <pose frame=''>2.07855 0.844264 0.012788 1e-06 -1e-06 1.3e-05</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 -9.8 0 -0 0</acceleration>
+          <wrench>0 0 -0.196 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='rotonda_aruco'>
+        <pose frame=''>1.75464 2.0045 0.012787 1e-06 -2e-06 -0</pose>
+        <scale>1 1 1</scale>
+        <link name='link_18'>
+          <pose frame=''>1.75464 2.0045 0.012787 1e-06 -2e-06 -0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 -9.8 0 -0 0</acceleration>
+          <wrench>0 0 -0.196 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='velocidad10_aruco'>
+        <pose frame=''>2.07959 2.56854 0.012778 3e-06 -3e-06 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link_20'>
+          <pose frame=''>2.07959 2.56854 0.012778 3e-06 -3e-06 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 -9.8 0 -0 0</acceleration>
+          <wrench>0 0 -0.196 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='velocidad20_aruco'>
+        <pose frame=''>3.47891 1.45469 0.012788 1e-06 -5e-06 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link_21'>
+          <pose frame=''>3.47891 1.45469 0.012788 1e-06 -5e-06 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 -9.8 0 -0 0</acceleration>
+          <wrench>0 0 -0.196 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='velocidad40_aruco'>
+        <pose frame=''>3.4811 0.707992 0.012795 2.2e-05 0.000401 -0.001912</pose>
+        <scale>1 1 1</scale>
+        <link name='link_22'>
+          <pose frame=''>3.4811 0.707992 0.012795 2.2e-05 0.000401 -0.001912</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 -9.76377 -5.6e-05 -7.5e-05 0</acceleration>
+          <wrench>0 0 -0.195275 0 -0 0</wrench>
         </link>
       </model>
       <light name='sun'>
         <pose frame=''>0 0 10 0 -0 0</pose>
       </light>
     </state>
-    <model name='peatones_qr'>
-      <link name='link_6'>
+    <model name='rotonda_aruco'>
+      <link name='link_18'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <inertial>
           <mass>0.02</mass>
@@ -298,7 +298,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/ROTONDA/rotonda_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -311,7 +311,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/ROTONDA/rotonda_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -364,10 +364,10 @@
       </link>
       <static>0</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>1.99131 0.863622 0 0 -0 0</pose>
+      <pose frame=''>1.68984 2.09587 0 0 -0 0</pose>
     </model>
-    <model name='parar_qr'>
-      <link name='link_4'>
+    <model name='velocidad10_aruco'>
+      <link name='link_20'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <inertial>
           <mass>0.02</mass>
@@ -388,7 +388,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PARAR/parar_qr.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD10/velo10_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -401,7 +401,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PARAR/parar_qr.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD10/velo10_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -454,189 +454,9 @@
       </link>
       <static>0</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>2.01963 3.4622 0 0 -0 0</pose>
+      <pose frame=''>2.03859 2.73604 0 0 -0 0</pose>
     </model>
-    <model name='rotonda_qr'>
-      <link name='link_9'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <inertial>
-          <mass>0.02</mass>
-          <inertia>
-            <ixx>0.166667</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.166667</iyy>
-            <iyz>0</iyz>
-            <izz>0.166667</izz>
-          </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
-        </inertial>
-        <gravity>1</gravity>
-        <self_collide>0</self_collide>
-        <kinematic>0</kinematic>
-        <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
-          <geometry>
-            <mesh>
-              <uri>file://models/stl/SENALES_QR/ROTONDA/rotonda_qr.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <cast_shadows>1</cast_shadows>
-          <transparency>0</transparency>
-        </visual>
-        <collision name='collision'>
-          <laser_retro>0</laser_retro>
-          <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
-          <geometry>
-            <mesh>
-              <uri>file://models/stl/SENALES_QR/ROTONDA/rotonda_qr.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <surface>
-            <friction>
-              <ode>
-                <mu>1</mu>
-                <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
-              </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
-            </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
-            <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
-              <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
-              </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
-            </contact>
-          </surface>
-        </collision>
-      </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>1.73412 2.02673 0 0 -0 0</pose>
-    </model>
-    <model name='ceda_qr'>
-      <link name='link_0'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <inertial>
-          <mass>0.02</mass>
-          <inertia>
-            <ixx>0.166667</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.166667</iyy>
-            <iyz>0</iyz>
-            <izz>0.166667</izz>
-          </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
-        </inertial>
-        <gravity>1</gravity>
-        <self_collide>0</self_collide>
-        <kinematic>0</kinematic>
-        <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
-          <geometry>
-            <mesh>
-              <uri>file://models/stl/SENALES_QR/CEDA/ceda_qr.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <cast_shadows>1</cast_shadows>
-          <transparency>0</transparency>
-        </visual>
-        <collision name='collision'>
-          <laser_retro>0</laser_retro>
-          <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
-          <geometry>
-            <mesh>
-              <uri>file://models/stl/SENALES_QR/CEDA/ceda_qr.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <surface>
-            <friction>
-              <ode>
-                <mu>1</mu>
-                <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
-              </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
-            </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
-            <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
-              <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
-              </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
-            </contact>
-          </surface>
-        </collision>
-      </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>2.03124 1.47221 0 0 -0 0</pose>
-    </model>
-    <model name='velocidad40_qr'>
+    <model name='parar_aruco'>
       <link name='link_13'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <inertial>
@@ -658,7 +478,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PARAR/parar_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -671,7 +491,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PARAR/parar_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -724,10 +544,10 @@
       </link>
       <static>0</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>3.11751 0.774809 0 0 -0 0</pose>
+      <pose frame=''>2.09208 3.32456 0 0 -0 0</pose>
     </model>
-    <model name='velocidad20_qr'>
-      <link name='link_12'>
+    <model name='peatones_aruco'>
+      <link name='link_15'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <inertial>
           <mass>0.02</mass>
@@ -748,7 +568,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD20/velo20_qr.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PEATONES/peatones_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -761,7 +581,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD20/velo20_qr.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PEATONES/peatones_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -814,10 +634,10 @@
       </link>
       <static>0</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>3.38192 1.45634 0 0 -0 0</pose>
+      <pose frame=''>2.06722 0.844264 0 0 -0 0</pose>
     </model>
-    <model name='velocidad10_qr_0'>
-      <link name='link_11'>
+    <model name='ceda_aruco'>
+      <link name='link_9'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <inertial>
           <mass>0.02</mass>
@@ -838,7 +658,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD10/velo10_qr.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/CEDA/ceda_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -851,7 +671,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD10/velo10_qr.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/CEDA/ceda_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -904,10 +724,10 @@
       </link>
       <static>0</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>2.0512 2.52693 0 0 -0 0</pose>
+      <pose frame=''>2.12507 1.51468 0 0 -0 0</pose>
     </model>
-    <model name='derecha_qr_0'>
-      <link name='link_1'>
+    <model name='velocidad40_aruco'>
+      <link name='link_22'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <inertial>
           <mass>0.02</mass>
@@ -928,7 +748,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/DERECHA/dcha_qr.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD40/velo40_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -941,7 +761,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/DERECHA/dcha_qr.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD40/velo40_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -994,11 +814,191 @@
       </link>
       <static>0</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>2.96597 2.29515 0 0 -0 0</pose>
+      <pose frame=''>3.36342 0.958283 0 0 -0 0</pose>
+    </model>
+    <model name='velocidad20_aruco'>
+      <link name='link_21'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <inertial>
+          <mass>0.02</mass>
+          <inertia>
+            <ixx>0.166667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.166667</iyy>
+            <iyz>0</iyz>
+            <izz>0.166667</izz>
+          </inertia>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+        </inertial>
+        <gravity>1</gravity>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD20/velo20_aruco.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <cast_shadows>1</cast_shadows>
+          <transparency>0</transparency>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD20/velo20_aruco.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>1</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0</restitution_coefficient>
+              <threshold>1e+06</threshold>
+            </bounce>
+            <contact>
+              <collide_without_contact>0</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>1</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+      </link>
+      <static>0</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose frame=''>3.38788 1.45469 0 0 -0 0</pose>
+    </model>
+    <model name='derecha_aruco'>
+      <link name='link_10'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <inertial>
+          <mass>0.02</mass>
+          <inertia>
+            <ixx>0.166667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.166667</iyy>
+            <iyz>0</iyz>
+            <izz>0.166667</izz>
+          </inertia>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+        </inertial>
+        <gravity>1</gravity>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file://models/stl/SENALES_ARUCOS/DERECHA/cha_aruco.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <cast_shadows>1</cast_shadows>
+          <transparency>0</transparency>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file://models/stl/SENALES_ARUCOS/DERECHA/cha_aruco.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>1</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0</restitution_coefficient>
+              <threshold>1e+06</threshold>
+            </bounce>
+            <contact>
+              <collide_without_contact>0</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>1</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+      </link>
+      <static>0</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose frame=''>2.8055 2.38644 0 0 -0 0</pose>
     </model>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>4.58832 0.711195 2.25142 -0 0.675643 2.6722</pose>
+        <pose frame=''>5.44972 5.59166 1.49378 0 0.215643 -2.45099</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
