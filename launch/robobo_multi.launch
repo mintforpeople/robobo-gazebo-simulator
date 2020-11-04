@@ -17,7 +17,7 @@
 		<param name="robot_description" command="$(find xacro)/xacro --inorder '$(find robobo_gazebo)/urdf/robobo.urdf.xacro' 
 			pusher:=true
 			camera_front:=true
-			emotion:=SAD
+			emotion:=NORMAL
 			visualize_irSensor:=false 
 			visualize_camera:=false" />
 
@@ -44,7 +44,7 @@
 		<param name="robot_description" command="$(find xacro)/xacro --inorder '$(find robobo_gazebo)/urdf/robobo.urdf.xacro' 
 			pusher:=true
 			camera_front:=true
-			emotion:=SAD
+			emotion:=NORMAL
 			visualize_irSensor:=false 
 			visualize_camera:=false" />
 
