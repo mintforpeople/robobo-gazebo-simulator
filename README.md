@@ -150,10 +150,14 @@ For instance, to listen the TILT position topic:
 $ rostopic echo /robot/robobo/tilt
 ```
 
+Please, refer to the ROS documentation for a detailed explanation of the Robobo sensors:
+
+https://github.com/mintforpeople/robobo-programming/wiki/ROS1
+
 ## ROS services
 
 In addition, the following actuators are available:
-* *Wheel motors
+* Wheel motors
 * PANT-TILT unit motors
 
 It is possible to access the list of topics using:
@@ -222,6 +226,10 @@ error:
 ```
 
 That will make the Gazebo model move at speed 20 on each wheel during 2 seconds.
+
+Please, refer to the ROS documentation for a detailed explanation of the Robobo actuators:
+
+https://github.com/mintforpeople/robobo-programming/wiki/ROS1
 
 ## Simulation configuration
 
