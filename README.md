@@ -6,18 +6,39 @@ Repository for Robobo robot simulation in the Gazebo environment.
 
 * Ubuntu 16.04
 * Robot Operating System - Kinetic
+     * http://wiki.ros.org/ROS/Installation
+     * http://wiki.ros.org/ROS/Tutorials
 * Gazebo7
+     * http://gazebosim.org/tutorials
 
 ## Installation
 
-This model uses the original Robobo ROS messages, so it is necessary to use the robobo_msgs package, avaliable on https://github.com/mintforpeople/robobo-ros-msgs.
-Clone the respository in your own workspace and compile:
-
+The first step is to create a ROS Workspace:
 
 ```bash
-$ cd <catkin_ws>/src
+$ mkdir –p ~/<workspace_name>/src
+$ cd ~/<workspace_name>
+$ catkin_make
+```
+
+This model uses the original Robobo ROS messages, so it is necessary to clone the Robobo simulator repositories (model and messages) in your own workspace:
+
+```bash
+$ cd ~/<workspace_name>/src
 $ git clone https://github.com/mintforpeople/robobo-gazebo-simulator
 $ git clone https://github.com/mintforpeople/robobo-ros-msgs
+```
+
+Next, you have to clone the Opencv-apps repository because the Robobo ROS messages package depends on it:
+
+```bash
+$ git clone https://github.com/ros-perception/opencv_apps
+```
+
+Finally, you have to build the workspace:
+
+```bash
+$ cd ~/<workspace_name>
 $ catkin_make
 ```
 
@@ -26,7 +47,7 @@ $ catkin_make
 You must do the first two steps in each new terminal you need to use the model:
 
 ```bash
-$ cd <catkin_ws>/src
+$ cd ~/<workspace_name>
 $ source devel/setup.bash
 ```
 
@@ -35,6 +56,12 @@ To launch the model:
 ```bash
 $ roslaunch robobo_gazebo robobo.launch
 ```
+
+As a consequence, Gazebo will open and the Robobo model will be shown, in a similar way as in the following image (depending on the selected world file):
+
+<p align="center">
+<img src="https://github.com/mintforpeople/robobo-gazebo-simulator/blob/master/gazebo.png" width=700" 
+</p>
 
 To interact with the model you have the following ROS topics and services. They are the same ones used in the real Robobo, there is more information here: https://github.com/mintforpeople/robobo-programming/wiki/ROS.
 
