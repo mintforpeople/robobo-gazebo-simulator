@@ -42,7 +42,7 @@ $ cd ~/<workspace_name>
 $ catkin_make
 ```
 
-## Basic Usage
+## Model launch
 
 You must do the first two steps in each new terminal you need to use the model:
 
@@ -63,30 +63,272 @@ As a consequence, Gazebo will open and the Robobo model will be shown, in a simi
 <img src="https://github.com/mintforpeople/robobo-gazebo-simulator/blob/master/gazebo.png" width=700" 
 </p>
 
-To interact with the model you have the following ROS topics and services. They are the same ones used in the real Robobo, there is more information here: https://github.com/mintforpeople/robobo-programming/wiki/ROS.
+To control the robot from a Python script, please refer to the video tutorial available at:
 
-Topics availables:
+https://documentation.theroboboproject.com/gazebo/tutorial_gazebo.mp4
 
-* /robot/[\<modelName\>/]moveWheels
-* /robot/[\<modelName\>/]resetWheels
-* /robot/[\<modelName\>/]movePanTilt
-* /robot/[\<modelName\>/]unlock/move
-* /robot/[\<modelName\>/]accel
-* /robot/[\<modelName\>/]camera/camera_info
-* /robot/[\<modelName\>/]camera/image/compressed
-* /robot/[\<modelName\>/]irs
-* /robot/[\<modelName\>/]orientation
-* /robot/[\<modelName\>/]pan
-* /robot/[\<modelName\>/]tilt
-* /robot/[\<modelName\>/]wheels
+From minute 5:30 onwards, there is a detailed explanation regarding it.
 
-Services availables:
+## ROS topics
 
-* /robot/[\<modelName\>/]moveWheels
-* /robot/[\<modelName\>/]resetWheels
-* /robot/[\<modelName\>/]movePanTilt
+Robobo publishes all its sensors as ROS topics. The current available sensors in simulation are:
 
-[\<modelName\>] is the Robobos name in the launch file (for example, see [here](launch/robobo_multi.launch)). If only launching one Robobo the modelName wont be present (for example, see [here](launch/robobo.launch)). This is the same behaviour than the real Robobo.
+* Infrared sensors
+* Motor encoders (wheels and PAN-TILT unit)
+* Inertial Measurement Unit (accelerometer, orientation)
+* Ambient light
+* Base battery
+* Smartphone battery
+* Camera image (compressed)
+
+It is possible to access the list of topics using:
+
+```bash
+$ cd robobo_ws/
+$ source devel/setup.bash
+$ rostopic list
+```
+
+This is the current list of available topics in simulation:
+
+* /robot/robobo/accel
+* /robot/robobo/ambientlight
+* /robot/robobo/back_c
+* /robot/robobo/back_l
+* /robot/robobo/back_r
+* /robot/robobo/battery/base
+* /robot/robobo/battery/phone
+* /robot/robobo/camera/camera_info
+* /robot/robobo/camera/image
+* /robot/robobo/camera/image/compressed
+* /robot/robobo/camera/image/compressed/parameter_descriptions
+* /robot/robobo/camera/image/compressed/parameter_updates
+* /robot/robobo/camera/image/compressedDepth
+* /robot/robobo/camera/image/compressedDepth/parameter_descriptions
+* /robot/robobo/camera/image/compressedDepth/parameter_updates
+* /robot/robobo/camera/image/theora
+* /robot/robobo/camera/image/theora/parameter_descriptions
+* /robot/robobo/camera/image/theora/parameter_updates
+* /robot/robobo/camera/parameter_descriptions
+* /robot/robobo/camera/parameter_updates
+* /robot/robobo/front_c
+* /robot/robobo/front_l
+* /robot/robobo/front_ll
+* /robot/robobo/front_r
+* /robot/robobo/front_rr
+* /robot/robobo/image_view/compressed/parameter_descriptions
+* /robot/robobo/image_view/compressed/parameter_updates
+* /robot/robobo/image_view/ output
+* /robot/robobo/image_view/parameter_descriptions
+* /robot/robobo/image_view/parameter_updates
+* /robot/robobo/irs
+* /robot/robobo/light_sensor/camera_info
+* /robot/robobo/light_sensor/image_raw
+* /robot/robobo/light_sensor/image_raw/compressed
+* /robot/robobo/light_sensor/image_raw/compressed/parameter_descriptions
+* /robot/robobo/light_sensor/image_raw/compressed/parameter_updates
+* /robot/robobo/light_sensor/image_raw/compressedDepth
+* /robot/robobo/light_sensor/image_raw/compressedDepth/parameter_descriptions
+* /robot/robobo/light_sensor/image_raw/compressedDepth/parameter_updates
+* /robot/robobo/light_sensor/image_raw/theora
+* /robot/robobo/light_sensor/image_raw/theora/parameter_descriptions
+* /robot/robobo/light_sensor/image_raw/theora/parameter_updates
+* /robot/robobo/light_sensor/parameter_descriptions
+* /robot/robobo/light_sensor/parameter_updates
+* /robot/robobo/movePanTilt
+* /robot/robobo/moveWheels
+* /robot/robobo/orientation
+* /robot/robobo/pan
+* /robot/robobo/resetWheelsCommand
+* /robot/robobo/tilt
+* /robot/robobo/unlock/move
+* /robot/robobo/wheels
+
+For instance, to listen the TILT position topic:
+
+```bash
+$ rostopic echo /robot/robobo/tilt
+```
+
+## ROS services
+
+In addition, the following actuators are available:
+* *Wheel motors
+* PANT-TILT unit motors
+
+It is possible to access the list of topics using:
+
+```bash
+$ rosservice list
+```
+
+This is the current list of available services in simulation:
+
+* /robobo/robobo/body/set_power_load
+* /robobo/robobo/tilt_smartphone/set_power_load
+* /robot/robobo/camera/image/compressed/set_parameters
+* /robot/robobo/camera/image/compressedDepth/set_parameters
+* /robot/robobo/camera/image/theora/set_parameters
+* /robot/robobo/camera/set_camera_info
+* /robot/robobo/camera/set_parameters
+* /robot/robobo/image_view/compressed/set_parameters
+* /robot/robobo/image_view/get_loggers
+* /robot/robobo/image_view/set_logger_level
+* /robot/robobo/image_view/set_parameters
+* /robot/robobo/light_sensor/image_raw/compressed/set_parameters
+* /robot/robobo/light_sensor/image_raw/compressedDepth/set_parameters
+* /robot/robobo/light_sensor/image_raw/theora/set_parameters
+* /robot/robobo/light_sensor/set_camera_info
+* /robot/robobo/light_sensor/set_parameters
+* /robot/robobo/movePanTilt
+* /robot/robobo/moveWheels
+* /robot/robobo/resetWheels
+* /robot/robobo/robobo_irs/get_loggers
+* /robot/robobo/robobo_irs/set_logger_level
+
+For instance, to call the service that moves the wheel motors, we can do the following:
+
+```bash
+$ rosservice call /robot/robobo/moveWheels
+```
+
+The output would be something like this:
+
+```bash
+lspeed:
+  data: 0
+rspeed:
+  data: 0
+time:
+  data: 0
+unlockid:
+  data: 0
+error:
+  data: 0
+```
+That we can edit with our specific parameters, for instance:
+
+```bash
+lspeed:
+  data: 20
+rspeed:
+  data: 20
+time:
+  data: 2000
+unlockid:
+  data: 0
+error:
+  data: 0
+```
+
+That will make the Gazebo model move at speed 20 on each wheel during 2 seconds.
+
+## Simulation configuration
+
+The simulation can be configured in many ways. First, the launch file (https://github.com/mintforpeople/robobo-gazebo-simulator/blob/master/launch/robobo.launch) allows us to set the main configuration parameters of the simulation. Specifically:
+
+To change the simulated world, just modify "test.world" by the name of the world you want to use in the top part of the launch file:
+
+```xml
+<!--craete a new world-->
+	<include file="$(find gazebo_ros)/launch/empty_world.launch">
+		<!-- You can change the world name for your own -->
+		<arg name="world_name" value="$(find robobo_gazebo)/worlds/test.world"/>
+		<arg name="paused" value="false"/>
+	</include>
+```
+
+The model description consists of five configurable parameters:
+
+```xml
+<!--define parameters-->
+		<param name="tf_prefix" value="robobo_tf" />
+		<arg name="robobo_name" default="robobo"/>
+		<param name="robot_description" command="$(find xacro)/xacro --inorder '$(find robobo_gazebo)/urdf/robobo.urdf.xacro' 
+			pusher:=true
+			camera_front:=true
+			emotion:=NORMAL
+			visualize_irSensor:=false 
+			visualize_camera:=false" />
+```
+
+1. _pusher_: determines whether or not the robot carries the pusher piece. 
+     * Values: false=without pusher, true=with pusher.
+2. _camera_front_: Use the front or back camera of the Smartphone.     
+     * Values: false=front camera, true=back camera.
+3. _emotion_: changes the Robot's facial expression that is displayed in the Smartphone's screen. 
+     * Values: HAPPY, SAD, ANGRY, SMYLING, LAUGHTING, EMBARRASSED, SURPRISED, IN_LOVE, NORMAL, SLEEPING, AFRAID and TIRED.
+4. _visualize_irsensor_: determines if the infrared sensors are displayed in the gazebo model.
+     * Values: true, false.
+5. _visualize_camera_: determines if a camera preview is displayed in gazebo.
+     * Values: true, false.
+
+
+## Model configuration
+
+The robot model can be configured through the file robobo.urdf.xacro (https://github.com/mintforpeople/robobo-gazebo-simulator/blob/master/urdf/robobo.urdf.xacro) which allows to adapt its response to the specific features of the user's smartphone. Specifically, the following parameters are available (in the same order as shown in the file):
+
+1. Change the dimensions and mass of the smartphone
+ 
+2. Change the size of the camera image and the position on the smartphone.
+ 
+3. Change the position and field of view (fov) of the light sensor.
+ 
+4. Change the IMU characteristics, position, noise level and offset.
+ 
+5. Change the initial battery level of the cradle and smartphone.
+
+```xml
+<!--Create tilt-smartphone-->
+		<xacro:tilt_link mass="0.2" width="0.0778" length="0.1581" depth="0.0077" emotion_link="$(arg emotion)"/>
+
+		<!--Create camera sensor-->
+		<xacro:camera_sensor name="front_camera" width="480" height="640" x="0.1479" y="0.011" z="0" camera="$(arg camera_front)" visualize="$(arg visualize_camera)"/>
+
+		<!--Create light sensor-->
+		<xacro:light_sensor x="0.1479" y="0.011" z="0" fov="0.3"/>
+
+		<!--Create IMU sensor-->
+		<xacro:IMU_sensor name="IMU" x="0" y="0" z="0" roll="0" pitch="0" yaw="0" noise="0">
+			<xyzOffset>0 0 0</xyzOffset>
+			<rpyOffset>0 0 0</rpyOffset>
+		</xacro:IMU_sensor>
+
+		<!--Define base and smartphone battery charge in percent-->
+		<xacro:base_battery initialCharge="90"/>
+		<xacro:phone_battery initialCharge="85"/>
+```
+
+## Advanced configuration
+
+The file model.urdf.xacro (https://github.com/mintforpeople/robobo-gazebo-simulator/blob/master/urdf/robobo/model.urdf.xacro) contains the xacro:macro code with all the definitions and settings from the previous files. It consists of the following macros:
+
+* xacro:macro name = "tilt_link": creates the Robot Tilt System, configuring the size of the Smartphone and the Robot's face.
+* xacro:macro name = "base_battery": creates the base battery, as a parameter the initial charge in percentage.
+* xacro:macro name = "phone_battery": creates the smartphone battery, as parameter the initial charge in percentage.
+* xacro:macro name = "gazebo_physics_dynamic": defines the physical characteristics of the models, to perform the dynamic calculations in gazebo. 
+* xacro:macro name = "infrared_link: creates a "ghost" link to place the infrared sensors.
+* xacro:macro name = "infrared": creates the infrared sensors, both the one used in gazebo and the one used to visualize in rviz.
+* xacro:macro name = "camera_sensor": creates the smartphone camera.
+* xacro:macro name = "light_sensor": creates the light sensor.
+* xacro:macro name = "IMU_sensor": creates the IMU.
+* xacro:macro name = "model_plugin": runs the plugins that should be active from the beginning of the model creation.
+* xacro:macro name = "robobo_link": creates the base and Pan system of the robobo, defining the joints, infrared sensors, the physics of the models and whether or not it should carry the Pusher
+
+## World configuration
+
+There are several world models created specifically for Robobo, that can be accessed from: https://github.com/mintforpeople/robobo-gazebo-simulator/tree/master/worlds
+
+At this moment, the following worlds are available:
+
+* Garage
+* Table
+* Robobo city
+* Labyrinth
+
+In addition, different objects that can be included in these worlds have been modeled, so the robot can interact with them. They can be downloaded from: 
+
+https://documentation.theroboboproject.com/gazebo/models_editor_models.zip
 
 ## Multi robot enviroment
 
