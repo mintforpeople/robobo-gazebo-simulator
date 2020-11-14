@@ -1,3 +1,6 @@
+ /*This work has been funded by rosin.org (contract agreement 732287) 
+ through EP project "Robobo AI"*/
+
 /*******************************************************************************
  *
  *   Copyright 2019, Manufactura de Ingenios Tecnológicos S.L.
