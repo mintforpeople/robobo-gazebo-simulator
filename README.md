@@ -276,7 +276,7 @@ The robot model can be configured through the file robobo.urdf.xacro (https://gi
  
 4. Change the IMU characteristics, position, noise level and offset.
  
-5. Change the initial battery level of the cradle and smartphone.
+5. Change the initial battery level of the base and smartphone.
 
 ```xml
 <!--Create tilt-smartphone-->
@@ -335,53 +335,68 @@ https://documentation.theroboboproject.com/gazebo/models_editor_models.zip
 This Gazebo package supports multi robot enviroments. To spawn a Robobo you should add a group tag like the following to the launch file (see [here](launch/robobo_multi.launch)):
 
 ```xml
-<group ns="NAME*">
-<param name="tf_prefix" value="NAME*_tf" />
-<arg name="robobo_name" default="NAME*"/>
-<param name="robot_description" command="$(find xacro)/xacro --inorder '$(find robobo_gazebo)/urdf/robobo.urdf.xacro' 
-     pusher:=true
-     camera_front:=true
-     emotion:=SAD
-     visualize_irSensor:=false 
-     visualize_camera:=false" />
-<node name="robobo_model" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -x 0 -y 0 -z 0 -R 0 -P 0 -Y 0  -model $(arg robobo_name) summit -param robot_description"/>
-<node name="robobo_irs" pkg="robobo_gazebo" type="robobo_irs" args="-n $(arg robobo_name)"/>
-<node name= "image_view" pkg="image_view" type= "image_view" respawn= "false" output ="screen">
-     <remap from="image" to="/robot/$(arg robobo_name)/light_sensor/image_raw"/>
-     <param name="autosize" value="true"/>
-     <param name="image_transport" value="compressed"/>
-</node>
-</group>
+	<group ns="NAME*">
+		
+		<!--define parameters-->
+		<param name="tf_prefix" value="NAME*_tf" />
+		<arg name="robobo_name" default="NAME*"/>
+		<param name="robot_description" command="$(find xacro)/xacro --inorder '$(find robobo_gazebo)/urdf/robobo.urdf.xacro' 
+			pusher:=true
+			camera_front:=true
+			emotion:=NORMAL
+			visualize_irSensor:=false 
+			visualize_camera:=false" />
+
+		<!--launch robobo model-->
+		<node name="robobo_model" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -x 0 -y 0 -z 0 -R 0 -P 0 -Y 0  -model $(arg robobo_name) summit -param robot_description"/>
+
+		<!--launch infrared sensors-->
+		<node name="robobo_irs" pkg="robobo_gazebo" type="robobo_irs" args="-n $(arg robobo_name)"/>
+
+		<!--launch image node for light sensor-->
+		<node name= "image_view" pkg="image_view" type= "image_view" respawn= "false" output ="screen">
+			<remap from="image" to="/robot/$(arg robobo_name)/light_sensor/image_raw"/>
+			<param name="autosize" value="true"/>
+			<param name="image_transport" value="compressed"/>
+		</node>
+	</group>
 ```
 
-Where *NAME* should be changed to a unique name that will help to identify that specific robot. So each time you want to execute a script that communicates with that Robobo remember to specify the namespace; ROS allows you to change that using the private variable "*_ns*".
+Where *NAME* should be changed to a unique name that will help to identify each specific robot. So each time you want to execute a script that communicates with that Robobo, remember to specify the namespace; ROS allows you to change that using the private variable "*_ns*".
 
 ### Example
 
-> rosrun robobo_gazebo moveTest.py __ns:=robot _lspeed:=60 _time:=1000
+To launch a example script in multi-robot configuration, in addition to include the robots in the launch file, an appropriate script must be developed. 
 
-or
+To launch such script, the following steps should be performed:
 
-> rosrun robobo_gazebo moveTest.py __ns:=robot/robobo1 _lspeed:=60 _time:=1000
+```bash
+$ cd robobo_ws/
+$ source devel/setup.bash
+$ roslaunch robobo_gazebo robobo_multi.launch
+```
+And in a different terminal window:
 
-The previous command will run the moveTest.py script and will set the private variables *lspeed*, *time* and *_ns*; effectively commanding the robobo1 to move left wheel at 60 speed for 1000 milliseconds.
+```bash
+$ cd robobo_ws/
+$ source devel/setup.bash
+$ rosrun robobo_example.py
+```
 
 ## Structure
 
 This package contains the following folders:
 
-* include: contains header files for the source code.
 * launch: contains the launch files used by roslaunch.
-* models: contains the models used by Gazebo.
+* materials: contains the facial expression of the Robobo model.
+* meshes: contains the 3D models of Robobo.
+* models: contains the models used by Gazebo in .stl format. 
 * nodes: contains the node used to republish IR sensons data.
 * plugins: contains the source code of the plugins used by the *robobo* model.
+* rviz_config: contains the rviz configuration file to visualize models and sensors.
+* urdf: containd the xacro configuration files.
 * scripts: contains test scripts and a validation script.
-* src: contains the source code used by the IR node.
-* world: contains a definition of the world used by Gazebo.
-
-## Remark
-
-This package includes one node in python with the function of publishing all infrared sensor values in only one topic. This program reads all topics published by plugin infrared_range.cpp in each ray sensor of the model and brings them all together in one topic, like in the real Robobo.
+* worlds: contains the predefined worlds included with the model.
 
 ## License
 
