@@ -19,6 +19,28 @@
  *
  ******************************************************************************/
 
+/* Derived from the work :
+/*Pooyan Jamshidi
+ *The MIT License (MIT)
+
+ *Permission is hereby granted, free of charge, to any person obtaining a copy
+ *of this software and associated documentation files (the "Software"), to deal
+ *in the Software without restriction, including without limitation the rights
+ *to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ *copies of the Software, and to permit persons to whom the Software is
+ *furnished to do so, subject to the following conditions:
+
+ *The above copyright notice and this permission notice shall be included in all
+ *copies or substantial portions of the Software.
+
+ *THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ *IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ *FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ *AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ *LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ *OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ *SOFTWARE.*/
+
 #include "include/robobo/battery_consumer.hh"
 #include "gazebo/common/Battery.hh"
 #include "gazebo/physics/physics.hh"
@@ -53,6 +75,11 @@ void BatteryConsumerPlugin::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
     this->model = _model;
     this->world = _model->GetWorld();
 
+    std::string robot_namespace = "";
+    if (_sdf->HasElement("robotNamespace")) {
+        robot_namespace = _sdf->GetElement("robotNamespace")->Get<std::string>();
+    }
+
     std::string linkName = _sdf->Get<std::string>("link_name");
     this->link = _model->GetLink(linkName);
 
@@ -66,9 +93,9 @@ void BatteryConsumerPlugin::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
     this->battery->SetPowerLoad(this->consumerId, powerLoad);
 
     // Create ros node and publish stuff there!
-    this->rosNode.reset(new ros::NodeHandle(model->GetName()));
+    this->rosNode.reset(new ros::NodeHandle(robot_namespace));
 
-    this->set_power_load = this->rosNode->advertiseService(this->model->GetName() + "/"+ linkName+"/set_power_load", &BatteryConsumerPlugin::SetConsumerPowerLoad, this);
+    this->set_power_load = this->rosNode->advertiseService(linkName+"/set_power_load", &BatteryConsumerPlugin::SetConsumerPowerLoad, this);
 
 
     //ROS_GREEN_STREAM("Consumer loaded");

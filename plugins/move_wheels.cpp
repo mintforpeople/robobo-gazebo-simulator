@@ -52,6 +52,14 @@ void MoveWheels::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
 
   model = _model;
 
+  // Set wheels initial positions
+  model->GetJoint("left_motor")->SetPosition(0,1*M_PI/180);
+  model->GetJoint("left_motor")->SetLowStop(0, 1*M_PI/180);
+  model->GetJoint("left_motor")->SetHighStop(0, 1*M_PI/180);
+  model->GetJoint("right_motor")->SetPosition(0, 1*M_PI/180);
+  model->GetJoint("right_motor")->SetLowStop(0, 1*M_PI/180);
+  model->GetJoint("right_motor")->SetHighStop(0, 1*M_PI/180);
+
   // Initialize ros
   if (!ros::isInitialized())
   {
@@ -115,6 +123,11 @@ void MoveWheels::HandleMoveWheels(int8_t lwp, int8_t rwp, float time, int16_t bl
   model->GetJoint("right_motor")->SetParam("fmax", 0, 0.5);
   model->GetJoint("left_motor")->SetParam("fmax", 0, 0.5);
 
+  model->GetJoint("left_motor")->SetLowStop(0,-9E16);
+  model->GetJoint("left_motor")->SetHighStop(0,9E16);
+  model->GetJoint("right_motor")->SetLowStop(0,-9E16);
+  model->GetJoint("right_motor")->SetHighStop(0,9E16);
+
   // Calculate joints target velocity
   if (lwp != 0)
   {
@@ -144,6 +157,12 @@ void MoveWheels::HandleMoveWheels(int8_t lwp, int8_t rwp, float time, int16_t bl
   model->GetJoint("right_motor")->SetParam("vel", 0, double(0));
   model->GetJoint("right_motor")->SetParam("fmax", 0, 0);
   model->GetJoint("left_motor")->SetParam("fmax", 0, 0);
+
+  model->GetJoint("left_motor")->SetLowStop(0, model->GetJoint("left_motor")->GetAngle(0));
+  model->GetJoint("left_motor")->SetHighStop(0, model->GetJoint("left_motor")->GetAngle(0));
+  model->GetJoint("right_motor")->SetLowStop(0, model->GetJoint("right_motor")->GetAngle(0));
+  model->GetJoint("right_motor")->SetHighStop(0, model->GetJoint("right_motor")->GetAngle(0));
+
   if (blockPub.getNumSubscribers() > 0)
   {
     std_msgs::Int16 unblockId;

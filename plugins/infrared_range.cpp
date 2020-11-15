@@ -259,10 +259,10 @@ void InfraredRange::PutRangeData(common::Time &_updateTime)
       double ray = parent_ray_sensor_->LaserShape()->GetRange(i);
       int index = i;
 
-      ir_value = ir_value + 0.124 * pow(ray, -1.7823);
+      ir_value = ir_value + 0.1288 * pow(ray, -1.7887);
     }
 
-    range_msg_.range = ir_value + this->GaussianKernel(0, gaussian_noise_);
+    range_msg_.range = int(ir_value + this->GaussianKernel(0, gaussian_noise_));
 
     this->parent_ray_sensor_->SetActive(true);
 
