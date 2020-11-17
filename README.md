@@ -13,33 +13,33 @@ Repository for Robobo robot simulation in the Gazebo environment.
 
 ## Installation
 
-The first step is to create a ROS Workspace:
+The first step is to open a terminal window and create a ROS Workspace:
 
 ```bash
-$ mkdir –p ~/<workspace_name>/src
-$ cd ~/<workspace_name>
-$ catkin_make
+mkdir –p ~/<workspace_name>/src
+cd ~/<workspace_name>
+catkin_make
 ```
 
 This model uses the original Robobo ROS messages, so it is necessary to clone the Robobo simulator repositories (model and messages) in your own workspace:
 
 ```bash
-$ cd ~/<workspace_name>/src
-$ git clone https://github.com/mintforpeople/robobo-gazebo-simulator
-$ git clone https://github.com/mintforpeople/robobo-ros-msgs
+cd ~/<workspace_name>/src
+git clone https://github.com/mintforpeople/robobo-gazebo-simulator
+git clone https://github.com/mintforpeople/robobo-ros-msgs
 ```
 
 Next, you have to clone the Opencv-apps repository because the Robobo ROS messages package depends on it:
 
 ```bash
-$ git clone https://github.com/ros-perception/opencv_apps
+git clone https://github.com/ros-perception/opencv_apps
 ```
 
 Finally, you have to build the workspace:
 
 ```bash
-$ cd ~/<workspace_name>
-$ catkin_make
+cd ~/<workspace_name>
+catkin_make
 ```
 
 ## Model launch
@@ -47,14 +47,14 @@ $ catkin_make
 You must do the first two steps in each new terminal you need to use the model:
 
 ```bash
-$ cd ~/<workspace_name>
-$ source devel/setup.bash
+cd ~/<workspace_name>
+source devel/setup.bash
 ```
 
 To launch the model:
 
 ```bash
-$ roslaunch robobo_gazebo robobo.launch
+roslaunch robobo_gazebo robobo.launch
 ```
 
 As a consequence, Gazebo will open and the Robobo model will be shown, in a similar way as in the following image (depending on the selected world file):
@@ -84,75 +84,17 @@ Robobo publishes all its sensors as ROS topics. The current available sensors in
 It is possible to access the list of topics using:
 
 ```bash
-$ cd robobo_ws/
-$ source devel/setup.bash
-$ rostopic list
+rostopic list
 ```
-
-This is the current list of available topics in simulation:
-
-* /robot/robobo/accel
-* /robot/robobo/ambientlight
-* /robot/robobo/back_c
-* /robot/robobo/back_l
-* /robot/robobo/back_r
-* /robot/robobo/battery/base
-* /robot/robobo/battery/phone
-* /robot/robobo/camera/camera_info
-* /robot/robobo/camera/image
-* /robot/robobo/camera/image/compressed
-* /robot/robobo/camera/image/compressed/parameter_descriptions
-* /robot/robobo/camera/image/compressed/parameter_updates
-* /robot/robobo/camera/image/compressedDepth
-* /robot/robobo/camera/image/compressedDepth/parameter_descriptions
-* /robot/robobo/camera/image/compressedDepth/parameter_updates
-* /robot/robobo/camera/image/theora
-* /robot/robobo/camera/image/theora/parameter_descriptions
-* /robot/robobo/camera/image/theora/parameter_updates
-* /robot/robobo/camera/parameter_descriptions
-* /robot/robobo/camera/parameter_updates
-* /robot/robobo/front_c
-* /robot/robobo/front_l
-* /robot/robobo/front_ll
-* /robot/robobo/front_r
-* /robot/robobo/front_rr
-* /robot/robobo/image_view/compressed/parameter_descriptions
-* /robot/robobo/image_view/compressed/parameter_updates
-* /robot/robobo/image_view/ output
-* /robot/robobo/image_view/parameter_descriptions
-* /robot/robobo/image_view/parameter_updates
-* /robot/robobo/irs
-* /robot/robobo/light_sensor/camera_info
-* /robot/robobo/light_sensor/image_raw
-* /robot/robobo/light_sensor/image_raw/compressed
-* /robot/robobo/light_sensor/image_raw/compressed/parameter_descriptions
-* /robot/robobo/light_sensor/image_raw/compressed/parameter_updates
-* /robot/robobo/light_sensor/image_raw/compressedDepth
-* /robot/robobo/light_sensor/image_raw/compressedDepth/parameter_descriptions
-* /robot/robobo/light_sensor/image_raw/compressedDepth/parameter_updates
-* /robot/robobo/light_sensor/image_raw/theora
-* /robot/robobo/light_sensor/image_raw/theora/parameter_descriptions
-* /robot/robobo/light_sensor/image_raw/theora/parameter_updates
-* /robot/robobo/light_sensor/parameter_descriptions
-* /robot/robobo/light_sensor/parameter_updates
-* /robot/robobo/movePanTilt
-* /robot/robobo/moveWheels
-* /robot/robobo/orientation
-* /robot/robobo/pan
-* /robot/robobo/resetWheelsCommand
-* /robot/robobo/tilt
-* /robot/robobo/unlock/move
-* /robot/robobo/wheels
-
 For instance, to listen the TILT position topic:
 
 ```bash
-$ rostopic echo /robot/robobo/tilt
+rostopic echo /robot/robobo/tilt
 ```
 
-Please, refer to the ROS documentation for a detailed explanation of the Robobo sensors:
+Please, refer to the ROS documentation for a detailed explanation of the Robobo sensor topics:
 
-https://github.com/mintforpeople/robobo-programming/wiki/ROS1
+https://github.com/mintforpeople/robobo-programming/wiki/Robobo-Topics
 
 ## ROS services
 
@@ -163,42 +105,13 @@ In addition, the following actuators are available:
 It is possible to access the list of topics using:
 
 ```bash
-$ rosservice list
+rosservice list
 ```
-
-This is the current list of available services in simulation:
-
-* /robobo/robobo/body/set_power_load
-* /robobo/robobo/tilt_smartphone/set_power_load
-* /robot/robobo/camera/image/compressed/set_parameters
-* /robot/robobo/camera/image/compressedDepth/set_parameters
-* /robot/robobo/camera/image/theora/set_parameters
-* /robot/robobo/camera/set_camera_info
-* /robot/robobo/camera/set_parameters
-* /robot/robobo/image_view/compressed/set_parameters
-* /robot/robobo/image_view/get_loggers
-* /robot/robobo/image_view/set_logger_level
-* /robot/robobo/image_view/set_parameters
-* /robot/robobo/light_sensor/image_raw/compressed/set_parameters
-* /robot/robobo/light_sensor/image_raw/compressedDepth/set_parameters
-* /robot/robobo/light_sensor/image_raw/theora/set_parameters
-* /robot/robobo/light_sensor/set_camera_info
-* /robot/robobo/light_sensor/set_parameters
-* /robot/robobo/movePanTilt
-* /robot/robobo/moveWheels
-* /robot/robobo/resetWheels
-* /robot/robobo/robobo_irs/get_loggers
-* /robot/robobo/robobo_irs/set_logger_level
-
 For instance, to call the service that moves the wheel motors, we can do the following:
 
 ```bash
-$ rosservice call /robot/robobo/moveWheels
-```
+rosservice call /robot/robobo/moveWheels {
 
-The output would be something like this:
-
-```bash
 lspeed:
   data: 0
 rspeed:
@@ -209,6 +122,7 @@ unlockid:
   data: 0
 error:
   data: 0
+}
 ```
 That we can edit with our specific parameters, for instance:
 
@@ -223,13 +137,15 @@ unlockid:
   data: 0
 error:
   data: 0
+
+}
 ```
 
 That will make the Gazebo model move at speed 20 on each wheel during 2 seconds.
 
-Please, refer to the ROS documentation for a detailed explanation of the Robobo actuators:
+Please, refer to the ROS documentation for a detailed explanation of the Robobo actuation services:
 
-https://github.com/mintforpeople/robobo-programming/wiki/ROS1
+https://github.com/mintforpeople/robobo-programming/wiki/Robobo-Services
 
 ## Simulation configuration
 
@@ -327,16 +243,24 @@ The file model.urdf.xacro (https://github.com/mintforpeople/robobo-gazebo-simula
 
 There are several world models created specifically for Robobo, that can be accessed from: https://github.com/mintforpeople/robobo-gazebo-simulator/tree/master/worlds
 
+
 At this moment, the following worlds are available:
 
-* Garage
-* Table
-* Robobo city
-* Labyrinth
+* Table: it contains a white table with cardboard boxes, cylinders, balls and signs with aruco markers.
+- Warehouse: it contains areas of different colors and aruco markers, in which to store the cylinders of that color.
+- City1: a small city with a straight lane and a traffic circle that lead to the same road. It has a pedestrian crossing and signs with arucos or qr markers (to choose).
+- Maze1: a maze with natural lighting and a hidden green cylinder.
+- Maze2: the same maze as the previous world, but the ambient light is off, and instead of a green cylinder, we have a light bulb emitting light.
+- City2: A city with a traffic circle and several exits. In this case the signals have QR markers.
+- City3: The same city as in "City2" but the signs have aruco markers.
 
 In addition, different objects that can be included in these worlds have been modeled, so the robot can interact with them. They can be downloaded from: 
 
 https://documentation.theroboboproject.com/gazebo/models_editor_models.zip
+
+It contains a folder called _models_editor_models_. In this folder, all the models are saved in .sdf format, so that later the user can insert them into any gazebo world. To do this, the folder must be copied into the user's folder (/home/user). 
+
+When gazebo starts, in the left side menu, press the second tab "Insert". If the models do not appear, click on the "BOX" button, located in the upper menu. Then, create a box and save it in the default folder (model_editor_models). The objects will now appear in the "Insert" tab. To put an object in the world, simply click on it and leave it in the desired position.
 
 ## Multi robot enviroment
 
@@ -379,16 +303,16 @@ To launch a example script in multi-robot configuration, in addition to include 
 To launch such script, the following steps should be performed:
 
 ```bash
-$ cd robobo_ws/
-$ source devel/setup.bash
-$ roslaunch robobo_gazebo robobo_multi.launch
+cd robobo_ws/
+source devel/setup.bash
+roslaunch robobo_gazebo robobo_multi.launch
 ```
 And in a different terminal window:
 
 ```bash
-$ cd robobo_ws/
-$ source devel/setup.bash
-$ rosrun robobo_example.py
+cd robobo_ws/
+source devel/setup.bash
+rosrun robobo_example.py
 ```
 
 ## Structure
