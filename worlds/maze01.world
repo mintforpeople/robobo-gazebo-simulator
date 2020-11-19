@@ -276,7 +276,7 @@
     <state world_name='default'>
       <sim_time>123 665000000</sim_time>
       <real_time>0 0</real_time>
-      <wall_time>1594578268 471634565</wall_time>
+      <wall_time>1605707194 202031024</wall_time>
       <iterations>0</iterations>
       <model name='cylinder_big_green'>
         <pose frame=''>1.09714 0.261467 0.05 0 -0 0</pose>
