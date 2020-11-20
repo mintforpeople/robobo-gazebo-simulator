@@ -246,16 +246,16 @@ There are several world models created specifically for Robobo, that can be acce
 
 At this moment, the following worlds are available:
 
-* 'table': it contains a white table with cardboard boxes, cylinders, balls and signs with aruco markers.
-* 'warehouse': it contains areas of different colors and aruco markers, in which to store the cylinders of that color.
-* 'city_qr': A city with a traffic circle and several exits. The traffic signals have QR markers.
-* 'city_arucos': A city with a traffic circle and several exits. The traffic signals have aruco markers.
-* 'small_city_qr': a small city with a straight lane and a traffic circle that lead to the same road. It has a pedestrian crossing and signs with qr markers.
-* 'small_city_arucos': a small city with a straight lane and a traffic circle that lead to the same road. It has a pedestrian crossing and signs with aruco markers.
-* 'maze01': a maze with natural lighting and a hidden green cylinder.
-* 'maze02': a maze with natural lighting and a hidden blue cylinder.
-* 'maze03': a maze with natural lighting and a hidden yellow cylinder.
-* 'dark_maze': the same maze as the previous world, but the ambient light is off, and instead of a green cylinder, we have a light bulb emitting light.
+* table: it contains a white table with cardboard boxes, cylinders, balls and signs with aruco markers.
+* warehouse: it contains areas of different colors and aruco markers, in which to store the cylinders of that color.
+* city_qr: A city with a traffic circle and several exits. The traffic signals have QR markers.
+* city_arucos: A city with a traffic circle and several exits. The traffic signals have aruco markers.
+* small_city_qr: a small city with a straight lane and a traffic circle that lead to the same road. It has a pedestrian crossing and signs with qr markers.
+* small_city_arucos: a small city with a straight lane and a traffic circle that lead to the same road. It has a pedestrian crossing and signs with aruco markers.
+* maze01: a maze with natural lighting and a hidden green cylinder.
+* maze02: a maze with natural lighting and a hidden blue cylinder.
+* maze03: a maze with natural lighting and a hidden yellow cylinder.
+* dark_maze: the same maze as the previous world, but the ambient light is off, and instead of a green cylinder, we have a light bulb emitting light.
 
 In addition, different objects that can be included in these worlds have been modeled, so the robot can interact with them. They can be downloaded from: 
 
