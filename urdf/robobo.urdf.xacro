@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+
+<!--This work has been funded by rosin.org (contract agreement 732287) 
+ through EP project "Robobo AI"
+
+ *******************************************************************************
+ *
+ *   Copyright 2019, Manufactura de Ingenios Tecnologicos S.L.
+ *   <http://www.mintforpeople.com>
+ *
+ *   Redistribution, modification and use of this software are permitted under
+ *   terms of the Apache 2.0 License.
+ *
+ *   This software is distributed in the hope that it will be useful,
+ *   but WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND; without even the implied
+ *   warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ *   Apache 2.0 License for more details.
+ *
+ *   You should have received a copy of the Apache 2.0 License along with
+ *   this software. If not, see <http://www.apache.org/licenses/>.
+ *
+ ******************************************************************************-->
+
+<robot name="robobo_xacro" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+	<!--Import models xacro-->
+	<xacro:include filename="$(find robobo_gazebo)/urdf/robobo/model.urdf.xacro"/>
+
+	<xacro:arg name="pusher" default="false" />
+	<xacro:arg name="camera_front" default="true"/>
+	<xacro:arg name="emotion" default="normal" />
+	<xacro:arg name="visualize_irSensor" default="false" />
+	<xacro:arg name="visualize_camera" default="false" />
+	
+	<xacro:macro name="robobo">
+		<!--Create robobo base-->
+		<xacro:robobo_link pusher_xacro= "$(arg pusher)" visualize_sensor="$(arg visualize_irSensor)"/>
+
+		<!--Create tilt-smartphone-->
+		<xacro:tilt_link mass="0.2" width="0.0778" length="0.1581" depth="0.0077" emotion_link="$(arg emotion)"/>
+
+		<!--Create camera sensor-->
+		<xacro:camera_sensor name="front_camera" width="480" height="640" x="0.1479" y="0.011" z="0" camera="$(arg camera_front)" visualize="$(arg visualize_camera)"/>
+
+		<!--Create light sensor-->
+		<xacro:light_sensor x="0.1479" y="0.011" z="0" fov="0.3"/>
+
+		<!--Create IMU sensor-->
+		<xacro:IMU_sensor name="IMU" x="0" y="0" z="0" roll="0" pitch="0" yaw="0" noise="0">
+			<xyzOffset>0 0 0</xyzOffset>
+			<rpyOffset>0 0 0</rpyOffset>
+		</xacro:IMU_sensor>
+
+		<!--Define base and smartphone battery charge in percent-->
+		<xacro:base_battery initialCharge="90"/>
+		<xacro:phone_battery initialCharge="85"/>
+
+		<!--Execute initial position and initial nodes-->
+		<xacro:model_plugin/>
+
+	</xacro:macro>
+	<xacro:robobo/>
+</robot>

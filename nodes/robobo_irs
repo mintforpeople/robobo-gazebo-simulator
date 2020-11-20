@@ -1,0 +1,35 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*- 
+# /*******************************************************************************
+#  *
+#  *   Copyright 2019, Manufactura de Ingenios Tecnológicos S.L. 
+#  *   <http://www.mintforpeople.com>
+#  *
+#  *   Redistribution, modification and use of this software are permitted under
+#  *   terms of the Apache 2.0 License.
+#  *
+#  *   This software is distributed in the hope that it will be useful,
+#  *   but WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND; without even the implied
+#  *   warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#  *   Apache 2.0 License for more details.
+#  *
+#  *   You should have received a copy of the Apache 2.0 License along with    
+#  *   this software. If not, see <http://www.apache.org/licenses/>.
+#  *
+#  ******************************************************************************/
+
+
+import argparse
+from robobo.robobo_irs import ROBOBO_IRS
+
+def start_robobo_irs():
+	"""Create a Robobo IRS object and run it"""
+	parser = argparse.ArgumentParser(description="This script starts the Robobo IRS")
+	parser.add_argument("-n", "--robobo_name", help="The name of the robot")
+	args, _ = parser.parse_known_args()
+	kwargs = vars(args)
+	robobo_name = kwargs.pop("robobo_name", None)
+	robobo_irs = ROBOBO_IRS(robobo_name)
+	robobo_irs.run()
+if __name__ == "__main__":
+	start_robobo_irs()

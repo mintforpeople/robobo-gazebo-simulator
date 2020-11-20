@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+	<world name="default">
+		<!-- A global light source -->
+		<include>
+			<uri>model://sun</uri>
+		</include>
+		<!-- A ground plane -->	
+		<include>
+			<!--<uri>model://robobo_gazebo/models/white_ground</uri>-->	
+			<uri>model://ground_plane</uri>
+		</include>
+		<light type="point" name="point">
+     			<pose>0 0 2 0 0 0</pose>
+      			<diffuse>1 1 1 1</diffuse>
+      			<specular>.1 .1 .1 1</specular>
+      			<attenuation>
+        			<range>20</range>
+        			<linear>0.2</linear>
+        			<constant>0.8</constant>
+        			<quadratic>0.01</quadratic>
+      			</attenuation>
+      			<cast_shadows>false</cast_shadows>
+    		</light>
+
+	</world>
+</sdf>

@@ -1,0 +1,37 @@
+<launch>
+	<!--craete a new world-->
+	<include file="$(find gazebo_ros)/launch/empty_world.launch">
+		<!-- You can change the world name for your own -->
+		<arg name="world_name" value="$(find robobo_gazebo)/worlds/dark_maze.world"/>
+		<arg name="paused" value="false"/>
+	</include>
+
+	<!--create a new robobo-->
+	<group ns="robot">
+	<group ns="robobo">
+		
+		<!--define parameters-->
+		<param name="tf_prefix" value="robobo_tf" />
+		<arg name="robobo_name" default="robobo"/>
+		<param name="robot_description" command="$(find xacro)/xacro --inorder '$(find robobo_gazebo)/urdf/robobo.urdf.xacro' 
+			pusher:=true
+			camera_front:=true
+			emotion:=NORMAL
+			visualize_irSensor:=true 
+			visualize_camera:=false" />
+
+		<!--launch robobo model-->
+		<node name="robobo_model" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -x 2 -y 0 -z 0 -R 0 -P 0 -Y 0  -model $(arg robobo_name) -param robot_description"/>
+
+		<!--launch infrared sensors-->
+		<node name="robobo_irs" pkg="robobo_gazebo" type="robobo_irs" args="-n $(arg robobo_name)"/>
+
+		<!--launch image node for light sensor-->
+		<node name= "image_view" pkg="image_view" type= "image_view" respawn= "false" output ="screen">
+			<remap from="image" to="/robot/$(arg robobo_name)/light_sensor/image_raw"/>
+			<param name="autosize" value="true"/>
+			<param name="image_transport" value="compressed"/>
+		</node>
+	</group>
+	</group>
+</launch>

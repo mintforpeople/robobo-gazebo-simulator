@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--This work has been funded by rosin.org (contract agreement 732287) 
+ through EP project "Robobo AI"
+
+ *******************************************************************************
+ *
+ *   Copyright 2019, Manufactura de Ingenios Tecnologicos S.L.
+ *   <http://www.mintforpeople.com>
+ *
+ *   Redistribution, modification and use of this software are permitted under
+ *   terms of the Apache 2.0 License.
+ *
+ *   This software is distributed in the hope that it will be useful,
+ *   but WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND; without even the implied
+ *   warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ *   Apache 2.0 License for more details.
+ *
+ *   You should have received a copy of the Apache 2.0 License along with
+ *   this software. If not, see <http://www.apache.org/licenses/>.
+ *
+ ******************************************************************************-->
+
+<robot name="Robobo" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<!--Tilt and Smartphone link-->
+<xacro:macro name="tilt_link" params="mass width length depth emotion_link">
+	<link name="tilt_smartphone">
+		<inertial>
+			<origin xyz="${0.01095+length/2} ${0.002} ${0.00215+depth/2}" rpy="0 0 0"/>
+			<mass value="${mass}"/>
+			<inertia ixx="${mass*(width*width+depth*depth)/12}" ixy="0" ixz="0" iyy="${mass*(depth*depth+length*length)/12}" iyz="0" izz="${mass*(length*length+width*width)/12}"/>
+		</inertial>
+		<collision>
+			<origin xyz="${0.01095+length/2} ${0.002} ${0.00215+depth/2}" rpy="0 0 0"/>
+			<geometry>
+				<box size="${length} ${width} ${depth}" />
+			</geometry>
+		</collision>
+		<visual>
+			<origin xyz="0.01 0 0.0009" rpy="0 0 0"/>
+			<geometry>
+				<mesh filename="package://robobo_gazebo/meshes/tilt_smartphone_visual.dae" />
+			</geometry>
+		</visual>
+	</link>
+
+	<link name="smartphone_image">
+		<inertial>
+			<origin xyz="0.0901 0 -0.0104" rpy="0 0 0"/>
+			<mass value="0.001"/>
+			<inertia ixx= "0.000001" ixy="0" ixz="0" iyy="0.000001" iyz="0" izz="0.000001"/>
+		</inertial>
+		<visual>
+			<origin xyz="0.0901 0 -0.01028" rpy="0 0 0"/>
+			<geometry>
+				<box size="0.123 0.07 0.00001" />
+			</geometry>
+		</visual>
+	</link>
+
+	<joint name="image_join" type="fixed">
+		<parent link="tilt_smartphone" />
+		<child link="smartphone_image"/>
+		<origin xyz="0 0.002 0.019" rpy="0 0 0"/>
+		<axis xyz="0 0 0"/>
+	</joint>
+
+	<!--Robobo face-->
+	<gazebo reference="smartphone_image">
+		<visual>
+			<material>
+				<script>
+					<uri> file://materials/scripts/emotion.material</uri>
+					<xacro:if value="${emotion_link=='HAPPY'}">
+					<name>emotion/normal</name>
+					</xacro:if>
+
+					<xacro:if value="${emotion_link=='SAD'}">
+					<name>emotion/sad</name>
+					</xacro:if>
+
+					<xacro:if value="${emotion_link=='ANGRY'}">
+					<name>emotion/angry</name>
+					</xacro:if>
+
+					<xacro:if value="${emotion_link=='SMYLING'}">
+					<name>emotion/smile</name>
+					</xacro:if>
+
+					<xacro:if value="${emotion_link=='LAUGHTING'}">
+					<name>emotion/laughting</name>
+					</xacro:if>
+
+					<xacro:if value="${emotion_link=='EMBARRASSED'}">
+					<name>emotion/very_surprised</name>
+					</xacro:if>
+
+					<xacro:if value="${emotion_link=='SURPRISED'}">
+					<name>emotion/surprised</name>
+					</xacro:if>
+
+					<xacro:if value="${emotion_link=='IN_LOVE'}">
+					<name>emotion/smile</name>
+					</xacro:if>
+
+					<xacro:if value="${emotion_link=='NORMAL'}">
+					<name>emotion/normal</name>
+					</xacro:if>
+
+					<xacro:if value="${emotion_link=='SLEEPING'}">
+					<name>emotion/sleeping</name>
+					</xacro:if>
+
+					<xacro:if value="${emotion_link=='AFRAID'}">
+					<name>emotion/afraid</name>
+					</xacro:if>
+
+					<xacro:if value="${emotion_link=='TIRED'}">
+					<name>emotion/tired</name>
+					</xacro:if>
+
+				</script>
+
+			</material>
+		</visual>
+	</gazebo>
+
+	<!--GAZEBO physic-->
+	<gazebo_physics_dynamic parent="tilt_link" mu="0.8" mu2="0.8" p_ratio="0.5" e_modulus="7e6" min_depth="0.0008"/>
+</xacro:macro>
+
+<!--Define base battery-->
+<xacro:macro name="base_battery" params="initialCharge">
+
+	<gazebo reference="body">
+		<battery name="base">
+			<voltage>7</voltage>
+		</battery>
+	</gazebo>
+
+	<gazebo>
+		<plugin name="battery" filename="libbattery_discharge.so">
+			<ros_node>battery_monitor_client</ros_node>
+			<link_name>body</link_name>
+			<battery_name>base</battery_name>
+			<constant_coef>7.4</constant_coef>
+			<linear_coef>-6.8</linear_coef>
+			<initial_charge>${initialCharge*5.0/100}</initial_charge>
+			<capacity>5.0</capacity>
+			<resistance>0.061523</resistance>
+			<smooth_current_tau>1.0</smooth_current_tau>
+			<charge_rate>0.2</charge_rate>
+		</plugin>
+		<plugin name="consumer" filename="libbattery_consumer.so">
+			<link_name>body</link_name>
+			<battery_name>base</battery_name>
+			<power_load>1</power_load>
+		</plugin>
+	</gazebo>
+</xacro:macro>
+
+<!--Define phone battery-->
+<xacro:macro name="phone_battery" params="initialCharge">
+<gazebo reference="tilt_smartphone">
+		<battery name="phone">
+			<voltage>5</voltage>
+		</battery>
+	</gazebo>
+	<gazebo>
+		<plugin name="battery" filename="libbattery_discharge.so">
+			<ros_node>battery_monitor_client</ros_node>
+			<link_name>tilt_smartphone</link_name>
+			<battery_name>phone</battery_name>
+			<constant_coef>5.5</constant_coef>
+			<linear_coef>-4.5</linear_coef>
+			<initial_charge>${initialCharge*3.5/100}</initial_charge>
+			<capacity>3.5</capacity>
+			<resistance>0.031523</resistance>
+			<smooth_current_tau>1.0</smooth_current_tau>
+			<charge_rate>0.2</charge_rate>
+		</plugin>
+		<plugin name="consumer" filename="libbattery_consumer.so">
+			<link_name>tilt_smartphone</link_name>
+			<battery_name>phone</battery_name>
+			<power_load>3</power_load>
+		</plugin>
+	</gazebo>
+</xacro:macro>
+
+<!--Define physics dynamic-->
+<xacro:macro name="gazebo_physics_dynamic" params= "parent mu mu2 p_ratio e_modulus min_depth">
+	<gazebo reference="${parent}">
+		<collision>
+			<surface>
+				<friction>
+					<ode>
+						<mu>${mu}</mu>
+						<mu2>${mu2}</mu2>
+					</ode>
+				</friction>
+				<contact>
+					<poissons_ratio>${p_ratio}</poissons_ratio>
+					<elastic_modulus>${e_modulus}</elastic_modulus>
+					<ode>
+						<min_depth>${min_depth}</min_depth>
+					</ode>
+				</contact>
+			</surface>
+		</collision>
+	</gazebo>
+</xacro:macro>
+
+<!--Infrared link for sensor-->
+<xacro:macro name="infrared_link" params="name xyz rpy">
+	<link name="${name}_link">
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<mass value="0.0001"/>
+			<inertia ixx="0.00000000001" ixy="0" ixz="0" iyy="0.00000000001" iyz="0" izz="0.00000000001"/>
+		</inertial>
+	</link>
+	<joint name="${name}_join" type="fixed">
+		<parent link="body" />
+		<child link="${name}_link"/>
+		<origin xyz="${xyz}" rpy="${rpy}"/>
+		<axis xyz="0 0 0"/>
+	</joint>
+</xacro:macro>
+
+<!--Infrared sensor-->
+<xacro:macro name="infrared" params="name *pose visualize">
+	<gazebo reference="${name}_link">
+		<sensor type="ray" name="${name}">
+			<xacro:insert_block name="pose"/>
+			<visualize>0</visualize>
+				<ray>
+					<scan>
+						<horizontal>
+							<samples>4</samples>
+							<min_angle>-0.2</min_angle>
+							<max_angle>0.17</max_angle>
+						</horizontal>
+						<vertical>
+							<samples>4</samples>
+							<min_angle>-0.12</min_angle>
+							<max_angle>0.16</max_angle>
+						</vertical>
+					</scan>
+					<range>
+						<min>0</min>
+						<max>0.4</max>
+					</range>
+				</ray>
+			<plugin name="infrared_range" filename="libinfrared_range.so">
+				<gaussianNoise>0.005</gaussianNoise>
+				<updateRate>100</updateRate>
+				<alwaysOn>true</alwaysOn>
+				<topicName>${name}</topicName>
+				<frameName>${name}_link</frameName>
+				<visualize>0</visualize>
+				<fov>0</fov>
+			</plugin>
+		</sensor>
+
+		<sensor type="ray" name="${name}rviz">
+			<xacro:insert_block name="pose"/>
+			<visualize>${visualize}</visualize>
+				<ray>
+					<scan>
+						<horizontal>
+							<samples>1</samples>
+							<min_angle>-0.001</min_angle>
+							<max_angle>0.001</max_angle>
+						</horizontal>
+						<vertical>
+							<samples>1</samples>
+							<min_angle>-0.001</min_angle>
+							<max_angle>0.001</max_angle>
+						</vertical>
+					</scan>
+					<range>
+						<min>0</min>
+						<max>0.4</max>
+					</range>
+				</ray>
+			<plugin name="gazebo_ros_range" filename="libgazebo_ros_range.so">
+				<gaussianNoise>0.005</gaussianNoise>
+				<updateRate>100</updateRate>
+				<alwaysOn>true</alwaysOn>
+				<topicName>${name}_rviz</topicName>
+				<frameName>${name}_link</frameName>
+				<visualize>1</visualize>
+				<radiation>infrared</radiation>
+				<fov>0.2</fov>
+			</plugin>
+		</sensor>
+	</gazebo>
+</xacro:macro>
+
+<!--Smartphone camera-->
+<xacro:macro name="camera_sensor" params="name width height x y z camera visualize">
+	<gazebo reference="tilt_smartphone">
+		<sensor type="camera" name="${name}">
+			<xacro:if value="${camera}">
+				<pose>${0.0115+x} ${0.002+y} ${0.006+z} ${0} ${-1.5708} ${3.1415}</pose>
+			</xacro:if>
+			<xacro:unless value="${camera}">
+				<pose>${0.0115+x} ${0.002+y} ${0.006+z} ${0} ${1.5708} ${0}</pose>
+			</xacro:unless>
+			<visualize>${visualize}</visualize>
+			<camera name="head">
+				<image>
+					<width>${width}</width>
+					<height>${height}</height>
+				</image>
+			</camera>
+			<plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+				<frameName>tilt_smartphone</frameName>
+				<alwaysOn>true</alwaysOn>
+				<updateRate>5.0</updateRate>
+				<cameraName>camera</cameraName>
+				<imageTopicName>image</imageTopicName>
+				<cameraInfoTopicName>camera_info</cameraInfoTopicName>
+			</plugin>
+		</sensor>
+	</gazebo>
+</xacro:macro>
+
+<!--Light plugin-->
+<xacro:macro name="light_sensor" params="x y z fov">
+	<gazebo reference="tilt_smartphone">
+		<sensor name="ambientlight" type="camera">
+			<pose>${0.0115+x} ${0.002+y} ${0.006+z} 0 -1.5708 3.1415</pose>
+			<visualize>false</visualize>
+			<camera name='light'>
+				<horizontal_fov>${fov}</horizontal_fov>
+				<image>
+					<width>320</width>
+					<height>240</height>
+				</image>
+				<clip>
+					<near>0.0159</near>
+					<far>2.0</far>
+				</clip>
+			</camera>
+			<plugin name="gazebo_light_sensor" filename="liblight_sensor.so">
+				<cameraName>light_sensor</cameraName>
+				<alwaysOn>true</alwaysOn>
+				<updateRate>10</updateRate>
+				<imageTopicName>image_raw</imageTopicName>
+				<cameraInfoTopicName>camera_info</cameraInfoTopicName>
+			</plugin>
+		</sensor>
+	</gazebo>
+</xacro:macro>
+
+<!--IMU sensor-->
+<xacro:macro name="IMU_sensor" params="name x y z roll pitch yaw noise *xyzOffset *rpyOffset">
+	<gazebo reference="tilt_smartphone">
+		<sensor name="imu_sensor" type="imu">
+			<pose>${0.0115+x} ${0.002+y} ${0.006+z} 0 0 0</pose>
+			<visualize>1</visualize>
+			<always_on>true</always_on>
+			<update_rate>100</update_rate>
+			<plugin name="imu_plugin" filename="librobobo_imu_sensor.so">
+				<bodyName>tilt_smartphone</bodyName>
+				<updateRateHZ>10.0</updateRateHZ>
+				<gaussianNoise>0.0</gaussianNoise>
+				<xacro:insert_block name="xyzOffset"/>
+				<xacro:insert_block name="rpyOffset"/>
+				<frameName>tilt_smartphone</frameName>
+			</plugin>
+		</sensor>
+	</gazebo>
+</xacro:macro>
+
+<!--PLUGINS OF MODEL-->
+<xacro:macro name="model_plugin">
+	<gazebo>
+		<plugin name="encoders" filename="libencoders.so"/>
+		<plugin name="move_wheels" filename="libmove_wheels.so"/>
+		<plugin name="move_pan_tilt" filename="libmove_pan_tilt.so"/>
+	</gazebo>
+</xacro:macro>
+
+<!-- LINKS -->
+<xacro:macro name="robobo_link" params="pusher_xacro visualize_sensor">
+	<!--Body link-->
+	<link name="body">
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<mass value="0.6" />
+			<inertia ixx="0.000485229" ixy="0" ixz="0" iyy="0.001227181" iyz="0" izz="0.001452813"/>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<mesh filename="package://robobo_gazebo/meshes/body_visual.dae" />
+			</geometry>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<mesh filename="package://robobo_gazebo/meshes/body_collision.dae" />
+			</geometry>
+		</collision>
+	</link>
+
+	<!--Use pusher-->
+	<xacro:if value="${pusher_xacro}">
+		<!--Pusher link-->
+		<link name="pusher_link">
+			<inertial>
+				<origin xyz="0 0 0" rpy="0 0 0" />
+				<mass value="0.046"/>
+				<inertia ixx="0.000166667" ixy="0" ixz="0" iyy="0.000166667" iyz="0" izz="0.000166667"/>
+			</inertial>
+			<visual>
+				<origin xyz="0 0 0" rpy="0 0 0" />
+				<geometry>
+					<mesh filename="package://robobo_gazebo/meshes/Pusher.dae" />
+				</geometry>
+			</visual>
+			<collision>
+				<origin xyz="0 0 0" rpy="0 0 0" />
+				<geometry>
+					<mesh filename="package://robobo_gazebo/meshes/Pusher.dae" />
+				</geometry>
+			</collision>
+		</link>
+		<!--Gazebo Material-->
+		<gazebo reference="pusher_link">
+			<visual>
+				<material>
+					<lighting>1</lighting>
+					<script>
+						<uri>file://media/materials/scripts/gazebo.material</uri>
+						<name>Gazebo/Grey</name>
+					</script>
+					<ambient>0.313 0.764 1 1</ambient>
+					<diffuse>0.313 0.764 1 1</diffuse>
+					<specular>0.01 0.01 0.01 1</specular>
+					<emissive>0 0 0 1</emissive>
+					<shader type='vertex'>
+						<normal_map>__default__</normal_map>
+					</shader>
+				</material>
+			</visual>
+		</gazebo>
+
+		<joint name="pusher_join" type="fixed">
+			<parent link="body" />
+			<child link="pusher_link"/>
+			<origin xyz="-0.0425 0 -0.0257" rpy="0 0 1.5708"/>
+			<axis xyz="0 -1 0"/>
+		</joint>
+	</xacro:if>
+
+	<!--Left wheel link-->
+	<link name="left_wheel">
+		<inertial>
+			<origin xyz="0 0.002 0" rpy="0 0 0" />
+			<mass value="0.046"/>
+			<inertia ixx="0.000014552" ixy="0" ixz="0" iyy="0.000023921" iyz="0" izz="0.000014552"/>
+		</inertial>
+		<visual name="lw_visual">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="package://robobo_gazebo/meshes/left_wheel_visual.dae" />
+			</geometry>
+		</visual>
+		<collision>
+			<origin xyz="0 0.002 0" rpy="1.5707963267948966 0 0" />
+			<geometry>
+				<cylinder radius="0.03225" length="0.026"/>
+			</geometry>
+		</collision>
+	</link>
+
+	<!--Right wheel link-->
+	<link name="right_wheel">
+		<inertial>
+			<origin xyz="0 -0.002 0" rpy="0 0 0"/>
+			<mass value="0.046"/>
+			<inertia ixx="0.000014552" ixy="0" ixz="0" iyy="0.000023921" iyz="0" izz="0.000014552"/>
+		</inertial>
+		<collision>
+			<origin xyz="0 -0.002 0" rpy="1.5707963267948966 0 0"/>
+			<geometry>
+				<cylinder radius="0.03225" length="0.026"/>
+			</geometry>
+		</collision>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<mesh filename="package://robobo_gazebo/meshes/right_wheel_visual.dae" />
+			</geometry>
+		</visual>
+	</link>
+
+	<!--Pan link-->
+	<link name="pan">
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<mass value="0.077"/>
+			<inertia ixx="0.000037326" ixy="0" ixz="0" iyy="0.000037326" iyz="0" izz="0.000074536"/>
+		</inertial>
+		<collision>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.044" length="0.003"/>
+			</geometry>
+		</collision>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<mesh filename="package://robobo_gazebo/meshes/pan_visual.dae"/>
+			</geometry>
+		</visual>
+	</link>
+
+	<!--Infrared sensor plugin-->
+	<xacro:infrared_link name="front_c" xyz="-0.0803 0 0.0002" rpy="0 0 3.1415"/> 
+	<xacro:infrared_link name="front_l" xyz="-0.0727 -0.026 0.0012" rpy="0 0.21 3.526"/> 
+	<xacro:infrared_link name="front_ll" xyz="-0.0625 -0.0405 0.0012" rpy="0 0 3.927"/> 
+	<xacro:infrared_link name="front_r" xyz="-0.0727 0.026 0.0012" rpy="0 0.21 2.758"/> 
+	<xacro:infrared_link name="front_rr" xyz="-0.0625 0.0405 0.0012" rpy="0 0 2.356"/> 
+	<xacro:infrared_link name="back_c" xyz="0.1201 0 0" rpy="0 0.21 0"/> 
+	<xacro:infrared_link name="back_l" xyz="0.1055 -0.0308 0.001" rpy="0 0 -0.524"/> 
+	<xacro:infrared_link name="back_r" xyz="0.1055 0.0308 0.001" rpy="0 0 0.524"/> 
+
+
+	<!--Infrared sensor plugin-->
+	<xacro:infrared name="front_c" visualize="${visualize_sensor}">
+		<pose>-0.0803 0 0.0002 0 0 3.1415</pose>
+	</xacro:infrared>
+	<xacro:infrared name="front_l" visualize="${visualize_sensor}">
+		<pose>-0.0727 -0.026 0.0012 0 0.21 3.526</pose>
+	</xacro:infrared>
+	<xacro:infrared name="front_ll" visualize="${visualize_sensor}">
+		<pose>-0.0625 -0.0405 0.0012 0 0 3.927</pose>
+	</xacro:infrared>
+	<xacro:infrared name="front_r" visualize="${visualize_sensor}">
+		<pose>-0.0727 0.026 0.0012 0 0.21 2.758</pose>
+	</xacro:infrared>
+	<xacro:infrared name="front_rr" visualize="${visualize_sensor}">
+		<pose>-0.0625 0.0405 0.0012 0 0 2.356</pose>
+	</xacro:infrared>
+	<xacro:infrared name="back_c" visualize="${visualize_sensor}">
+		<pose>0.1201 0 0 0 0.21 0</pose>
+	</xacro:infrared>
+	<xacro:infrared name="back_l" visualize="${visualize_sensor}">
+		<pose>0.1055 -0.0308 0.001 0 0 -0.524</pose>
+	</xacro:infrared>
+	<xacro:infrared name="back_r" visualize="${visualize_sensor}">
+		<pose>0.1055 0.0308 0.001 0 0 0.524</pose>
+	</xacro:infrared>
+
+
+	<!--GAZEBO physic-->
+	<gazebo_physics_dynamic parent="body" mu="0.05" mu2="0.05" p_ratio="0.46" e_modulus="7e8" min_depth="0.0004"/>
+	<gazebo_physics_dynamic parent="left_wheel" mu="0.8" mu2="0.8" p_ratio="0.5" e_modulus="7e6" min_depth="0.0008"/>
+	<gazebo_physics_dynamic parent="right_wheel" mu="0.8" mu2="0.8" p_ratio="0.5" e_modulus="7e6" min_depth="0.0008"/>
+	<gazebo_physics_dynamic parent="pan" mu="0.8" mu2="0.8" p_ratio="0.5" e_modulus="7e6" min_depth="0.0008"/>
+	<gazebo_physics_dynamic parent="pusher_link" mu="0.8" mu2="0.8" p_ratio="0.5" e_modulus="7e6" min_depth="0.0008"/>
+
+	<!-- JOINTS -->
+	<joint name="left_motor" type="continuous">
+		<origin xyz="-0.026644 -0.075225 0.00145" rpy="0 0 0"/>
+		<parent link="body"/>
+		<child link="left_wheel"/>
+		<axis xyz="0 -1 0"/>
+		<limit effort="5" velocity="1"/>
+		<dynamics friction="0.022"/>
+	</joint>
+
+	<joint name="right_motor" type="continuous">
+		<origin xyz="-0.026644 0.075225 0.00145" rpy="0 0 0"/>
+		<parent link="body"/>
+		<child link="right_wheel"/>
+		<axis xyz="0 -1 0" />
+		<limit effort="5" velocity="1" />
+		<dynamics friction="0.022"/>
+	</joint>
+
+	<joint name="pan_motor" type="revolute">
+		<parent link="body"/>
+		<child link="pan"/>
+		<origin xyz="-0.003759 0 0.029351" rpy="0 0 3.1415"/>
+		<axis xyz="0 0 -1"/>
+		<limit lower="-3.14" upper="3.14" effort="5" velocity="1" />
+		<dynamics friction="0.15"/>
+	</joint>
+
+	<joint name="tilt_motor" type="revolute">
+		<parent link="pan" />
+		<child link="tilt_smartphone"/>
+		<origin xyz="0 -0.0016 0.019" rpy="0 0 0"/>
+		<axis xyz="0 -1 0"/>
+		<limit lower="0" upper="2" effort="5" velocity="1" />
+		<dynamics friction="0.22"/>
+	</joint>
+
+	<!-- TRANSMISSION -->
+	<transmission name="left_Transmission">
+		<type>transmission_interface/SimpleTransmission</type>
+		<joint name="left_motor">
+			<hardwareInterface>EffortJointInterface</hardwareInterface>
+		</joint>
+		<actuator name="motor1">
+			<hardwareInterface>EffortJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+  	
+	<transmission name="rigth_Transmission">
+		<type>transmission_interface/SimpleTransmission</type>
+		<joint name="right_motor">
+			<hardwareInterface>EffortJointInterface</hardwareInterface>
+		</joint>
+		<actuator name="motor2">
+			<hardwareInterface>EffortJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+  	
+	<transmission name="pan_Transmission">
+		<type>transmission_interface/SimpleTransmission</type>
+		<joint name="pan_motor">
+			<hardwareInterface>EffortJointInterface</hardwareInterface>
+		</joint>
+		<actuator name="motor3">
+			<hardwareInterface>EffortJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+  	
+	<transmission name="tilt_Transmission">
+		<type>transmission_interface/SimpleTransmission</type>
+		<joint name="tilt_motor">
+			<hardwareInterface>EffortJointInterface</hardwareInterface>
+		</joint>
+		<actuator name="motor4">
+			<hardwareInterface>EffortJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+
+</xacro:macro>
+
+</robot>

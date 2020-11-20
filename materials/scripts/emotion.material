@@ -1,0 +1,149 @@
+material emotion/afraid
+{
+	receive_shadows off
+		technique
+		{
+			pass
+			{
+				texture_unit
+				{
+					texture ../textures/afraid_new.png
+				}
+			}
+		}
+}
+
+material emotion/angry
+{
+	receive_shadows off
+		technique
+		{
+			pass
+			{
+				texture_unit
+				{
+					texture ../textures/angry_new.png
+				}
+			}
+		}
+}
+
+material emotion/laughting
+{
+	receive_shadows off
+		technique
+		{
+			pass
+			{
+				texture_unit
+				{
+					texture ../textures/laughting_new.png
+				}
+			}
+		}
+}
+
+material emotion/normal
+{
+	receive_shadows off
+		technique
+		{
+			pass
+			{
+				texture_unit
+				{
+					texture ../textures/normal_new.png
+				}
+			}
+		}
+}
+
+material emotion/sad
+{
+	receive_shadows off
+		technique
+		{
+			pass
+			{
+				texture_unit
+				{
+					texture ../textures/sad_new.png
+				}
+			}
+		}
+}
+
+material emotion/sleeping
+{
+	receive_shadows off
+		technique
+		{
+			pass
+			{
+				texture_unit
+				{
+					texture ../textures/sleeping_new.png
+				}
+			}
+		}
+}
+
+material emotion/smile
+{
+	receive_shadows off
+		technique
+		{
+			pass
+			{
+				texture_unit
+				{
+					texture ../textures/smile_new.png
+				}
+			}
+		}
+}
+
+material emotion/surprised
+{
+	receive_shadows off
+		technique
+		{
+			pass
+			{
+				texture_unit
+				{
+					texture ../textures/surprised_new.png
+				}
+			}
+		}
+}
+
+material emotion/tired
+{
+	receive_shadows off
+		technique
+		{
+			pass
+			{
+				texture_unit
+				{
+					texture ../textures/tired_new.png
+				}
+			}
+		}
+}
+
+material emotion/very_surprised
+{
+	receive_shadows off
+		technique
+		{
+			pass
+			{
+				texture_unit
+				{
+					texture ../textures/very_surprised_new.png
+				}
+			}
+		}
+}
