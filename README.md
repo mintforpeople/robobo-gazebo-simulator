@@ -4,11 +4,11 @@ Repository for Robobo robot simulation in the Gazebo environment.
 
 ## Requirements
 
-* Ubuntu 16.04
-* Robot Operating System - Kinetic
+* Ubuntu 18.04
+* Robot Operating System - Melodic
      * http://wiki.ros.org/ROS/Installation
      * http://wiki.ros.org/ROS/Tutorials
-* Gazebo7
+* Gazebo9
      * http://gazebosim.org/tutorials
 
 ## Installation
