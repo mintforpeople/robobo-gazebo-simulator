@@ -60,7 +60,7 @@ roslaunch robobo_gazebo robobo.launch
 As a consequence, Gazebo will open and the Robobo model will be shown, in a similar way as in the following image (depending on the selected world file):
 
 <p align="center">
-<img src="https://github.com/mintforpeople/robobo-gazebo-simulator/blob/master/gazebo.png" width=700" 
+<img src="https://github.com/mintforpeople/robobo-gazebo9-simulator/blob/master/gazebo.png" width=700" 
 </p>
 
 To control the robot from a Python script, please refer to the video tutorial available at:
@@ -149,7 +149,7 @@ https://github.com/mintforpeople/robobo-programming/wiki/Robobo-Services
 
 ## Simulation configuration
 
-The simulation can be configured in many ways. First, the launch file (https://github.com/mintforpeople/robobo-gazebo-simulator/blob/master/launch/robobo.launch) allows us to set the main configuration parameters of the simulation. Specifically:
+The simulation can be configured in many ways. First, the launch file (https://github.com/mintforpeople/robobo-gazebo9-simulator/blob/master/launch/robobo.launch) allows us to set the main configuration parameters of the simulation. Specifically:
 
 To change the simulated world, just modify "test.world" by the name of the world you want to use in the top part of the launch file:
 
@@ -190,7 +190,7 @@ The model description consists of five configurable parameters:
 
 ## Model configuration
 
-The robot model can be configured through the file robobo.urdf.xacro (https://github.com/mintforpeople/robobo-gazebo-simulator/blob/master/urdf/robobo.urdf.xacro) which allows to adapt its response to the specific features of the user's smartphone. Specifically, the following parameters are available (in the same order as shown in the file):
+The robot model can be configured through the file robobo.urdf.xacro (https://github.com/mintforpeople/robobo-gazebo9-simulator/blob/master/urdf/robobo.urdf.xacro) which allows to adapt its response to the specific features of the user's smartphone. Specifically, the following parameters are available (in the same order as shown in the file):
 
 1. Change the dimensions and mass of the smartphone
  
@@ -225,7 +225,7 @@ The robot model can be configured through the file robobo.urdf.xacro (https://gi
 
 ## Advanced configuration
 
-The file model.urdf.xacro (https://github.com/mintforpeople/robobo-gazebo-simulator/blob/master/urdf/robobo/model.urdf.xacro) contains the xacro:macro code with all the definitions and settings from the previous files. It consists of the following macros:
+The file model.urdf.xacro (https://github.com/mintforpeople/robobo-gazebo9-simulator/blob/master/urdf/robobo/model.urdf.xacro) contains the xacro:macro code with all the definitions and settings from the previous files. It consists of the following macros:
 
 * xacro:macro name = "tilt_link": creates the Robot Tilt System, configuring the size of the Smartphone and the Robot's face.
 * xacro:macro name = "base_battery": creates the base battery, as a parameter the initial charge in percentage.
@@ -241,7 +241,7 @@ The file model.urdf.xacro (https://github.com/mintforpeople/robobo-gazebo-simula
 
 ## World configuration
 
-There are several world models created specifically for Robobo, that can be accessed from: https://github.com/mintforpeople/robobo-gazebo-simulator/tree/master/worlds
+There are several world models created specifically for Robobo, that can be accessed from: https://github.com/mintforpeople/robobo-gazebo9-simulator/tree/master/worlds
 
 
 At this moment, the following worlds are available:
