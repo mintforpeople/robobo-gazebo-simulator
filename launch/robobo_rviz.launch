@@ -7,6 +7,7 @@
 	</include>
 
 	<!--create a new robobo-->
+	<group ns="robot">
 	<group ns="robobo">
 		
 		<!--define parameters-->
@@ -40,5 +41,6 @@
 
 		</node>
 
+	</group>
 	</group>
 </launch>
