@@ -247,12 +247,15 @@ There are several world models created specifically for Robobo, that can be acce
 At this moment, the following worlds are available:
 
 * Table: it contains a white table with cardboard boxes, cylinders, balls and signs with aruco markers.
-- Warehouse: it contains areas of different colors and aruco markers, in which to store the cylinders of that color.
-- City1: a small city with a straight lane and a traffic circle that lead to the same road. It has a pedestrian crossing and signs with arucos or qr markers (to choose).
-- Maze1: a maze with natural lighting and a hidden green cylinder.
-- Maze2: the same maze as the previous world, but the ambient light is off, and instead of a green cylinder, we have a light bulb emitting light.
-- City2: A city with a traffic circle and several exits. In this case the signals have QR markers.
-- City3: The same city as in "City2" but the signs have aruco markers.
+* Warehouse: it contains areas of different colors and aruco markers, in which to store the cylinders of that color.
+*  City_qr: A city with a traffic circle and several exits. The traffic signals have QR markers.
+*  City_arucos: A city with a traffic circle and several exits. The traffic signals have aruco markers.
+* Small_city_qr: a small city with a straight lane and a traffic circle that lead to the same road. It has a pedestrian crossing and signs with qr markers.
+* Small_city_arucos: a small city with a straight lane and a traffic circle that lead to the same road. It has a pedestrian crossing and signs with aruco markers.
+* Maze01: a maze with natural lighting and a hidden green cylinder.
+* Maze02: a maze with natural lighting and a hidden yellow cylinder.
+* Maze03: a maze with natural lighting and a hidden blue cylinder.
+* Dark_maze: the same maze as the previous world, but the ambient light is off, and instead of a green cylinder, we have a light bulb emitting light.
 
 In addition, different objects that can be included in these worlds have been modeled, so the robot can interact with them. They can be downloaded from: 
 
