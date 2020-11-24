@@ -102,7 +102,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/cylinder_big.stl</uri>
+              <uri>file://models/stl/cylinder_big.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
