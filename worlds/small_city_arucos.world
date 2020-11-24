@@ -81,9 +81,9 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <state world_name='default'>
-      <sim_time>257 188000000</sim_time>
+      <sim_time>0 0</sim_time>
       <real_time>0 0</real_time>
-      <wall_time>1605708120 18871766</wall_time>
+      <wall_time>0 0</wall_time>
       <iterations>0</iterations>
       <model name='ceda_aruco'>
         <pose frame=''>0.52614 -0.026962 0.007938 -6e-06 6.6e-05 0</pose>

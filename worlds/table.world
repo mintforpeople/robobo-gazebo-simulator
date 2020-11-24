@@ -765,9 +765,9 @@
       <pose frame=''>-0.644248 0.066907 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>83 479000000</sim_time>
+      <sim_time>0 0</sim_time>
       <real_time>0 0</real_time>
-      <wall_time>1593616312 465797651</wall_time>
+      <wall_time>0 0</wall_time>
       <iterations>0</iterations>
       <model name='aruco00'>
         <pose frame=''>-0.070753 0.970284 0.941841 1e-06 -2e-06 1.67204</pose>

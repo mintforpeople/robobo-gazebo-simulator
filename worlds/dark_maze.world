@@ -170,9 +170,9 @@
       <pose frame=''>0.34112 0.686506 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>124 872000000</sim_time>
+      <sim_time>0 0</sim_time>
       <real_time>0 0</real_time>
-      <wall_time>1605707309 50636504</wall_time>
+      <wall_time>0 0</wall_time>
       <iterations>0</iterations>
       <model name='ground_0'>
         <pose frame=''>0.342609 0.689007 0 0 -0 0</pose>
