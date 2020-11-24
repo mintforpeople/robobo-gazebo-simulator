@@ -274,9 +274,9 @@
       <pose frame=''>0.319409 -0.013192 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>626 939000000</sim_time>
-      <real_time>1 507588015</real_time>
-      <wall_time>1605708481 58253970</wall_time>
+      <sim_time>0 0</sim_time>
+      <real_time>0 0</real_time>
+      <wall_time>0 0</wall_time>
       <iterations>361</iterations>
       <model name='cylinder_medium_yellow'>
         <pose frame=''>0.319409 -0.013192 4.7e-05 0.001871 -0.000363 -2e-06</pose>

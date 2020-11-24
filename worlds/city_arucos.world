@@ -168,9 +168,9 @@
       <pose frame=''>0.028115 0.014021 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>425 269000000</sim_time>
+      <sim_time>0 0</sim_time>
       <real_time>0 0</real_time>
-      <wall_time>1605707874 944040025</wall_time>
+      <wall_time>0 0</wall_time>
       <iterations>0</iterations>
       <model name='bigcity'>
         <pose frame=''>-0.000503 -0.002958 0.002788 0 -0 0</pose>

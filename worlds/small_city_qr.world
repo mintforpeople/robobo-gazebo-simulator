@@ -81,9 +81,9 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <state world_name='default'>
-      <sim_time>193 104000000</sim_time>
+      <sim_time>0 0</sim_time>
       <real_time>0 0</real_time>
-      <wall_time>1605707057 412992779</wall_time>
+      <wall_time>0 0</wall_time>
       <iterations>0</iterations>
       <model name='ceda_qr'>
         <pose frame=''>0.525295 -0.034016 0.007952 0.000378 -7.1e-05 -0.000165</pose>

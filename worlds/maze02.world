@@ -81,7 +81,7 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <model name='maze_02'>
-      <link name='maze_02::link_0'>
+      <link name='link_0'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <inertial>
           <mass>1</mass>
@@ -98,7 +98,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/maze02/maze_02.dae</uri>
+              <uri>model://stl/maze02/maze_02.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -111,7 +111,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/maze02/maze_02.dae</uri>
+              <uri>model://stl/maze02/maze_02.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -191,7 +191,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/cylinder_medium.stl</uri>
+              <uri>model://stl/cylinder_medium.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -218,7 +218,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/cylinder_medium.stl</uri>
+              <uri>model://stl/cylinder_medium.stl</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -274,9 +274,9 @@
       <pose frame=''>-0.880707 -1.71776 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>304 508000000</sim_time>
+      <sim_time>0 0</sim_time>
       <real_time>0 0</real_time>
-      <wall_time>1605708353 286388130</wall_time>
+      <wall_time>0 0</wall_time>
       <iterations>0</iterations>
       <model name='cylinder_medium_blue'>
         <pose frame=''>-0.046486 -0.387598 -9e-06 1.8e-05 -7e-06 0</pose>
@@ -301,7 +301,7 @@
       <model name='maze_02'>
         <pose frame=''>0.104644 -0.549463 0 0 -0 0</pose>
         <scale>1 1 1</scale>
-        <link name='maze_02::link_0'>
+        <link name='link_0'>
           <pose frame=''>0.104644 -0.549463 0 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
