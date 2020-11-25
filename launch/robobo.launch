@@ -17,7 +17,7 @@
 			pusher:=true
 			camera_front:=true
 			emotion:=NORMAL
-			visualize_irSensor:=true 
+			visualize_irSensor:=false 
 			visualize_camera:=false" />
 
 		<!--launch robobo model-->
