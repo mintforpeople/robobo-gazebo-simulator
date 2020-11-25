@@ -18,8 +18,7 @@
 			camera_front:=true
 			emotion:=NORMAL
 			visualize_irSensor:=true 
-			visualize_camera:=true
-			rviz:=true" />
+			visualize_camera:=true/>
 
 		<!--launch robobo model-->
 		<node name="robobo_model" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -x 0 -y 0 -z 0 -R 0 -P 0 -Y 0 -model $(arg robobo_name) -param robot_description"/>
