@@ -221,7 +221,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/City/city.dae</uri>
+              <uri>file://models/stl/City/city.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -239,7 +239,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/City/city.dae</uri>
+              <uri>file://models/stl/City/city.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -336,7 +336,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
+              <uri>file://models/stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -413,7 +413,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
+              <uri>file://models/stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -426,7 +426,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
+              <uri>file://models/stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -503,7 +503,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_QR/VELOCIDAD20/velo20_qr.dae</uri>
+              <uri>file://models/stl/SENALES_QR/VELOCIDAD20/velo20_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -516,7 +516,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_QR/VELOCIDAD20/velo20_qr.dae</uri>
+              <uri>file://models/stl/SENALES_QR/VELOCIDAD20/velo20_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -593,7 +593,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
+              <uri>file://models/stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -606,7 +606,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
+              <uri>file://models/stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -683,7 +683,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_QR/CEDA/ceda_qr.dae</uri>
+              <uri>file://models/stl/SENALES_QR/CEDA/ceda_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -696,7 +696,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_QR/CEDA/ceda_qr.dae</uri>
+              <uri>file://models/stl/SENALES_QR/CEDA/ceda_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -773,7 +773,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_QR/VELOCIDAD20/velo20_qr.dae</uri>
+              <uri>file://models/stl/SENALES_QR/VELOCIDAD20/velo20_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -786,7 +786,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_QR/VELOCIDAD20/velo20_qr.dae</uri>
+              <uri>file://models/stl/SENALES_QR/VELOCIDAD20/velo20_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -863,7 +863,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
+              <uri>file://models/stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -876,7 +876,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
+              <uri>file://models/stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -953,7 +953,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_QR/ROTONDA/rotonda_qr.dae</uri>
+              <uri>file://models/stl/SENALES_QR/ROTONDA/rotonda_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -966,7 +966,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_QR/ROTONDA/rotonda_qr.dae</uri>
+              <uri>file://models/stl/SENALES_QR/ROTONDA/rotonda_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1039,7 +1039,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/Dog/dog.dae</uri>
+              <uri>file://models/stl/Dog/dog.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1052,7 +1052,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/Dog/dog.dae</uri>
+              <uri>file://models/stl/Dog/dog.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
