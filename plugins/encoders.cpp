@@ -86,11 +86,30 @@ void Encoders::Callback(const common::UpdateInfo &)
   {
     // Read and transform values to degrees of right wheel joint
     int newRightWheelPos = int(round(model->GetJoint("right_motor")->Position()*180/M_PI) - rReset);
-    int newRightWheelVel = int(round(model->GetJoint("right_motor")->GetVelocity(0) * 180 / M_PI));
+    int newRightWheelVel_aux=model->GetJoint("right_motor")->GetVelocity(0);
+    int newRightWheelVel=0;
+    if (newRightWheelVel_aux!=0){
+      if (newRightWheelVel_aux<0){
+        newRightWheelVel = int(round(27*model->GetJoint("right_motor")->GetVelocity(0)/M_PI+8));
+      }
+      else{
+        newRightWheelVel = int(round(27*model->GetJoint("right_motor")->GetVelocity(0)/M_PI-8));
+      }
+    }
 
     // Read and transform values to degrees of left wheel joint
     int newLeftWheelPos = int(round(model->GetJoint("left_motor")->Position()*180/M_PI) - lReset);
-    int newLeftWheelVel = int(round(model->GetJoint("left_motor")->GetVelocity(0) * 180 / M_PI));
+    int newLeftWheelVel_aux=model->GetJoint("left_motor")->GetVelocity(0);
+    int newLeftWheelVel=0;
+    if (newLeftWheelVel_aux!=0){
+      if (newLeftWheelVel_aux<0){
+        newLeftWheelVel = int(round(27*model->GetJoint("left_motor")->GetVelocity(0)/M_PI+8));
+      }
+      else{
+        newLeftWheelVel = int(round(27*model->GetJoint("left_motor")->GetVelocity(0)/M_PI-8));
+      }
+    }
+    
     if (rightWheelPos != newRightWheelPos || rightWheelVel != newLeftWheelVel || leftWheelPos != newLeftWheelPos ||
         leftWheelVel != newLeftWheelVel)
     {
