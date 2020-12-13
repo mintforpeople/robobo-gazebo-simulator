@@ -137,7 +137,7 @@ void MoveWheels::HandleMoveWheels(int8_t lwp, int8_t rwp, float time, int16_t bl
   }
 
   if (rwp != 0){
-    rspeedGazebo = ((1.646E-06 * pow(abs_lwp, 3) + -2.850E-03 * pow(abs_lwp, 2) + 6.649 * abs_lwp + 5.114E+01) + (-2.912E-04 * pow(abs_lwp, 3) + 4.647E-02 * pow(abs_lwp, 2) + -1.339 * abs_lwp -1.225E+01) / time) * M_PI / 180;
+    rspeedGazebo = ((1.646E-06 * pow(abs_rwp, 3) + -2.850E-03 * pow(abs_rwp, 2) + 6.649 * abs_rwp + 5.114E+01) + (-2.912E-04 * pow(abs_rwp, 3) + 4.647E-02 * pow(abs_rwp, 2) + -1.339 * abs_rwp -1.225E+01) / time) * M_PI / 180;
 
   if (rwp < 0)
     rspeedGazebo = -rspeedGazebo;
