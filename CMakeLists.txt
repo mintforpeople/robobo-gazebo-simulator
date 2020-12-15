@@ -166,7 +166,7 @@ install(
 )
 
 install(
-	DIRECTORY plugins/include/${PROJECT_NAME}/
+	DIRECTORY plugins/include/robobo/
 	DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
 )
 
