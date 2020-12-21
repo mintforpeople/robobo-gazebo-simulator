@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.90.1 commit date:2020-09-23, commit time:06:43, hash:3e85bb34d0d7</authoring_tool>
+    </contributor>
+    <created>2020-12-15T11:19:52</created>
+    <modified>2020-12-15T11:19:52</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images/>
+  <library_geometries>
+    <geometry id="Table_goi-mesh" name="Table goi">
+      <mesh>
+        <source id="Table_goi-mesh-positions">
+          <float_array id="Table_goi-mesh-positions-array" count="72">0.4420505 0.2585005 -0.0381574 1.44205 0.2585005 -0.0381574 1.44205 0.1585004 -0.0381574 0.4420505 0.1585004 -0.0381574 1.44205 0.2585005 0.8418425 1.44205 0.1585004 0.8418425 0.4420505 0.2585005 0.8418425 0.4420505 0.1585004 0.8418425 0.4420505 -1.438016 -0.0381574 1.44205 -1.438016 -0.0381574 1.44205 -1.538016 -0.0381574 0.4420505 -1.538016 -0.0381574 1.44205 -1.438016 0.8418425 1.44205 -1.538016 0.8418425 0.4420505 -1.438016 0.8418425 0.4420505 -1.538016 0.8418425 0.1420502 -1.538016 0.8418425 1.74205 -1.538016 0.8418425 1.74205 -1.538016 0.9418426 0.1420502 -1.538016 0.9418426 1.74205 0.2619838 0.8418425 1.74205 0.2619838 0.9418426 0.1420502 0.2619838 0.8418425 0.1420502 0.2619838 0.9418426</float_array>
+          <technique_common>
+            <accessor source="#Table_goi-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Table_goi-mesh-normals">
+          <float_array id="Table_goi-mesh-normals-array" count="18">0 0 -1 1 0 0 0 0 1 -1 0 0 0 1 0 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#Table_goi-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Table_goi-mesh-vertices">
+          <input semantic="POSITION" source="#Table_goi-mesh-positions"/>
+        </vertices>
+        <triangles count="36">
+          <input semantic="VERTEX" source="#Table_goi-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Table_goi-mesh-normals" offset="1"/>
+          <p>0 0 1 0 2 0 0 0 2 0 3 0 1 1 4 1 5 1 1 1 5 1 2 1 4 2 6 2 7 2 4 2 7 2 5 2 6 3 0 3 3 3 6 3 3 3 7 3 1 4 0 4 6 4 6 4 4 4 1 4 2 5 7 5 3 5 7 5 2 5 5 5 8 0 9 0 10 0 8 0 10 0 11 0 9 1 12 1 13 1 9 1 13 1 10 1 12 2 14 2 15 2 12 2 15 2 13 2 14 3 8 3 11 3 14 3 11 3 15 3 9 4 8 4 14 4 14 4 12 4 9 4 10 5 15 5 11 5 15 5 10 5 13 5 16 5 17 5 18 5 16 5 18 5 19 5 17 1 20 1 21 1 17 1 21 1 18 1 20 4 22 4 23 4 20 4 23 4 21 4 22 3 16 3 19 3 22 3 19 3 23 3 17 0 16 0 22 0 22 0 20 0 17 0 18 2 23 2 19 2 23 2 18 2 21 2</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Table_goi" name="Table goi" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Table_goi-mesh" name="Table goi"/>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
