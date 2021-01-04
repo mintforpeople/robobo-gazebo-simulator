@@ -315,12 +315,12 @@ And in a different terminal window:
 ```bash
 cd robobo_ws/
 source devel/setup.bash
-rosrun robobo_example.py
+rosrun robobo-multirobot-ros.py
 ```
 In case you aim to launch the same script in different robots, you can use ROS parameters. For instance, the following command will launch the moveTest.py file (included in the scripts folder) using robobo1 as name for the robot, which will be automatically used in the topic name, avoiding to put it in the launch file. Other three parameters (left speed, righ speed and time) are included too in the command:
 
 ```bash
-rosrun robobo_gazebo moveTest.py __ns:=robobo1 _lspeed:=30 _rspeed:=30 _time:=2000
+rosrun robobo_gazebo moveTest.py __ns:=robot/robobo1 _lspeed:=30 _rspeed:=30 _time:=2000
 ```
 
 ## Structure
