@@ -124,10 +124,10 @@ void MovePanTilt::HandleMovePanTilt(int16_t panPos, int8_t panSpeed, int16_t pan
   {
     // Calculate joint target velocity
     int difPan = panPos - currentPanAngle;
-    motorVelocity =
-        (abs(difPan) * (-3.06E-05 * pow(panSpeed, 3) + 3.877E-03 * pow(panSpeed, 2) + 0.84747 * panSpeed + 8.05468) /
+     motorVelocity =
+        (abs(difPan) * (-4.46E-05 * pow(panSpeed, 3) + 4.414E-03 * pow(panSpeed, 2) + 0.88555 * panSpeed + 7.91461) /
          (abs(difPan) -
-          (-1.99E-05 * pow(panSpeed, 3) + 1.064E-03 * pow(panSpeed, 2) - 0.33034 * panSpeed - 8.9074E-01))) *
+          (-1.035E-05 * pow(panSpeed, 3) + 3.556E-03 * pow(panSpeed, 2) - 0.69108 * panSpeed - 1.02559))) *
         M_PI / 180;
 
     // Unlock joint position and set target velocity
