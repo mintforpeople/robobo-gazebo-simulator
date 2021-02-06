@@ -69,8 +69,9 @@ catkin_package(
 	infrared_range
 	robobo_imu_sensor
 	light_sensor
-
-	brass_gazebo_battery
+	battery_discharge
+        battery_consumer
+	led_color
 	
 	CATKIN_DEPENDS
 	roscpp
@@ -125,6 +126,10 @@ add_dependencies(light_sensor ${catkin_EXPORTED_TARGETS})
 ## Specify libraries to link a library or executable target against
 target_link_libraries( light_sensor ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} CameraPlugin )
 
+add_library(led_color SHARED plugins/led_color.cpp)
+add_dependencies(led_color ${catkin_EXPORTED_TARGETS})
+target_link_libraries(led_color ${GAZEBO_LIBRARIES} ${Boost_LIBRARIES} ${roscpp_LIBRARIES} ${catkin_LIBRARIES})
+
 IF(CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64")
     ADD_DEFINITIONS(-fPIC)
 ENDIF()
@@ -155,9 +160,10 @@ install(
 	encoders
 	infrared_range
 	robobo_imu_sensor
-
 	battery_discharge
         battery_consumer
+	led_color
+	
         DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 
 	ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
