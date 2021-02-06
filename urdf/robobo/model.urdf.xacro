@@ -374,6 +374,43 @@
 		</sensor>
 	</gazebo>
 </xacro:macro>
+	
+<!--LEDs-->
+<xacro:macro name="LED" params="name xyz rpy">
+	
+	<link name= "${name}">
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<mass value="0.001" />
+			<inertia ixx="0.000001" ixy="0" ixz="0" iyy="0.000001" iyz="0" izz="0.000001"/>
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<geometry>
+				<cylinder radius="0.003" length="0.0005"/>
+			</geometry>
+		</visual>
+	</link>
+
+	<joint name="${name}" type="fixed">
+		<parent link="body" />
+		<child link="${name}"/>
+		<origin xyz="${xyz}" rpy="${rpy}"/>
+		<axis xyz="0 -1 0"/>
+	</joint>
+
+	<gazebo reference="${name}">
+		<visual>
+			<material>
+				<ambient>0 0 0 1</ambient>
+				<diffuse>0 0 0 1</diffuse>
+				<specular>0 0 0 0</specular>
+				<emissive>0 1 0 1</emissive>
+			</material>
+		</visual>
+
+	</gazebo>
+</xacro:macro>
 
 <!--PLUGINS OF MODEL-->
 <xacro:macro name="model_plugin">
@@ -407,6 +444,22 @@
 		</collision>
 	</link>
 
+	<!--LEDs--> 
+	<xacro:LED name="Front-C" xyz="-0.0584 0 0.0328" rpy="0 -0.7 0"/>
+	<xacro:LED name="Front-R" xyz="-0.0709 0.0060 0.019" rpy="-0.09 -0.95 0"/> 
+	<xacro:LED name="Front-RR" xyz="-0.0636	0.010	0.027" rpy="-0.15 -0.8 0"/> 
+	<xacro:LED name="Front-L" xyz="-0.0709 -0.0060 0.019" rpy="0.09 -0.95 0"/> 
+	<xacro:LED name="Front-LL" xyz="-0.0636 -0.010 0.027" rpy="0.15 -0.8 0"/>
+	<xacro:LED name="Back-L" xyz="0.084 -0.0372 0.02" rpy="1 0 0.35"/> 
+	<xacro:LED name="Back-R" xyz="0.084 0.037 0.02" rpy="-1 0 -0.35"/>
+
+	<gazebo reference="Front-C">
+		<visual>
+			<plugin name="ledcolor_plugin" filename="libled_color.so"/>
+		</visual>
+
+	</gazebo>
+	
 	<!--Use pusher-->
 	<xacro:if value="${pusher_xacro}">
 		<!--Pusher link-->
