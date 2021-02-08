@@ -2,7 +2,7 @@
 
 # /*******************************************************************************
 #  *
-#  *   Copyright 2019, Manufactura de Ingenios Tecnológicos S.L. 
+#  *   Copyright 2019, Manufactura de Ingenios Tecnologicos S.L. 
 #  *   <http://www.mintforpeople.com>
 #  *
 #  *   Redistribution, modification and use of this software are permitted under
