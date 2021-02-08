@@ -127,24 +127,18 @@ void MoveWheels::HandleMoveWheels(int8_t lwp, int8_t rwp, float time, int16_t bl
   model->GetJoint("left_motor")->SetHighStop(0,9E16);
   model->GetJoint("right_motor")->SetLowStop(0,-9E16);
   model->GetJoint("right_motor")->SetHighStop(0,9E16);
-
+    
   // Calculate joints target velocity
   if (lwp != 0)
   {
-    lspeedGazebo =
-        ((-4.625E-05 * pow(abs_lwp, 3) + 5.219E-03 * pow(abs_lwp, 2) + 6.357 * abs_lwp + 5.137E+01) +
-         (-3.253E-04 * pow(abs_lwp, 3) + 4.285E-02 * pow(abs_lwp, 2) + -2.064 * abs_lwp - 1.770E+01) / time) *
-        M_PI / 180;
+    lspeedGazebo = ((1.646E-06 * pow(abs_lwp, 3) + -2.850E-03 * pow(abs_lwp, 2) + 6.649 * abs_lwp + 5.114E+01) + (-2.912E-04 * pow(abs_lwp, 3) + 4.647E-02 * pow(abs_lwp, 2) + -1.339 * abs_lwp - 1.225E+01) / time) * M_PI / 180;
     if (lwp < 0)
       lspeedGazebo = -lspeedGazebo;
   }
 
   if (rwp != 0)
   {
-    rspeedGazebo =
-        ((-4.625E-05 * pow(abs_rwp, 3) + 5.219E-03 * pow(abs_rwp, 2) + 6.357 * abs_rwp + 5.137E+01) +
-         (-3.253E-04 * pow(abs_rwp, 3) + 4.285E-02 * pow(abs_rwp, 2) + -2.064 * abs_rwp - 1.770E+01) / time) *
-        M_PI / 180;
+    rspeedGazebo = ((1.646E-06 * pow(abs_rwp, 3) + -2.850E-03 * pow(abs_rwp, 2) + 6.649 * abs_rwp + 5.114E+01) + (-2.912E-04 * pow(abs_rwp, 3) + 4.647E-02 * pow(abs_rwp, 2) + -1.339 * abs_rwp - 1.225E+01) / time) * M_PI / 180;
     if (rwp < 0)
       rspeedGazebo = -rspeedGazebo;
   }
