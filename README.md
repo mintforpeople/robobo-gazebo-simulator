@@ -343,24 +343,17 @@ This package contains the following folders:
 robobo-gazebo-simulator is available under the Apache 2.0 license. See the LICENSE file for more info.
 
 ## Acknowledgement
+***
 <!-- 
-    ROSIN acknowledgement from the ROSIN press kit
-    @ https://github.com/rosin-project/press_kit
+    NEOTEC acknowledgement
 -->
 
-<a href="http://rosin-project.eu">
-  <img src="http://rosin-project.eu/wp-content/uploads/rosin_ack_logo_wide.png" 
-       alt="rosin_logo" height="60" >
-</a>
+<p align="center">
+<img src="https://github.com/mintforpeople/robobo-programming/wiki/images/cdti.png" width=400" 
+</p>
 
-Supported by ROSIN - ROS-Industrial Quality-Assured Robot Software Components.  
-More information: <a href="http://rosin-project.eu">rosin-project.eu</a>
-
-<img src="http://rosin-project.eu/wp-content/uploads/rosin_eu_flag.jpg" 
-     alt="eu_flag" height="45" align="left" >  
-
-This project has received funding from the European Union’s Horizon 2020  
-research and innovation programme under grant agreement no. 732287. 
+_Empresa subvencionada por el CDTI (Presupuestos Generales del Estado a cargo de la aplicación 27.12.467C.74908)
+Concretamente, mediante el programa de Ayudas destinadas a nuevos proyectos empresariales de empresas innovadoras (Programa NEOTEC), al amparo de la Orden ECC/1333/2015, de 2 de julio._
 
 
 
