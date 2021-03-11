@@ -279,10 +279,10 @@
       <wall_time>0 0</wall_time>
       <iterations>0</iterations>
       <model name='cylinder_medium'>
-        <pose frame=''>-0.046486 -0.387598 -9e-06 1.8e-05 -7e-06 0</pose>
+        <pose frame=''>-0.046486 -0.387597 0.029991 0 -1e-05 0</pose>
         <scale>1 1 1</scale>
         <link name='link_1'>
-          <pose frame=''>-0.046486 -0.387598 -9e-06 1.8e-05 -7e-06 0</pose>
+          <pose frame=''>-0.046486 -0.387597 0.029991 0 -1e-05 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>

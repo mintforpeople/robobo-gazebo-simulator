@@ -86,10 +86,10 @@
       <wall_time>0 0</wall_time>
       <iterations>0</iterations>
       <model name='ceda_qr'>
-        <pose frame=''>0.525295 -0.034016 0.007952 0.000378 -7.1e-05 -0.000165</pose>
+        <pose frame=''>0.525295 -0.034016 0.004957 0.000378 -7.1e-05 -0.000165</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0.525295 -0.034016 0.007952 0.000378 -7.1e-05 -0.000165</pose>
+          <pose frame=''>0.525295 -0.034016 0.004957 0.000378 -7.1e-05 -0.000165</pose>
           <velocity>0.000261 4.4e-05 -0.005388 -0.001024 0.005299 -4.1e-05</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -126,70 +126,70 @@
         </link>
       </model>
       <model name='peatones_qr'>
-        <pose frame=''>0.527452 -0.963897 0.008244 -0.013073 0.00259 0.021205</pose>
+        <pose frame=''>0.527452 -0.963897 0.005401 -0.013073 0.00259 0.021205</pose>
         <scale>1 1 1</scale>
         <link name='link_6'>
-          <pose frame=''>0.527452 -0.963897 0.008244 -0.013073 0.00259 0.021205</pose>
+          <pose frame=''>0.527452 -0.963897 0.005401 -0.013073 0.00259 0.021205</pose>
           <velocity>0.000264 3.4e-05 -0.001511 0.028627 0.003277 6.4e-05</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='peatones_qr_0'>
-        <pose frame=''>0.052128 -0.473432 0.008312 -5.9e-05 0.018773 3.12616</pose>
+        <pose frame=''>0.052128 -0.473432 0.005021 -5.9e-05 0.018773 3.12616</pose>
         <scale>1 1 1</scale>
         <link name='link_6'>
-          <pose frame=''>0.052128 -0.473432 0.008312 -5.9e-05 0.018773 3.12616</pose>
+          <pose frame=''>0.052128 -0.473432 0.005021 -5.9e-05 0.018773 3.12616</pose>
           <velocity>0.000283 2.1e-05 0.00336 0.000982 0.003948 -0.001254</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='rotonda_qr'>
-        <pose frame=''>0.302415 0.857632 0.007953 4.1e-05 -0.000872 1.2e-05</pose>
+        <pose frame=''>0.302415 0.857632 0.004960 4.1e-05 -0.000872 1.2e-05</pose>
         <scale>1 1 1</scale>
         <link name='link_9'>
-          <pose frame=''>0.302415 0.857632 0.007953 4.1e-05 -0.000872 1.2e-05</pose>
+          <pose frame=''>0.302415 0.857632 0.004960 4.1e-05 -0.000872 1.2e-05</pose>
           <velocity>-0.000311 5.2e-05 -0.015545 0.000268 0.000232 3.7e-05</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='velocidad20_qr'>
-        <pose frame=''>0.522708 -1.56214 0.008009 -0.000334 -0.001993 0.009851</pose>
+        <pose frame=''>0.522708 -1.56214 0.004990 -0.000334 -0.001993 0.009851</pose>
         <scale>1 1 1</scale>
         <link name='link_12'>
-          <pose frame=''>0.522708 -1.56214 0.008009 -0.000334 -0.001993 0.009851</pose>
+          <pose frame=''>0.522708 -1.56214 0.004990 -0.000334 -0.001993 0.009851</pose>
           <velocity>0.000257 4e-05 0.007105 -0.00044 -0.000529 -0.000247</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='velocidad20_qr_0'>
-        <pose frame=''>0.04532 -0.194629 0.008056 0.000314 0.003408 3.09423</pose>
+        <pose frame=''>0.04532 -0.194629 0.005168 0.000314 0.003408 3.09423</pose>
         <scale>1 1 1</scale>
         <link name='link_12'>
-          <pose frame=''>0.04532 -0.194629 0.008056 0.000314 0.003408 3.09423</pose>
+          <pose frame=''>0.04532 -0.194629 0.005168 0.000314 0.003408 3.09423</pose>
           <velocity>0.000259 3.9e-05 0.006311 0.013583 0.008346 -0.000214</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='velocidad40_qr'>
-        <pose frame=''>0.521707 -2.15021 0.007991 0.000904 0.00117 -0.000576</pose>
+        <pose frame=''>0.521707 -2.15021 0.005004 0.000904 0.00117 -0.000576</pose>
         <scale>1 1 1</scale>
         <link name='link_13'>
-          <pose frame=''>0.521707 -2.15021 0.007991 0.000904 0.00117 -0.000576</pose>
+          <pose frame=''>0.521707 -2.15021 0.005004 0.000904 0.00117 -0.000576</pose>
           <velocity>0.000265 4.8e-05 0.003025 0.001213 -0.001856 -0.000278</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='velocidad40_qr_0'>
-        <pose frame=''>0.049181 -1.14453 0.007994 0.000111 0.000568 3.08583</pose>
+        <pose frame=''>0.049181 -1.14453 0.005002 0.000111 0.000568 3.08583</pose>
         <scale>1 1 1</scale>
         <link name='link_13'>
-          <pose frame=''>0.049181 -1.14453 0.007994 0.000111 0.000568 3.08583</pose>
+          <pose frame=''>0.049181 -1.14453 0.005002 0.000111 0.000568 3.08583</pose>
           <velocity>0.000258 4.1e-05 -0.010923 -0.001546 -0.000378 -0.000142</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
