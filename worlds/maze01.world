@@ -190,10 +190,10 @@
       <wall_time>0 0</wall_time>
       <iterations>8376</iterations>
       <model name='cylinder_big'>
-        <pose frame=''>1.11714 0.267924 6e-06 5.3e-05 -0.000243 -0.006384</pose>
+        <pose frame=''>1.117158 0.267925 0.060001 0.000040 0.000052 -0.006384</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>1.11714 0.267924 6e-06 5.3e-05 -0.000243 -0.006384</pose>
+          <pose frame=''>1.117158 0.267925 0.060001 0.000040 0.000052 -0.006384</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 -1e-06 0.001193 -0.017043 0.070296 0</acceleration>
           <wrench>0 0 6e-05 0 -0 0</wrench>
