@@ -1,13 +1,13 @@
-'''This work has been funded by rosin.org (contract agreement 732287) 
- through EP project "Robobo AI"'''
+#This work has been funded by rosin.org (contract agreement 732287) 
+#through EP project "Robobo AI
 
 #!/usr/bin/env python
 
-'''CHALLENGE 
-Create a program that makes Robobo move forward until it detects an obstacle:
-Through the front infrared sensors, Robobo will detect the obstacle and it will stop to avoid the collision. 
-Then, it should move his head back and then move backwards for a few seconds.
-Finally, make Robobo return its head to its normal position.'''
+#CHALLENGE 
+#Create a program that makes Robobo move forward until it detects an obstacle:
+#Through the front infrared sensors, Robobo will detect the obstacle and it will stop to avoid the collision. 
+#Then, it should move his head back and then move backwards for a few seconds.
+#Finally, make Robobo return its head to its normal position.'''
 
 import rospy
 from std_msgs.msg import String, Int8, Int16, Int32
