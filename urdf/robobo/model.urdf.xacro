@@ -254,7 +254,7 @@
 				</ray>
 			<plugin name="infrared_range" filename="libinfrared_range.so">
 				<gaussianNoise>0.005</gaussianNoise>
-				<updateRate>100</updateRate>
+				<updateRate>10</updateRate>
 				<alwaysOn>true</alwaysOn>
 				<topicName>${name}</topicName>
 				<frameName>${name}_link</frameName>
