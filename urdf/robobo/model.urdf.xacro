@@ -28,7 +28,7 @@
 	<link name="tilt_smartphone">
 		<inertial>
 			<origin xyz="${0.01095+length/2} ${0.002} ${0.00215+depth/2}" rpy="0 0 0"/>
-			<mass value="${mass}"/>
+			<mass value="${mass/100}"/>
 			<inertia ixx="${mass*(width*width+depth*depth)/12}" ixy="0" ixz="0" iyy="${mass*(depth*depth+length*length)/12}" iyz="0" izz="${mass*(length*length+width*width)/12}"/>
 		</inertial>
 		<collision>
