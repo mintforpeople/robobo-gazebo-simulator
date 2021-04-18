@@ -146,7 +146,11 @@ void MoveWheels::HandleMoveWheels(int8_t lwp, int8_t rwp, float time, int16_t bl
   // Set joints velocity
   model->GetJoint("left_motor")->SetParam("vel", 0, lspeedGazebo);
   model->GetJoint("right_motor")->SetParam("vel", 0, rspeedGazebo);
-  usleep(time * 1E6);
+  //usleep(time * 1E6);
+  
+  ros::Duration d = ros::Duration(time);
+  d.sleep();
+  
   model->GetJoint("left_motor")->SetParam("vel", 0, double(0));
   model->GetJoint("right_motor")->SetParam("vel", 0, double(0));
   model->GetJoint("right_motor")->SetParam("fmax", 0, 0);
