@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.91.0 commit date:2020-11-25, commit time:08:34, hash:0f45cab862b8</authoring_tool>
+    </contributor>
+    <created>2021-03-15T10:07:00</created>
+    <modified>2021-03-15T10:07:00</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Material-supermarket-effect">
+      <profile_COMMON>
+        <newparam sid="supermarket_png-surface">
+          <surface type="2D">
+            <init_from>supermarket_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="supermarket_png-sampler">
+          <sampler2D>
+            <source>supermarket_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="supermarket_png-sampler" texcoord="lib-map1-a78073ad-4c6c-4fc6-8d43-9bd3319a54bb"/>
+            </diffuse>
+            <reflectivity>
+              <float sid="specular">1</float>
+            </reflectivity>
+            <index_of_refraction>
+              <float sid="ior">0</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_007-effect">
+      <profile_COMMON>
+        <newparam sid="cartel_supermarket_png-surface">
+          <surface type="2D">
+            <init_from>cartel_supermarket_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="cartel_supermarket_png-sampler">
+          <sampler2D>
+            <source>cartel_supermarket_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="cartel_supermarket_png-sampler"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_005-effect">
+      <profile_COMMON>
+        <newparam sid="supermarket_png_001-surface">
+          <surface type="2D">
+            <init_from>supermarket_png_001</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="supermarket_png_001-sampler">
+          <sampler2D>
+            <source>supermarket_png_001-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="supermarket_png_001-sampler"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_006-effect">
+      <profile_COMMON>
+        <newparam sid="supermarket_png_001-surface">
+          <surface type="2D">
+            <init_from>supermarket_png_001</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="supermarket_png_001-sampler">
+          <sampler2D>
+            <source>supermarket_png_001-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="supermarket_png_001-sampler"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_004-effect">
+      <profile_COMMON>
+        <newparam sid="supermarket_png_001-surface">
+          <surface type="2D">
+            <init_from>supermarket_png_001</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="supermarket_png_001-sampler">
+          <sampler2D>
+            <source>supermarket_png_001-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="supermarket_png_001-sampler"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="cartel_supermarket_png" name="cartel_supermarket_png">
+      <init_from>cartel_supermarket.png</init_from>
+    </image>
+    <image id="supermarket_png" name="supermarket_png">
+      <init_from>supermarket.png</init_from>
+    </image>
+    <image id="supermarket_png_001" name="supermarket_png_001">
+      <init_from>supermarket.png.001.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="Material-supermarket-material" name="Material-supermarket">
+      <instance_effect url="#Material-supermarket-effect"/>
+    </material>
+    <material id="Material_007-material" name="Material.007">
+      <instance_effect url="#Material_007-effect"/>
+    </material>
+    <material id="Material_005-material" name="Material.005">
+      <instance_effect url="#Material_005-effect"/>
+    </material>
+    <material id="Material_006-material" name="Material.006">
+      <instance_effect url="#Material_006-effect"/>
+    </material>
+    <material id="Material_004-material" name="Material.004">
+      <instance_effect url="#Material_004-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="mesh-a78073ad-4c6c-4fc6-8d43-9bd3319a54bb-mesh" name="mesh-a78073ad-4c6c-4fc6-8d43-9bd3319a54bb">
+      <mesh>
+        <source id="mesh-a78073ad-4c6c-4fc6-8d43-9bd3319a54bb-mesh-positions">
+          <float_array id="mesh-a78073ad-4c6c-4fc6-8d43-9bd3319a54bb-mesh-positions-array" count="12">235.6882 -737.8948 247.5398 235.6882 -737.8948 306.5083 764.6166 -737.8948 247.5398 764.6166 -737.8948 306.5083</float_array>
+          <technique_common>
+            <accessor source="#mesh-a78073ad-4c6c-4fc6-8d43-9bd3319a54bb-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="mesh-a78073ad-4c6c-4fc6-8d43-9bd3319a54bb-mesh-normals">
+          <float_array id="mesh-a78073ad-4c6c-4fc6-8d43-9bd3319a54bb-mesh-normals-array" count="3">0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#mesh-a78073ad-4c6c-4fc6-8d43-9bd3319a54bb-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="mesh-a78073ad-4c6c-4fc6-8d43-9bd3319a54bb-mesh-map-0">
+          <float_array id="mesh-a78073ad-4c6c-4fc6-8d43-9bd3319a54bb-mesh-map-0-array" count="12">1 1 0 1 0 0 1 1 0 0 1 0</float_array>
+          <technique_common>
+            <accessor source="#mesh-a78073ad-4c6c-4fc6-8d43-9bd3319a54bb-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="mesh-a78073ad-4c6c-4fc6-8d43-9bd3319a54bb-mesh-vertices">
+          <input semantic="POSITION" source="#mesh-a78073ad-4c6c-4fc6-8d43-9bd3319a54bb-mesh-positions"/>
+        </vertices>
+        <triangles material="Material-supermarket-material" count="2">
+          <input semantic="VERTEX" source="#mesh-a78073ad-4c6c-4fc6-8d43-9bd3319a54bb-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#mesh-a78073ad-4c6c-4fc6-8d43-9bd3319a54bb-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#mesh-a78073ad-4c6c-4fc6-8d43-9bd3319a54bb-mesh-map-0" offset="2" set="0"/>
+          <p>3 0 0 1 0 1 0 0 2 3 0 3 0 0 4 2 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="solid_cartel_supermarket_2_-mesh" name="solid_cartel_supermarket_2_">
+      <mesh>
+        <source id="solid_cartel_supermarket_2_-mesh-positions">
+          <float_array id="solid_cartel_supermarket_2_-mesh-positions-array" count="96">242.2487 -737.4536 324.0551 757.2487 -737.4536 324.0551 242.2487 -727.4536 324.0551 757.2487 -727.4536 324.0551 757.2487 -737.4536 324.0551 242.2487 -737.4536 324.0551 764.7487 -737.4536 314.6801 234.7487 -737.4536 314.6801 764.7487 -737.4536 247.0551 234.7487 -737.4536 247.0551 764.7487 -737.4536 247.0551 777.2487 -727.4536 247.0551 764.7487 -737.4536 314.6801 777.2487 -727.4536 299.0551 777.2487 -727.4536 247.0551 222.2487 -727.4536 247.0551 222.2487 -727.4536 299.0551 242.2487 -727.4536 324.0551 757.2487 -727.4536 324.0551 777.2487 -727.4536 299.0551 222.2487 -727.4536 299.0551 222.2487 -727.4536 247.0551 234.7487 -737.4536 314.6801 234.7487 -737.4536 247.0551 757.2487 -727.4536 324.0551 757.2487 -737.4536 324.0551 777.2487 -727.4536 299.0551 764.7487 -737.4536 314.6801 242.2487 -727.4536 324.0551 222.2487 -727.4536 299.0551 242.2487 -737.4536 324.0551 234.7487 -737.4536 314.6801</float_array>
+          <technique_common>
+            <accessor source="#solid_cartel_supermarket_2_-mesh-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="solid_cartel_supermarket_2_-mesh-normals">
+          <float_array id="solid_cartel_supermarket_2_-mesh-normals-array" count="42">0 0 1 0 -1 -1.2945e-5 0 -1 6.28931e-6 0 -1 0 0.6246986 -0.780866 0 0.6246951 -0.7808688 0 0 1 0 0 1 -7.03829e-7 -0.6246939 -0.7808697 0 -0.6246951 -0.7808689 0 0.7808688 0 0.6246951 0.7808648 8.13401e-6 0.6247 -0.7808688 0 0.6246951 -0.7808688 -4.06702e-6 0.6246951</float_array>
+          <technique_common>
+            <accessor source="#solid_cartel_supermarket_2_-mesh-normals-array" count="14" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="solid_cartel_supermarket_2_-mesh-vertices">
+          <input semantic="POSITION" source="#solid_cartel_supermarket_2_-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_007-material" count="18">
+          <input semantic="VERTEX" source="#solid_cartel_supermarket_2_-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#solid_cartel_supermarket_2_-mesh-normals" offset="1"/>
+          <p>0 0 1 0 2 0 2 0 1 0 3 0 4 1 5 1 6 1 6 2 5 2 7 2 6 3 7 3 8 3 8 3 7 3 9 3 10 4 11 4 12 4 12 5 11 5 13 5 14 6 15 6 16 6 17 6 18 6 16 6 16 7 18 7 19 7 16 6 19 6 14 6 20 8 21 8 22 8 22 9 21 9 23 9 24 10 25 10 26 10 26 11 25 11 27 11 28 12 29 12 30 12 30 13 29 13 31 13</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="solid_Supermarket_002-mesh" name="solid_Supermarket.002">
+      <mesh>
+        <source id="solid_Supermarket_002-mesh-positions">
+          <float_array id="solid_Supermarket_002-mesh-positions-array" count="72">911 -697.4395 247.0441 911 -699.7077 250.3388 111 -697.4395 247.0441 111 -699.7077 250.3388 911 -542.4395 353.7493 911 -697.4395 247.0441 111 -542.4395 353.7493 111 -697.4395 247.0441 911 -544.7077 357.0441 911 -542.4395 353.7493 111 -544.7077 357.0441 111 -542.4395 353.7493 911 -699.7077 250.3388 911 -544.7077 357.0441 111 -699.7077 250.3388 111 -544.7077 357.0441 911 -542.4395 353.7493 911 -544.7077 357.0441 911 -697.4395 247.0441 911 -699.7077 250.3388 111 -544.7077 357.0441 111 -542.4395 353.7493 111 -699.7077 250.3388 111 -697.4395 247.0441</float_array>
+          <technique_common>
+            <accessor source="#solid_Supermarket_002-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="solid_Supermarket_002-mesh-normals">
+          <float_array id="solid_Supermarket_002-mesh-normals-array" count="30">0 -0.8236939 -0.5670349 0 -0.8236756 -0.5670614 0 0.5670439 -0.8236877 0 0.5670438 -0.8236877 0 0.823686 0.5670464 0 0.823695 0.5670331 0 -0.5670437 0.8236879 0 -0.5670439 0.8236876 1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#solid_Supermarket_002-mesh-normals-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="solid_Supermarket_002-mesh-vertices">
+          <input semantic="POSITION" source="#solid_Supermarket_002-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_005-material" count="12">
+          <input semantic="VERTEX" source="#solid_Supermarket_002-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#solid_Supermarket_002-mesh-normals" offset="1"/>
+          <p>0 0 1 0 2 0 2 1 1 1 3 1 4 2 5 2 6 2 6 3 5 3 7 3 8 4 9 4 10 4 10 5 9 5 11 5 12 6 13 6 14 6 14 7 13 7 15 7 16 8 17 8 18 8 18 8 17 8 19 8 20 9 21 9 22 9 22 9 21 9 23 9</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="solid_Supermarket_001-mesh" name="solid_Supermarket.001">
+      <mesh>
+        <source id="solid_Supermarket_001-mesh-positions">
+          <float_array id="solid_Supermarket_001-mesh-positions-array" count="72">871 -217.5375 357.0441 871 -20.5375 250.563 151 -217.5375 357.0441 151 -20.5375 250.563 871 -219.4395 353.5252 871 -217.5375 357.0441 151 -219.4395 353.5252 151 -217.5375 357.0441 871 -22.43949 247.0441 871 -219.4395 353.5252 151 -22.43949 247.0441 151 -219.4395 353.5252 871 -20.5375 250.563 871 -22.43949 247.0441 151 -20.5375 250.563 151 -22.43949 247.0441 871 -219.4395 353.5252 871 -22.43949 247.0441 871 -217.5375 357.0441 871 -20.5375 250.563 151 -22.43949 247.0441 151 -219.4395 353.5252 151 -20.5375 250.563 151 -217.5375 357.0441</float_array>
+          <technique_common>
+            <accessor source="#solid_Supermarket_001-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="solid_Supermarket_001-mesh-normals">
+          <float_array id="solid_Supermarket_001-mesh-normals-array" count="36">0 0.4754985 0.8797165 0 0.4754986 0.8797165 0 -0.8797159 0.4754996 0 -0.8797206 0.4754912 0 -0.4754986 -0.8797166 0 -0.4754986 -0.8797165 0 0.8797171 -0.4754976 0 0.8797172 -0.4754975 1 0 0 1 5.99633e-6 0 -1 0 0 -1 -1.36279e-7 0</float_array>
+          <technique_common>
+            <accessor source="#solid_Supermarket_001-mesh-normals-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="solid_Supermarket_001-mesh-vertices">
+          <input semantic="POSITION" source="#solid_Supermarket_001-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_006-material" count="12">
+          <input semantic="VERTEX" source="#solid_Supermarket_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#solid_Supermarket_001-mesh-normals" offset="1"/>
+          <p>0 0 1 0 2 0 2 1 1 1 3 1 4 2 5 2 6 2 6 3 5 3 7 3 8 4 9 4 10 4 10 5 9 5 11 5 12 6 13 6 14 6 14 7 13 7 15 7 16 8 17 8 18 8 18 9 17 9 19 9 20 10 21 10 22 10 22 11 21 11 23 11</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="solid_Supermarket-mesh" name="solid_Supermarket">
+      <mesh>
+        <source id="solid_Supermarket-mesh-positions">
+          <float_array id="solid_Supermarket-mesh-positions-array" count="198">911 -219.4395 247.0441 1022 7.560515 247.0441 111 -219.4395 247.0441 0 7.560515 247.0441 111 -542.4395 247.0441 0 -737.4395 247.0441 911 -542.4395 247.0441 1022 -737.4395 247.0441 0 -737.4395 247.0441 0 7.560515 247.0441 0 -737.4395 11.0441 0 7.560515 11.0441 1022 -737.4395 247.0441 0 -737.4395 247.0441 1022 -737.4395 11.0441 0 -737.4395 11.0441 1022 7.560515 247.0441 1022 -737.4395 247.0441 1022 7.560515 11.0441 1022 -737.4395 11.0441 0 7.560515 247.0441 1022 7.560515 247.0441 0 7.560515 11.0441 1022 7.560515 11.0441 1022 7.560515 11.0441 1022 -737.4395 11.0441 0 7.560515 11.0441 0 -737.4395 11.0441 111 -542.4395 357.0441 111 -219.4395 357.0441 111 -542.4395 247.0441 111 -219.4395 247.0441 911 -542.4395 357.0441 111 -542.4395 357.0441 911 -542.4395 247.0441 111 -542.4395 247.0441 911 -219.4395 357.0441 911 -542.4395 357.0441 911 -219.4395 247.0441 911 -542.4395 247.0441 111 -219.4395 357.0441 911 -219.4395 357.0441 111 -219.4395 247.0441 911 -219.4395 247.0441 911 -219.4395 357.0441 941 -199.4395 357.0441 911 -542.4395 357.0441 941 -562.4395 357.0441 111 -542.4395 357.0441 80.99997 -562.4395 357.0441 111 -219.4395 357.0441 80.99997 -199.4395 357.0441 941 -562.4395 357.0441 941 -380.9395 420.0441 80.99997 -562.4395 357.0441 80.99997 -380.9395 420.0441 941 -380.9395 420.0441 941 -199.4395 357.0441 80.99997 -380.9395 420.0441 80.99997 -199.4395 357.0441 941 -562.4395 357.0441 941 -199.4395 357.0441 941 -380.9395 420.0441 80.99997 -380.9395 420.0441 80.99997 -199.4395 357.0441 80.99997 -562.4395 357.0441</float_array>
+          <technique_common>
+            <accessor source="#solid_Supermarket-mesh-positions-array" count="66" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="solid_Supermarket-mesh-normals">
+          <float_array id="solid_Supermarket-mesh-normals-array" count="45">0 0 1 -8.71615e-7 0 1 3.77895e-7 0 1 3.77895e-7 0 1 -1 0 0 0 -1 0 1 0 0 0 1 0 0 0 -1 -1.61249e-6 0 -1 1.4348e-6 0 -1 0 -0.3279149 0.9447073 0 -0.3279149 0.9447072 0 0.3279148 0.9447073 0 0.3279149 0.9447072</float_array>
+          <technique_common>
+            <accessor source="#solid_Supermarket-mesh-normals-array" count="15" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="solid_Supermarket-mesh-vertices">
+          <input semantic="POSITION" source="#solid_Supermarket-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_004-material" count="40">
+          <input semantic="VERTEX" source="#solid_Supermarket-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#solid_Supermarket-mesh-normals" offset="1"/>
+          <p>0 0 1 0 2 0 2 0 1 0 3 0 2 1 3 1 4 1 4 2 3 2 5 2 4 0 5 0 6 0 6 0 5 0 7 0 6 0 7 0 0 0 0 3 7 3 1 3 8 4 9 4 10 4 10 4 9 4 11 4 12 5 13 5 14 5 14 5 13 5 15 5 16 6 17 6 18 6 18 6 17 6 19 6 20 7 21 7 22 7 22 7 21 7 23 7 24 8 25 8 26 8 26 8 25 8 27 8 28 4 29 4 30 4 30 4 29 4 31 4 32 5 33 5 34 5 34 5 33 5 35 5 36 6 37 6 38 6 38 6 37 6 39 6 40 7 41 7 42 7 42 7 41 7 43 7 44 9 45 9 46 9 46 8 45 8 47 8 46 8 47 8 48 8 48 8 47 8 49 8 48 8 49 8 50 8 50 10 49 10 51 10 50 8 51 8 44 8 44 8 51 8 45 8 52 11 53 11 54 11 54 12 53 12 55 12 56 13 57 13 58 13 58 14 57 14 59 14 60 6 61 6 62 6 63 4 64 4 65 4</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Brep" name="Brep" type="NODE">
+        <matrix sid="transform">0.001 0 0 0 0 0.001 0 0 0 0 0.001 0 0 0 0 1</matrix>
+        <instance_geometry url="#mesh-a78073ad-4c6c-4fc6-8d43-9bd3319a54bb-mesh" name="Brep">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material-supermarket-material" target="#Material-supermarket-material">
+                <bind_vertex_input semantic="lib-map1-a78073ad-4c6c-4fc6-8d43-9bd3319a54bb" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="solid_cartel_supermarket_2_" name="solid_cartel_supermarket_2_" type="NODE">
+        <matrix sid="transform">0.001 0 0 0 0 0.001 0 0 0 0 0.001 0 0 0 0 1</matrix>
+        <instance_geometry url="#solid_cartel_supermarket_2_-mesh" name="solid_cartel_supermarket_2_">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material_007-material" target="#Material_007-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="solid_Supermarket_002" name="solid_Supermarket.002" type="NODE">
+        <matrix sid="transform">0.001 0 0 0 0 0.001 0 0 0 0 0.001 0 0 0 0 1</matrix>
+        <instance_geometry url="#solid_Supermarket_002-mesh" name="solid_Supermarket.002">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material_005-material" target="#Material_005-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="solid_Supermarket_001" name="solid_Supermarket.001" type="NODE">
+        <matrix sid="transform">0.001 0 0 0 0 0.001 0 0 0 0 0.001 0 0 0 0 1</matrix>
+        <instance_geometry url="#solid_Supermarket_001-mesh" name="solid_Supermarket.001">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material_006-material" target="#Material_006-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="solid_Supermarket" name="solid_Supermarket" type="NODE">
+        <matrix sid="transform">0.001 0 0 0 0 0.001 0 0 0 0 0.001 0 0 0 0 1</matrix>
+        <instance_geometry url="#solid_Supermarket-mesh" name="solid_Supermarket">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material_004-material" target="#Material_004-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
