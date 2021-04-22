@@ -102,7 +102,7 @@
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
-            <uri>file://models/stl/daeBlender/bigcity.dae</uri>
+            <uri>model://stl/daeBlender/bigcity.dae</uri>
             <scale>1 1 1</scale>
           </mesh>
         </geometry>
@@ -438,6 +438,26 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+<model name='super'>
+        <pose frame=''>0.624603 2.38082 0 0 -0 1.5708</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>0.624603 2.38082 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='university'>
+        <pose frame=''>1.37718 0.606206 0.01174 0 -0 1.5708</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>1.37718 0.606206 0.01174 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
       <model name='velocidad10_qr'>
         <pose frame=''>2.83511 2.30878 0.012788 1e-06 -2e-06 1.57549</pose>
         <scale>1 1 1</scale>
@@ -574,7 +594,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -587,7 +607,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -664,7 +684,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PARAR/parar_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PARAR/parar_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -677,7 +697,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PARAR/parar_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PARAR/parar_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -754,7 +774,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/ROTONDA/rotonda_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/ROTONDA/rotonda_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -767,7 +787,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/ROTONDA/rotonda_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/ROTONDA/rotonda_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -844,7 +864,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/CEDA/ceda_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/CEDA/ceda_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -857,7 +877,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/CEDA/ceda_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/CEDA/ceda_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -934,7 +954,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -947,7 +967,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1031,7 +1051,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD50/velo50_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/VELOCIDAD50/velo50_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1044,7 +1064,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD50/velo50_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/VELOCIDAD50/velo50_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1121,7 +1141,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD20/velo20_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/VELOCIDAD20/velo20_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1134,7 +1154,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD20/velo20_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/VELOCIDAD20/velo20_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1211,7 +1231,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PELIGRO IZQUIERDA/peligr_izq_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PELIGRO IZQUIERDA/peligr_izq_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1224,7 +1244,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PELIGRO IZQUIERDA/peligr_izq_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PELIGRO IZQUIERDA/peligr_izq_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1301,7 +1321,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1314,7 +1334,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1391,7 +1411,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1404,7 +1424,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1481,7 +1501,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PARAR/parar_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PARAR/parar_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1494,7 +1514,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PARAR/parar_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PARAR/parar_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1571,7 +1591,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/CEDA/ceda_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/CEDA/ceda_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1584,7 +1604,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/CEDA/ceda_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/CEDA/ceda_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1661,7 +1681,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PELIGRO DERECHA/pelgr_dcha_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PELIGRO DERECHA/pelgr_dcha_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1674,7 +1694,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PELIGRO DERECHA/pelgr_dcha_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PELIGRO DERECHA/pelgr_dcha_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1751,7 +1771,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PELIGRO DERECHA/pelgr_dcha_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PELIGRO DERECHA/pelgr_dcha_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1764,7 +1784,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PELIGRO DERECHA/pelgr_dcha_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PELIGRO DERECHA/pelgr_dcha_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1841,7 +1861,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD20/velo20_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/VELOCIDAD20/velo20_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1854,7 +1874,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD20/velo20_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/VELOCIDAD20/velo20_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1931,7 +1951,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/CEDA/ceda_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/CEDA/ceda_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1944,7 +1964,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/CEDA/ceda_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/CEDA/ceda_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2021,7 +2041,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2034,7 +2054,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2111,7 +2131,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PELIGRO DERECHA/pelgr_dcha_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PELIGRO DERECHA/pelgr_dcha_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2124,7 +2144,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PELIGRO DERECHA/pelgr_dcha_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PELIGRO DERECHA/pelgr_dcha_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2201,7 +2221,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/ROTONDA/rotonda_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/ROTONDA/rotonda_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2214,7 +2234,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/ROTONDA/rotonda_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/ROTONDA/rotonda_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2291,7 +2311,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PARAR/parar_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PARAR/parar_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2304,7 +2324,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PARAR/parar_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PARAR/parar_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2381,7 +2401,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PELIGRO IZQUIERDA/peligr_izq_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PELIGRO IZQUIERDA/peligr_izq_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2394,7 +2414,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PELIGRO IZQUIERDA/peligr_izq_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PELIGRO IZQUIERDA/peligr_izq_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2471,7 +2491,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/CEDA/ceda_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/CEDA/ceda_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2484,7 +2504,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/CEDA/ceda_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/CEDA/ceda_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2561,7 +2581,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD10/velo10_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/VELOCIDAD10/velo10_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2574,7 +2594,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD10/velo10_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/VELOCIDAD10/velo10_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2651,7 +2671,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD20/velo20_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/VELOCIDAD20/velo20_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2664,7 +2684,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD20/velo20_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/VELOCIDAD20/velo20_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2741,7 +2761,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PELIGRO IZQUIERDA/peligr_izq_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PELIGRO IZQUIERDA/peligr_izq_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2754,7 +2774,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PELIGRO IZQUIERDA/peligr_izq_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PELIGRO IZQUIERDA/peligr_izq_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2831,7 +2851,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/ROTONDA/rotonda_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/ROTONDA/rotonda_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2844,7 +2864,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/ROTONDA/rotonda_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/ROTONDA/rotonda_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2921,7 +2941,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PARAR/parar_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PARAR/parar_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2934,7 +2954,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PARAR/parar_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PARAR/parar_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3011,7 +3031,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD50/velo50_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/VELOCIDAD50/velo50_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3024,7 +3044,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD50/velo50_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/VELOCIDAD50/velo50_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3101,7 +3121,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3114,7 +3134,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3191,7 +3211,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/ROTONDA/rotonda_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/ROTONDA/rotonda_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3204,7 +3224,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/ROTONDA/rotonda_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/ROTONDA/rotonda_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3281,7 +3301,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3294,7 +3314,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/VELOCIDAD40/velo40_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3371,7 +3391,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PELIGRO IZQUIERDA/peligr_izq_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PELIGRO IZQUIERDA/peligr_izq_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3384,7 +3404,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PELIGRO IZQUIERDA/peligr_izq_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PELIGRO IZQUIERDA/peligr_izq_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3461,7 +3481,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3474,7 +3494,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3551,7 +3571,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD50/velo50_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/VELOCIDAD50/velo50_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3564,7 +3584,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/VELOCIDAD50/velo50_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/VELOCIDAD50/velo50_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3641,7 +3661,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PELIGRO DERECHA/pelgr_dcha_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PELIGRO DERECHA/pelgr_dcha_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3654,7 +3674,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>file://models/stl/SENALES_QR/PELIGRO DERECHA/pelgr_dcha_qr.dae</uri>
+              <uri>model://stl/SENALES_QR/PELIGRO DERECHA/pelgr_dcha_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3709,5 +3729,382 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose frame=''>3.4772 3.77351 0 0 -0 0</pose>
     </model>
+<model name='super'>
+      <link name='link_0'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.166667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.166667</iyy>
+            <iyz>0</iyz>
+            <izz>0.166667</izz>
+          </inertia>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://stl/SUPERMARKET_DAE/supermarket.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <cast_shadows>1</cast_shadows>
+          <transparency>0</transparency>
+          <material>
+            <shader type='pixel'>
+              <normal_map>__default__</normal_map>
+            </shader>
+          </material>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose frame=''>0.51 -0.365 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>1.03 0.75 0.89</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>1</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0</restitution_coefficient>
+              <threshold>1e+06</threshold>
+            </bounce>
+            <contact>
+              <collide_without_contact>0</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>1</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+      </link>
+      <static>1</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose frame=''>0.624603 2.38082 0 0 -0 1.5708</pose>
+    </model>
+    <model name='university'>
+      <link name='link_0'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <inertial>
+          <mass>50000</mass>
+          <inertia>
+            <ixx>0.166667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.166667</iyy>
+            <iyz>0</iyz>
+            <izz>0.166667</izz>
+          </inertia>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://stl/udc_gaz/udc_gaz.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <cast_shadows>1</cast_shadows>
+          <transparency>0</transparency>
+          <material>
+            <shader type='pixel'>
+              <normal_map>__default__</normal_map>
+            </shader>
+          </material>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose frame=''>0.53 0.396 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>1.053 0.8 0.92</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>1</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0</restitution_coefficient>
+              <threshold>1e+06</threshold>
+            </bounce>
+            <contact>
+              <collide_without_contact>0</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>1</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+      </link>
+      <static>1</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose frame=''>1.37718 0.606206 0.01174 0 -0 1.5708</pose>
+    </model>
+    <model name='rotonda'>
+      <link name='link_0'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <inertial>
+          <mass>50</mass>
+          <inertia>
+            <ixx>0.166667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.166667</iyy>
+            <iyz>0</iyz>
+            <izz>0.166667</izz>
+          </inertia>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://stl/rotonda/Rotonda.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <cast_shadows>1</cast_shadows>
+          <transparency>0</transparency>
+          <material>
+            <shader type='vertex'>
+              <normal_map>__default__</normal_map>
+            </shader>
+          </material>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose frame=''>0.07 -0.09 -0.08 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.07</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>1</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0</restitution_coefficient>
+              <threshold>1e+06</threshold>
+            </bounce>
+            <contact>
+              <collide_without_contact>0</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>1</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+      </link>
+      <static>1</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose frame=''>1.67427 2.0836 0 0 -0 0</pose>
+    </model>
+    <model name='cesped'>
+      <link name='link_0'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <inertial>
+          <mass>50</mass>
+          <inertia>
+            <ixx>0.166667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.166667</iyy>
+            <iyz>0</iyz>
+            <izz>0.166667</izz>
+          </inertia>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://stl/cesped/cesped.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <cast_shadows>1</cast_shadows>
+          <transparency>0</transparency>
+          <material>
+            <shader type='pixel'>
+              <normal_map>__default__</normal_map>
+            </shader>
+          </material>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose frame=''>0.368 0 0.44 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.75 0.05 0.92</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>1</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0</restitution_coefficient>
+              <threshold>1e+06</threshold>
+            </bounce>
+            <contact>
+              <collide_without_contact>0</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>1</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose frame=''>2.88418 0.691804 0.013229 1.5708 -4e-06 3.14141</pose>
+</model>
   </world>
 </sdf>
