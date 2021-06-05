@@ -50,6 +50,7 @@
 #include <string>
 
 #include <gazebo_plugins/gazebo_ros_utils.h>
+#include "robobo_msgs/OrientationEuler.h"
 
 namespace gazebo
 {
@@ -93,10 +94,14 @@ private:
   ros::Publisher accelPub;
   /// \brief Ros Publisher for orientation data.
   ros::Publisher orientationPub;
+  /// \brief Ros Publisher for euler orientation data.
+  ros::Publisher orientationEulerPub;
   /// \brief Ros acceleration message.
   geometry_msgs::Accel accel_msg;
   /// \brief Ros orientation message.
   geometry_msgs::Quaternion orient_msg;
+  /// \brief Ros euler orientation message.
+  robobo_msgs::OrientationEuler orientEuler_msg;
 
   /// \brief last time on which the data was published.
   common::Time last_time;
@@ -112,6 +117,12 @@ private:
   ignition::math::Vector3d accelerometer_data;
   /// \brief Angular velocity data from the sensor.
   ignition::math::Vector3d gyroscope_data;
+  /// \brief euler Orientation data from the sensor.
+  ignition::math::Vector3d orientationEuler;
+  /// \brief Initial Pose parameter.
+  ignition::math::Pose3d init_pose;
+  /// \brief Offset Accel parameter.
+  ignition::math::Vector3d offsetAccel;
 
   /// \brief Seed for the Gaussian noise generator.
   unsigned int seed;
