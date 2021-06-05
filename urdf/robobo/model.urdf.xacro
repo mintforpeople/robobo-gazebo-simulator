@@ -121,8 +121,8 @@
 					</xacro:if>
 
 				</script>
-
 			</material>
+			<plugin name="emotion_plugin" filename="libemotion.so"/>
 		</visual>
 	</gazebo>
 
