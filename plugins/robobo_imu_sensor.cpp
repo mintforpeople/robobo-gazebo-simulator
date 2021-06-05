@@ -92,6 +92,12 @@ void RoboboImuSensor::Load(sensors::SensorPtr sensor_, sdf::ElementPtr sdf_)
 
   accelPub = node->advertise<geometry_msgs::Accel>(robot_namespace + "accel", 1);
   orientationPub = node->advertise<geometry_msgs::Quaternion>(robot_namespace + "orientation", 1);
+ 
+  orientationEulerPub = node->advertise<robobo_msgs::OrientationEuler>(robot_namespace + "orientation_euler", 1);
+ 
+  init_pose.Pos()=(0,0,0);
+  init_pose.Rot()=ignition::math::Quaterniond(ignition::math::Vector3d(3.1416,-1.5708,0));
+  sensor->SetPose(init_pose);
 
   connection = event::Events::ConnectWorldUpdateBegin(boost::bind(&RoboboImuSensor::UpdateChild, this, _1));
 
@@ -106,18 +112,7 @@ void RoboboImuSensor::UpdateChild(const common::UpdateInfo & /*_info*/)
 
   if (update_rate > 0 && (current_time - last_time).Double() < 1.0 / update_rate)  // update rate check
     return;
-
-  if (accelPub.getNumSubscribers() > 0 && accelerometer_data.X() != newAccelData.X() &&
-      accelerometer_data.Y() != newAccelData.Y() && accelerometer_data.Z() != newAccelData.Z())
-  {
-    accelerometer_data = newAccelData;
-    accel_msg.linear.x = accelerometer_data.X() + GuassianKernel(0, gaussian_noise);
-    accel_msg.linear.y = accelerometer_data.Y() + GuassianKernel(0, gaussian_noise);
-    accel_msg.linear.z = accelerometer_data.Z() + GuassianKernel(0, gaussian_noise);
-
-    // publishing data
-    accelPub.publish(accel_msg);
-  }
+ 
   if (orientationPub.getNumSubscribers() > 0 && orientation.X() != newOrientationData.X() &&
       orientation.Y() != newOrientationData.Y() && orientation.Z() != newOrientationData.Z() &&
       orientation.W() != newOrientationData.W())
@@ -132,6 +127,37 @@ void RoboboImuSensor::UpdateChild(const common::UpdateInfo & /*_info*/)
     orient_msg.w = orientation.W() + GuassianKernel(0, gaussian_noise);
     orientationPub.publish(orient_msg);
   }
+ 
+  ignition::math::Vector3d newOrientationEulerData=newOrientationData.Euler();
+  if (orientationEulerPub.getNumSubscribers() > 0 && orientationEuler.X() != newOrientationEulerData.X() &&
+      orientationEuler.Y() != newOrientationEulerData.Y() && orientationEuler.Z() != newOrientationEulerData.Z())
+  {
+    
+    orientationEuler = newOrientationEulerData;  
+    
+    orientEuler_msg.roll.data=orientationEuler.X()*57.3;
+    orientEuler_msg.pitch.data=orientationEuler.Y()*57.3;
+    orientEuler_msg.yaw.data=orientationEuler.Z()*57.3;
+    
+    orientEuler_msg.vector.x=orientEuler_msg.roll.data;
+    orientEuler_msg.vector.y=orientEuler_msg.pitch.data;
+    orientEuler_msg.vector.z=orientEuler_msg.yaw.data;
+    
+    orientationEulerPub.publish(orientEuler_msg);
+  }
+ 
+  if (accelPub.getNumSubscribers() > 0 && accelerometer_data.X() != newAccelData.X() &&
+      accelerometer_data.Y() != newAccelData.Y() && accelerometer_data.Z() != newAccelData.Z())
+  {
+    accelerometer_data = newAccelData;
+    accel_msg.linear.x = accelerometer_data.X()+9.8*sin(newOrientationEulerData.Y()) - GuassianKernel(0, gaussian_noise);
+    accel_msg.linear.y = accelerometer_data.Y() + GuassianKernel(0, gaussian_noise);
+    accel_msg.linear.z = accelerometer_data.Z()-9.8*cos(newOrientationEulerData.Y()) - GuassianKernel(0, gaussian_noise);
+
+    // publishing data
+    accelPub.publish(accel_msg);
+  }
+
 
   ros::spinOnce();
   last_time = current_time;
