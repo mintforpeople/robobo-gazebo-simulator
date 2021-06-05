@@ -72,6 +72,7 @@ catkin_package(
 	battery_discharge
         battery_consumer
 	led_color
+	emotion
 	
 	CATKIN_DEPENDS
 	roscpp
@@ -126,6 +127,12 @@ add_dependencies(light_sensor ${catkin_EXPORTED_TARGETS})
 ## Specify libraries to link a library or executable target against
 target_link_libraries( light_sensor ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} CameraPlugin )
 
+#EMOTION
+add_library(emotion SHARED plugins/emotion.cpp)
+add_dependencies(emotion ${catkin_EXPORTED_TARGETS})
+target_link_libraries(emotion ${GAZEBO_LIBRARIES} ${Boost_LIBRARIES} ${roscpp_LIBRARIES} ${catkin_LIBRARIES})
+
+#LED
 add_library(led_color SHARED plugins/led_color.cpp)
 add_dependencies(led_color ${catkin_EXPORTED_TARGETS})
 target_link_libraries(led_color ${GAZEBO_LIBRARIES} ${Boost_LIBRARIES} ${roscpp_LIBRARIES} ${catkin_LIBRARIES})
@@ -163,6 +170,7 @@ install(
 	battery_discharge
         battery_consumer
 	led_color
+	emotion
 	
         DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 
