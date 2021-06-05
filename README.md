@@ -25,7 +25,7 @@ This model uses the original Robobo ROS messages, so it is necessary to clone th
 
 ```bash
 cd ~/<workspace_name>/src
-git clone https://github.com/mintforpeople/robobo-gazebo-simulator
+git clone https://github.com/mintforpeople/robobo-gazebo9-simulator
 git clone https://github.com/mintforpeople/robobo-ros-msgs
 ```
 
