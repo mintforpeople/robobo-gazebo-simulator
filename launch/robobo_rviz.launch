@@ -3,7 +3,7 @@
 	<include file="$(find gazebo_ros)/launch/empty_world.launch">
 		<!-- You can change the world name for your own -->
 		<arg name="world_name" value="$(find robobo_gazebo)/worlds/test.world"/>
-		<arg name="paused" value="true"/>
+		<arg name="paused" value="false"/>
 	</include>
 
 	<!--create a new robobo-->
@@ -17,8 +17,8 @@
 			pusher:=false 
 			camera_front:=true
 			emotion:=NORMAL
-			visualize_irSensor:=true 
-			visualize_camera:=true" />
+			visualize_irSensor:=false 
+			visualize_camera:=false" />
 
 		<!--launch robobo model-->
 		<node name="robobo_model" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -x 0 -y 0 -z 0 -R 0 -P 0 -Y 0 -model $(arg robobo_name) -param robot_description"/>
@@ -34,11 +34,9 @@
 		</node>
 
 		<!--launch rviz-->
-		<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
+		<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
 		<node name="rviz" pkg="rviz" type="rviz" args="-d $(find robobo_gazebo)/rviz_config/robobo.rviz"/>
-		<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
-			<param name="use_gui" value="true"/>
-		</node>
+		<node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui"/>
 
 	</group>
 	</group>
