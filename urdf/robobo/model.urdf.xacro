@@ -28,7 +28,7 @@
 	<link name="tilt_smartphone">
 		<inertial>
 			<origin xyz="${0.01095+length/2} ${0.002} ${0.00215+depth/2}" rpy="0 0 0"/>
-			<mass value="${mass}"/>
+			<mass value="${mass/100}"/>
 			<inertia ixx="${mass*(width*width+depth*depth)/12}" ixy="0" ixz="0" iyy="${mass*(depth*depth+length*length)/12}" iyz="0" izz="${mass*(length*length+width*width)/12}"/>
 		</inertial>
 		<collision>
@@ -121,8 +121,8 @@
 					</xacro:if>
 
 				</script>
-
 			</material>
+			<plugin name="emotion_plugin" filename="libemotion.so"/>
 		</visual>
 	</gazebo>
 
@@ -426,7 +426,7 @@
 	<!--Body link-->
 	<link name="body">
 		<inertial>
-			<origin xyz="0.04 0 0" rpy="0 0 0"/>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<mass value="0.6" />
 			<inertia ixx="0.000485229" ixy="0" ixz="0" iyy="0.001227181" iyz="0" izz="0.001452813"/>
 		</inertial>
