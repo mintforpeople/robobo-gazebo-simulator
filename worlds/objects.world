@@ -98,7 +98,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/aplee_2.dae</uri>
+              <uri>model://stl/apple/aplee_2.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -111,7 +111,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/aplee_2.dae</uri>
+              <uri>model://stl/apple/aplee_2.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -167,7 +167,7 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>0.04974 0.007609 0 0 -0 0</pose>
+      <pose frame=''>0.106342 -0.019063 0 0 -0 0</pose>
     </model>
     <model name='bottle'>
       <link name='link_0'>
@@ -256,7 +256,7 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>0.312164 -0.002819 0 0 -0 0</pose>
+      <pose frame=''>0.31585 0.000906 0 0 -0 0</pose>
     </model>
     <model name='glass'>
       <link name='link_0'>
@@ -345,38 +345,38 @@
       </link>
       <static>1</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>0.18808 0.03508 0 0 -0 0</pose>
+      <pose frame=''>0.152818 0.000799 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>147 246000000</sim_time>
-      <real_time>149 289060747</real_time>
-      <wall_time>1627376533 188111284</wall_time>
-      <iterations>147246</iterations>
+      <sim_time>67 991000000</sim_time>
+      <real_time>69 737973148</real_time>
+      <wall_time>1627385403 510196818</wall_time>
+      <iterations>67991</iterations>
       <model name='apple'>
-        <pose frame=''>0.04974 0.007609 0.001774 0 -0 0</pose>
+        <pose frame=''>0.106342 -0.019063 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0.04974 0.007609 0.001774 0 -0 0</pose>
+          <pose frame=''>0.106342 -0.019063 0 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='bottle'>
-        <pose frame=''>0.312164 -0.016437 0.00284 0 -0 0</pose>
+        <pose frame=''>0.31585 0.000906 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0.312164 -0.016437 0.00284 0 -0 0</pose>
+          <pose frame=''>0.31585 0.000906 0 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='glass'>
-        <pose frame=''>0.163843 -0.02151 0.001361 0 -0 0</pose>
+        <pose frame=''>0.152818 0.000799 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0.163843 -0.02151 0.001361 0 -0 0</pose>
+          <pose frame=''>0.152818 0.000799 0 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -398,7 +398,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>0.376923 -0.721784 0.203012 0 0.331643 1.8602</pose>
+        <pose frame=''>1.0545 -0.849678 0.405426 0 0.339643 2.29619</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
