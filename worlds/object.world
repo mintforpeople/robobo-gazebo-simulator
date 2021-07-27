@@ -98,7 +98,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/tam/Descargas/2/aplee_2.dae</uri>
+              <uri>model://stl/aplee_2.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
