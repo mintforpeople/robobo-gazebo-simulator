@@ -60,7 +60,7 @@ roslaunch robobo_gazebo robobo.launch
 As a consequence, Gazebo will open and the Robobo model will be shown, in a similar way as in the following image (depending on the selected world file):
 
 <p align="center">
-<img src="https://github.com/mintforpeople/robobo-gazebo9-simulator/blob/master/gazebo.png" width=700" 
+<img src="https://github.com/mintforpeople/robobo-gazebo-simulator/blob/master/gazebo.png" width=700" 
 </p>
 
 To control the robot from a Python script, please refer to the video tutorial available at:
@@ -149,7 +149,7 @@ https://github.com/mintforpeople/robobo-programming/wiki/Robobo-Services
 
 ## Simulation configuration
 
-The simulation can be configured in many ways. First, the launch file (https://github.com/mintforpeople/robobo-gazebo9-simulator/blob/master/launch/robobo.launch) allows us to set the main configuration parameters of the simulation. Specifically:
+The simulation can be configured in many ways. First, the launch file (https://github.com/mintforpeople/robobo-gazebo-simulator/blob/master/launch/robobo.launch) allows us to set the main configuration parameters of the simulation. Specifically:
 
 To change the simulated world, just modify "test.world" by the name of the world you want to use in the top part of the launch file:
 
@@ -190,7 +190,7 @@ The model description consists of five configurable parameters:
 
 ## Model configuration
 
-The robot model can be configured through the file robobo.urdf.xacro (https://github.com/mintforpeople/robobo-gazebo9-simulator/blob/master/urdf/robobo.urdf.xacro) which allows to adapt its response to the specific features of the user's smartphone. Specifically, the following parameters are available (in the same order as shown in the file):
+The robot model can be configured through the file robobo.urdf.xacro (https://github.com/mintforpeople/robobo-gazebo-simulator/blob/master/urdf/robobo.urdf.xacro) which allows to adapt its response to the specific features of the user's smartphone. Specifically, the following parameters are available (in the same order as shown in the file):
 
 1. Change the dimensions and mass of the smartphone
  
