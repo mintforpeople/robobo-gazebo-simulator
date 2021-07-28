@@ -37,7 +37,7 @@ find_package(catkin REQUIRED COMPONENTS
 find_package(OpenCV)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
-find_package(ignition-math4 REQUIRED)
+find_package(ignition-math6 REQUIRED)
 
 
 ## System dependencies
@@ -91,7 +91,7 @@ catkin_package(
 ## Build ##
 ###########
 
-include_directories(include ${catkin_INCLUDE_DIRS} ${Boost_INCLUDE_DIR} ${GAZEBO_INCLUDE_DIRS} ${IGNITION-MATH4_INCLUDE_DIRS})
+include_directories(include ${catkin_INCLUDE_DIRS} ${Boost_INCLUDE_DIR} ${GAZEBO_INCLUDE_DIRS} ${IGNITION-MATH6_INCLUDE_DIRS})
 
 # Next line is necessary because Gazebo plugins are not added to GAZEBO_LIBRARIES
 link_directories(${GAZEBO_LIBRARY_DIRS})
