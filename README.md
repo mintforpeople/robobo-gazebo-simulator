@@ -4,11 +4,11 @@ Repository for Robobo robot simulation in the Gazebo environment.
 
 ## Requirements
 
-* Ubuntu 18.04
-* Robot Operating System - Melodic
+* Ubuntu 20.04
+* Robot Operating System - Noetic
      * http://wiki.ros.org/ROS/Installation
      * http://wiki.ros.org/ROS/Tutorials
-* Gazebo9
+* Gazebo11
      * http://gazebosim.org/tutorials
 
 ## Installation
@@ -25,7 +25,7 @@ This model uses the original Robobo ROS messages, so it is necessary to clone th
 
 ```bash
 cd ~/<workspace_name>/src
-git clone https://github.com/mintforpeople/robobo-gazebo9-simulator
+git clone https://github.com/mintforpeople/robobo-gazebo-simulator
 git clone https://github.com/mintforpeople/robobo-ros-msgs
 ```
 
@@ -225,7 +225,7 @@ The robot model can be configured through the file robobo.urdf.xacro (https://gi
 
 ## Advanced configuration
 
-The file model.urdf.xacro (https://github.com/mintforpeople/robobo-gazebo9-simulator/blob/master/urdf/robobo/model.urdf.xacro) contains the xacro:macro code with all the definitions and settings from the previous files. It consists of the following macros:
+The file model.urdf.xacro (https://github.com/mintforpeople/robobo-gazebo-simulator/blob/master/urdf/robobo/model.urdf.xacro) contains the xacro:macro code with all the definitions and settings from the previous files. It consists of the following macros:
 
 * xacro:macro name = "tilt_link": creates the Robot Tilt System, configuring the size of the Smartphone and the Robot's face.
 * xacro:macro name = "base_battery": creates the base battery, as a parameter the initial charge in percentage.
@@ -241,7 +241,7 @@ The file model.urdf.xacro (https://github.com/mintforpeople/robobo-gazebo9-simul
 
 ## World configuration
 
-There are several world models created specifically for Robobo, that can be accessed from: https://github.com/mintforpeople/robobo-gazebo9-simulator/tree/master/worlds
+There are several world models created specifically for Robobo, that can be accessed from: https://github.com/mintforpeople/robobo-gazebo-simulator/tree/master/worlds
 
 
 At this moment, the following worlds are available:
