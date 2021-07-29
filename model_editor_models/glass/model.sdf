@@ -18,7 +18,7 @@
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
-            <uri>file://models/stl/glass_2.dae</uri>
+            <uri>model://stl/glass_2.dae</uri>
             <scale>1 1 1</scale>
           </mesh>
         </geometry>
@@ -32,7 +32,7 @@
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
-            <uri>file://models/stl/glass_2.dae</uri>
+            <uri>model://stl/glass_2.dae</uri>
           </mesh>
         </geometry>
         <surface>
