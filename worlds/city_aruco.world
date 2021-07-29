@@ -102,7 +102,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/daeBlender/bigcity.dae</uri>
+              <uri>file://models/stl/daeBlender/bigcity.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -614,7 +614,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/ROTONDA/rotonda_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/ROTONDA/rotonda_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -627,7 +627,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/ROTONDA/rotonda_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/ROTONDA/rotonda_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -704,7 +704,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PARAR/parar_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PARAR/parar_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -717,7 +717,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PARAR/parar_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PARAR/parar_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -794,7 +794,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PEATONES/peatones_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PEATONES/peatones_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -807,7 +807,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PEATONES/peatones_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PEATONES/peatones_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -884,7 +884,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/CEDA/ceda_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/CEDA/ceda_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -897,7 +897,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/CEDA/ceda_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/CEDA/ceda_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -974,7 +974,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/VELOCIDAD40/velo40_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD40/velo40_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -987,7 +987,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/VELOCIDAD40/velo40_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD40/velo40_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1071,7 +1071,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/ROTONDA/rotonda_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/ROTONDA/rotonda_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1084,7 +1084,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/ROTONDA/rotonda_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/ROTONDA/rotonda_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1161,7 +1161,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/ROTONDA/rotonda_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/ROTONDA/rotonda_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1174,7 +1174,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/ROTONDA/rotonda_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/ROTONDA/rotonda_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1251,7 +1251,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/ROTONDA/rotonda_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/ROTONDA/rotonda_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1264,7 +1264,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/ROTONDA/rotonda_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/ROTONDA/rotonda_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1341,7 +1341,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
+              <uri>file://models/stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1354,7 +1354,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
+              <uri>file://models/stl/SENALES_QR/PEATONES/peatones_qr.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1431,7 +1431,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PEATONES/peatones_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PEATONES/peatones_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1444,7 +1444,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PEATONES/peatones_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PEATONES/peatones_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1521,7 +1521,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PEATONES/peatones_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PEATONES/peatones_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1534,7 +1534,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PEATONES/peatones_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PEATONES/peatones_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1611,7 +1611,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PARAR/parar_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PARAR/parar_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1624,7 +1624,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PARAR/parar_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PARAR/parar_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1701,7 +1701,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PARAR/parar_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PARAR/parar_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1714,7 +1714,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PARAR/parar_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PARAR/parar_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1791,7 +1791,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PARAR/parar_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PARAR/parar_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1804,7 +1804,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PARAR/parar_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PARAR/parar_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1881,7 +1881,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/CEDA/ceda_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/CEDA/ceda_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1894,7 +1894,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/CEDA/ceda_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/CEDA/ceda_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1971,7 +1971,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/CEDA/ceda_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/CEDA/ceda_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -1984,7 +1984,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/CEDA/ceda_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/CEDA/ceda_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2061,7 +2061,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/CEDA/ceda_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/CEDA/ceda_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2074,7 +2074,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/CEDA/ceda_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/CEDA/ceda_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2164,7 +2164,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PELIGRO IZQUIERDA/peligr_izq_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PELIGRO IZQUIERDA/peligr_izq_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2241,7 +2241,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PELIGRO IZQUIERDA/peligr_izq_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PELIGRO IZQUIERDA/peligr_izq_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2254,7 +2254,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PELIGRO IZQUIERDA/peligr_izq_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PELIGRO IZQUIERDA/peligr_izq_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2331,7 +2331,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PELIGRO IZQUIERDA/peligr_izq_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PELIGRO IZQUIERDA/peligr_izq_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2344,7 +2344,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PELIGRO IZQUIERDA/peligr_izq_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PELIGRO IZQUIERDA/peligr_izq_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2421,7 +2421,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PELIGRO IZQUIERDA/peligr_izq_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PELIGRO IZQUIERDA/peligr_izq_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2434,7 +2434,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PELIGRO IZQUIERDA/peligr_izq_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PELIGRO IZQUIERDA/peligr_izq_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2511,7 +2511,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/VELOCIDAD50/velo50_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD50/velo50_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2524,7 +2524,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/VELOCIDAD50/velo50_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD50/velo50_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2601,7 +2601,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PELIGRO DERECHA/peligr_dcha_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PELIGRO DERECHA/peligr_dcha_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2614,7 +2614,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PELIGRO DERECHA/peligr_dcha_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PELIGRO DERECHA/peligr_dcha_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2691,7 +2691,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PELIGRO DERECHA/peligr_dcha_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PELIGRO DERECHA/peligr_dcha_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2704,7 +2704,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PELIGRO DERECHA/peligr_dcha_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PELIGRO DERECHA/peligr_dcha_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2781,7 +2781,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PELIGRO DERECHA/peligr_dcha_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PELIGRO DERECHA/peligr_dcha_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2794,7 +2794,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PELIGRO DERECHA/peligr_dcha_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PELIGRO DERECHA/peligr_dcha_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2871,7 +2871,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PELIGRO DERECHA/peligr_dcha_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PELIGRO DERECHA/peligr_dcha_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2884,7 +2884,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/PELIGRO DERECHA/peligr_dcha_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/PELIGRO DERECHA/peligr_dcha_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2961,7 +2961,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/VELOCIDAD20/velo20_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD20/velo20_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2974,7 +2974,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/VELOCIDAD20/velo20_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD20/velo20_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3051,7 +3051,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/VELOCIDAD40/velo40_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD40/velo40_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3064,7 +3064,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/VELOCIDAD40/velo40_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD40/velo40_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3141,7 +3141,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/VELOCIDAD20/velo20_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD20/velo20_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3154,7 +3154,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/VELOCIDAD20/velo20_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD20/velo20_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3231,7 +3231,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/VELOCIDAD10/velo10_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD10/velo10_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3244,7 +3244,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/VELOCIDAD10/velo10_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD10/velo10_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3321,7 +3321,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/VELOCIDAD50/velo50_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD50/velo50_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3334,7 +3334,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/VELOCIDAD50/velo50_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD50/velo50_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3411,7 +3411,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/VELOCIDAD40/velo40_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD40/velo40_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3424,7 +3424,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/VELOCIDAD40/velo40_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD40/velo40_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3501,7 +3501,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/VELOCIDAD40/velo40_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD40/velo40_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3514,7 +3514,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/VELOCIDAD40/velo40_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD40/velo40_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3591,7 +3591,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/VELOCIDAD50/velo50_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD50/velo50_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3604,7 +3604,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/VELOCIDAD50/velo50_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD50/velo50_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3681,7 +3681,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/VELOCIDAD20/velo20_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD20/velo20_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3694,7 +3694,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SENALES_ARUCOS/VELOCIDAD20/velo20_aruco.dae</uri>
+              <uri>file://models/stl/SENALES_ARUCOS/VELOCIDAD20/velo20_aruco.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3771,7 +3771,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/SUPERMARKET_DAE/supermarket.dae</uri>
+              <uri>file://models/stl/SUPERMARKET_DAE/supermarket.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3865,7 +3865,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/udc_gaz/udc_gaz.dae</uri>
+              <uri>file://models/stl/udc_gaz/udc_gaz.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -3959,7 +3959,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/rotonda/Rotonda.dae</uri>
+              <uri>file://models/stl/rotonda/Rotonda.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -4054,7 +4054,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/Big_cesped/cesped_big.dae</uri>
+              <uri>file://models/stl/Big_cesped/cesped_big.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>

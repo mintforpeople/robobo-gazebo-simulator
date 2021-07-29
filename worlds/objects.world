@@ -98,7 +98,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/apple/aplee_2.dae</uri>
+              <uri>file://models/stl/apple/aplee_2.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -111,7 +111,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/apple/aplee_2.dae</uri>
+              <uri>file://models/stl/apple/aplee_2.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -187,7 +187,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/bottle_2.dae</uri>
+              <uri>file://models/stl/bottle_2.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -200,7 +200,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/bottle_2.dae</uri>
+              <uri>file://models/stl/bottle_2.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -276,7 +276,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/glass_2.dae</uri>
+              <uri>file://models/stl/glass_2.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -289,7 +289,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>model://stl/glass_2.dae</uri>
+              <uri>file://models/stl/glass_2.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
