@@ -57,6 +57,12 @@ To launch the model:
 roslaunch robobo_gazebo robobo.launch
 ```
 
+You can change the world to load, use the parameter `world` (the parameter is optional, if you don't use it, the `test` world is loaded):
+
+```bash
+roslaunch robobo_gazebo robobo.launch world:=small_city_qr
+```
+
 As a consequence, Gazebo will open and the Robobo model will be shown, in a similar way as in the following image (depending on the selected world file):
 
 <p align="center">
