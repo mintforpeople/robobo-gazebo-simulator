@@ -57,7 +57,7 @@ To launch the model:
 roslaunch robobo_gazebo robobo.launch
 ```
 
-You can change the world to load, use the parameter `world` (the parameter is optional, if you don't use it, the `test` world is loaded):
+You can change the world to load using the parameter `world` (the parameter is optional, if you don't use it, the `test` world is loaded):
 
 ```bash
 roslaunch robobo_gazebo robobo.launch world:=small_city_qr
