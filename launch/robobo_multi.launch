@@ -1,9 +1,12 @@
 <launch>
-	<!--craete a new world-->
+	<arg name="world" default="test"/>
+	<param name="world" value="$(arg world)" />
+
+	<!--create a new world-->
 	<include file="$(find gazebo_ros)/launch/empty_world.launch">
 		<!-- You can change the world name for your own -->
-		<arg name="world_name" value="$(find robobo_gazebo)/worlds/test.world"/>
-		<arg name="paused" value="true"/>
+		<arg name="world_name" value="$(find robobo_gazebo)/worlds/$(arg world).world"/>
+		<arg name="paused" value="false"/>
 	</include>
 
 
