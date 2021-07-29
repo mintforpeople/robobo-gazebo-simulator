@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <sdf version='1.6'>
-  <model name='bottle'>
+  <model name='apple'>
     <link name='link_0'>
       <pose frame=''>0 0 0 0 -0 0</pose>
       <inertial>
@@ -18,7 +18,7 @@
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
-            <uri>file://models/stl/bottle_2.dae</uri>
+            <uri>file://models/stl/apple/aplee_2.dae</uri>
             <scale>1 1 1</scale>
           </mesh>
         </geometry>
@@ -32,7 +32,7 @@
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
-            <uri>file://models/stl/bottle_2.dae</uri>
+            <uri>file://models/stl/apple/aplee_2.dae</uri>
           </mesh>
         </geometry>
         <surface>
