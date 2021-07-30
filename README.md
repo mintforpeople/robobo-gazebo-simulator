@@ -263,9 +263,9 @@ At this moment, the following worlds are available:
 * maze03: a maze with natural lighting and a hidden yellow cylinder.
 * dark_maze: the same maze as the previous world, but the ambient light is off, and instead of a green cylinder, we have a light bulb emitting light.
 
-In addition, different objects that can be included in these worlds have been modeled, so the robot can interact with them. They can be downloaded from: 
+In addition, different objects that can be included in these worlds have been modeled, so the robot can interact with them. 
 
-https://documentation.theroboboproject.com/gazebo/models_editor_models.zip
+https://github.com/mintforpeople/robobo-gazebo-models
 
 It contains a folder called _models_editor_models_. In this folder, all the models are saved in .sdf format, so that later the user can insert them into any gazebo world. To do this, the folder must be copied into the user's folder (/home/user). 
 
