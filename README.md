@@ -75,6 +75,10 @@ https://documentation.theroboboproject.com/gazebo/tutorial_gazebo.mp4
 
 From minute 5:30 onwards, there is a detailed explanation regarding it.
 
+It is important to download the 3D modelled files for the different worlds to work. For this purpose we have created the following repository:  
+
+https://github.com/mintforpeople/robobo-gazebo-models
+
 ## ROS topics
 
 Robobo publishes all its sensors as ROS topics. The current available sensors in simulation are:
